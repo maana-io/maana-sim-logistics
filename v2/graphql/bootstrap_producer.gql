@@ -1,0 +1,218 @@
+mutation bootstrap_producer {
+  addProductTypeEnums(
+    input: [
+      { id: "Hydrocarbons" }
+      { id: "Crude" }
+      { id: "Petrochemicals" }
+      { id: "CoalRock" }
+      { id: "Coal" }
+      { id: "Energy" }
+      { id: "Ore" }
+      { id: "Metal" }
+      { id: "Tree" }
+      { id: "Wood" }
+      { id: "Lumber" }
+      { id: "Goods" }
+      { id: "Grain" }
+      { id: "Food" }
+    ]
+  )
+
+  addProducerTypeEnums(
+    input: [
+      { id: "OilWell" }
+      { id: "OilRefinery" }
+      { id: "Forest" }
+      { id: "LumberMill" }
+      { id: "CoalMine" }
+      { id: "PowerPlant" }
+      { id: "OreMine" }
+      { id: "SteelMill" }
+      { id: "Factory" }
+      { id: "Farm" }
+    ]
+  )
+
+  addActionTypeRequirements(
+    input: [
+      # Oil (well)
+      {
+        id: "OilWell:Research:1"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "OilWell:Research:2"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "OilWell:Research:3"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "OilWell:Upgrade:1"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "OilWell:Upgrade:2"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "OilWell:Upgrade:3"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+    ]
+  )
+
+  addProductQuantitys(
+    input: [
+      {
+        id: "OilWell:0:Input:Hydrocarbons"
+        type: "Hydrocarbons"
+        quantity: 1.0
+      }
+      { id: "OilWell:0:Output:Crude", type: "Crude", quantity: 1.0 }
+      {
+        id: "OilWell:0:Storage:Hydrocarbons"
+        type: "Hydrocarbons"
+        quantity: 1.0
+      }
+      { id: "OilWell:0:Storage:Crude", type: "Crude", quantity: 1.0 }
+      {
+        id: "OilWell:1:Input:Hydrocarbons"
+        type: "Hydrocarbons"
+        quantity: 1.0
+      }
+      { id: "OilWell:1:Output:Crude", type: "Crude", quantity: 1.0 }
+      {
+        id: "OilWell:1:Storage:Hydrocarbons"
+        type: "Hydrocarbons"
+        quantity: 1.0
+      }
+      { id: "OilWell:1:Storage:Crude", type: "Crude", quantity: 1.0 }
+      {
+        id: "OilWell:2:Input:Hydrocarbons"
+        type: "Hydrocarbons"
+        quantity: 1.0
+      }
+      { id: "OilWell:2:Output:Crude", type: "Crude", quantity: 1.0 }
+      {
+        id: "OilWell:2:Storage:Hydrocarbons"
+        type: "Hydrocarbons"
+        quantity: 1.0
+      }
+      { id: "OilWell:2:Storage:Crude", type: "Crude", quantity: 1.0 }
+      {
+        id: "OilWell:3:Input:Hydrocarbons"
+        type: "Hydrocarbons"
+        quantity: 1.0
+      }
+      { id: "OilWell:3:Output:Crude", type: "Crude", quantity: 1.0 }
+      {
+        id: "OilWell:3:Storage:Hydrocarbons"
+        type: "Hydrocarbons"
+        quantity: 1.0
+      }
+      { id: "OilWell:3:Storage:Crude", type: "Crude", quantity: 1.0 }
+    ]
+  )
+
+  addStorages(
+    input: [
+      {
+        id: "OilWell:0:Hydrocarbons"
+        type: "Hydrocarbons"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "OilWell:0:Crude", type: "Crude", capacity: 1.0, amount: 1.0 }
+      {
+        id: "OilWell:1:Hydrocarbons"
+        type: "Hydrocarbons"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "OilWell:1:Crude", type: "Crude", capacity: 1.0, amount: 1.0 }
+      {
+        id: "OilWell:2:Hydrocarbons"
+        type: "Hydrocarbons"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "OilWell:2:Crude", type: "Crude", capacity: 1.0, amount: 1.0 }
+      {
+        id: "OilWell:3:Hydrocarbons"
+        type: "Hydrocarbons"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "OilWell:3:Crude", type: "Crude", capacity: 1.0, amount: 1.0 }
+    ]
+  )
+
+  addProducerLevels(
+    input: [
+      # Oil (well)
+      {
+        id: "OilWell:0"
+        inputs: ["OilWell:0:Output:Hydrocarbons"]
+        outputs: ["OilWell:0:Output:Crude"]
+        storage: ["OilWell:0:Hyrdrocarbons", "OilWell:0:Crude"]
+        baseCostPerUnit: 1.0
+        stoppageSurchargeRate: 1.0
+        actionRequirements: []
+        nextLevel: "OilWell:1"
+      }
+      {
+        id: "OilWell:1"
+        inputs: ["OilWell:1:Output:Hydrocarbons"]
+        outputs: ["OilWell:1:Output:Crude"]
+        storage: ["OilWell:1:Hyrdrocarbons", "OilWell:1:Crude"]
+        baseCostPerUnit: 1.0
+        stoppageSurchargeRate: 1.0
+        actionRequirements: ["OilWell:Research:1", "OilWell:Upgrade:1"]
+        nextLevel: "OilWell:2"
+      }
+      {
+        id: "OilWell:2"
+        inputs: ["OilWell:2:Output:Hydrocarbons"]
+        outputs: ["OilWell:2:Output:Crude"]
+        storage: ["OilWell:2:Hyrdrocarbons", "OilWell:2:Crude"]
+        baseCostPerUnit: 1.0
+        stoppageSurchargeRate: 1.0
+        actionRequirements: ["OilWell:Research:2", "OilWell:Upgrade:2"]
+        nextLevel: "OilWell:3"
+      }
+      {
+        id: "OilWell:3"
+        inputs: ["OilWell:3:Output:Hydrocarbons"]
+        outputs: ["OilWell:3:Output:Crude"]
+        storage: ["OilWell:3:Hyrdrocarbons", "OilWell:3:Crude"]
+        baseCostPerUnit: 1.0
+        stoppageSurchargeRate: 1.0
+        actionRequirements: ["OilWell:Research:3", "OilWell:Upgrade:3"]
+      }
+    ]
+  )
+
+  addProducerConfigs(
+    input: [{ id: "OilWell:Default", defaultLevel: "OilWell:0" }]
+  )
+}

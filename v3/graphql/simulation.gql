@@ -1,0 +1,23 @@
+mutation bootstrap {
+  addSimulations(
+    input: [
+      { id: "Default", steps: 0, balance: 1000000, income: 0, expenses: 0 }
+    ]
+  )
+
+  addResourceTransferTypeEnums(input: [{ id: "Withdraw" }, { id: "Deposit" }])
+
+  addResourceTransferStatusEnums(
+    input: [
+      { id: "Pending" }
+      { id: "OK" }
+      { id: "ErrFunds" }
+      { id: "ErrLocation" }
+      { id: "ErrCapacity" }
+      { id: "ErrQuantity" }
+      { id: "ErrResource" }
+      { id: "ErrCounterparty" }
+      { id: "ErrTransferType" }
+    ]
+  )
+}

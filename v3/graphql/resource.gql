@@ -1,0 +1,19 @@
+mutation bootstrap {
+  addResourceTypeEnums(
+    input: [
+      { id: "Hydrocarbons" }
+      { id: "Crude" }
+      { id: "Petrochemicals" }
+      { id: "CoalRock" }
+      { id: "Coal" }
+      { id: "Energy" }
+      { id: "Ore" }
+      { id: "Metal" }
+      { id: "Trees" }
+      { id: "Lumber" }
+      { id: "Goods" }
+      { id: "Grain" }
+      { id: "Food" }
+    ]
+  )
+}

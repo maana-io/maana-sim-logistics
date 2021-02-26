@@ -1,0 +1,229 @@
+mutation bootstrap {
+  addVehicleTypeEnums(
+    input: [{ id: "Truck" }, { id: "Train" }, { id: "Plane" }, { id: "Ship" }]
+  )
+
+  addTransitStatusEnums(
+    input: [
+      { id: "Idle" }
+      { id: "Pending" }
+      { id: "InTransit" }
+      { id: "Arrived" }
+      { id: "Cancelled" }
+      { id: "Disabled" }
+      { id: "Repair" }
+    ]
+  )
+
+  addTransitOrders(
+    input: [
+      {
+        id: "Idle"
+        sim: "Default"
+        vehicle: 0
+        destX: 0
+        destY: 0
+        steps: 0
+        status: "Idle"
+      }
+    ]
+  )
+
+  addResources(
+    input: [
+      {
+        id: "Truck:0:Crude"
+        sim: "Default"
+        type: "Crude"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:0:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:0:Goods"
+        sim: "Default"
+        type: "Goods"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+    ]
+  )
+
+  addVehicles(
+    input: [
+      {
+        id: "Truck:0"
+        sim: "Default"
+        type: "Truck"
+        hub: "TruckDepot:0"
+        steps: 0
+        speed: 1.0
+        maxDistance: 1.0
+        reliability: 0.9
+        durability: 0.9
+        efficiency: 1.0
+        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargoModeAND: false
+        x: 1
+        y: 1
+        transitOrder: "Idle"
+        lastServiceStep: 0
+        serviceInterval: 100
+      }
+      {
+        id: "Truck:1"
+        sim: "Default"
+        type: "Truck"
+        hub: "TruckDepot:0"
+        steps: 0
+        speed: 1.0
+        maxDistance: 1.0
+        reliability: 0.9
+        durability: 0.9
+        efficiency: 1.0
+        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargoModeAND: false
+        x: 4
+        y: 2
+        transitOrder: "Idle"
+        lastServiceStep: 0
+        serviceInterval: 100
+      }
+      {
+        id: "Truck:2"
+        sim: "Default"
+        type: "Truck"
+        hub: "TruckDepot:0"
+        steps: 0
+        speed: 1.0
+        maxDistance: 1.0
+        reliability: 0.9
+        durability: 0.9
+        efficiency: 1.0
+        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargoModeAND: false
+        x: 2
+        y: 6
+        transitOrder: "Idle"
+        lastServiceStep: 0
+        serviceInterval: 100
+      }
+      {
+        id: "Truck:3"
+        sim: "Default"
+        type: "Truck"
+        hub: "TruckDepot:0"
+        steps: 0
+        speed: 1.0
+        maxDistance: 1.0
+        reliability: 0.9
+        durability: 0.9
+        efficiency: 1.0
+        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargoModeAND: false
+        x: 9
+        y: 4
+        transitOrder: "Idle"
+        lastServiceStep: 0
+        serviceInterval: 100
+      }
+      {
+        id: "Truck:4"
+        sim: "Default"
+        type: "Truck"
+        hub: "TruckDepot:0"
+        steps: 0
+        speed: 1.0
+        maxDistance: 1.0
+        reliability: 0.9
+        durability: 0.9
+        efficiency: 1.0
+        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargoModeAND: false
+        x: 8
+        y: 8
+        transitOrder: "Idle"
+        lastServiceStep: 0
+        serviceInterval: 100
+      }
+      {
+        id: "Truck:5"
+        sim: "Default"
+        type: "Truck"
+        hub: "TruckDepot:0"
+        steps: 0
+        speed: 1.0
+        maxDistance: 1.0
+        reliability: 0.9
+        durability: 0.9
+        efficiency: 1.0
+        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargoModeAND: false
+        x: 6
+        y: 10
+        transitOrder: "Idle"
+        lastServiceStep: 0
+        serviceInterval: 100
+      }
+      {
+        id: "Ship:0"
+        sim: "Default"
+        type: "Ship"
+        hub: "TruckDepot:0"
+        steps: 0
+        speed: 1.0
+        maxDistance: 1.0
+        reliability: 0.9
+        durability: 0.9
+        efficiency: 1.0
+        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargoModeAND: false
+        x: 5
+        y: 6
+        transitOrder: "Idle"
+        lastServiceStep: 0
+        serviceInterval: 100
+      }
+      {
+        id: "Plane:0"
+        sim: "Default"
+        type: "Plane"
+        hub: "TruckDepot:0"
+        steps: 0
+        speed: 1.0
+        maxDistance: 1.0
+        reliability: 0.9
+        durability: 0.9
+        efficiency: 1.0
+        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargoModeAND: false
+        x: 7
+        y: 6
+        transitOrder: "Idle"
+        lastServiceStep: 0
+        serviceInterval: 100
+      }
+    ]
+  )
+}

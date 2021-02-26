@@ -1,0 +1,589 @@
+input ActionObjectUnionAsInput {
+  id: ID!
+  producer: ID
+  facility: ID
+  vehicle: ID
+  pathType: PathTypeEnumAsInput
+  tiles: [ID]
+  order: OrderAsInput
+}
+
+type ActionObjectUnionOutput {
+  id: ID!
+  producer: ID
+  facility: ID
+  vehicle: ID
+  pathType: PathTypeEnum
+  tiles: [ID]
+  order: Order
+}
+
+type ActionProgress {
+  id: ID!
+  type: ActionTypeEnumOutput!
+  step: Float!
+  remainingSteps: Float!
+  status: ActionStatusEnum!
+  info: String
+  object: ActionObjectUnionOutput!
+  sim: ID!
+}
+
+type ActionsReport {
+  id: ID!
+  progress: [ActionProgress!]!
+  ok: Boolean!
+}
+
+type ActionStatusEnum {
+  id: ID!
+}
+
+input ActionTypeEnumAsInput {
+  id: ID!
+}
+
+type ActionTypeEnumOutput {
+  id: ID!
+}
+
+type ActionTypeRequirement {
+  id: ID!
+  type: ActionTypeEnumOutput!
+  time: Float!
+  cost: Float!
+  inputs: [ProductQuantity!]!
+}
+
+input ActionTypeRequirementAsInput {
+  id: ID!
+  type: ActionTypeEnumAsInput!
+  time: Float!
+  cost: Float!
+  inputs: [ProductQuantityAsInput!]!
+}
+
+enum AggregateOp {
+  MIN
+  MAX
+  SUM
+  COUNT
+}
+
+type City {
+  id: ID!
+  sim: ID!
+  population: Float!
+  consumables: [Consumable!]!
+  level: CityLevel!
+  x: Int!
+  y: Int!
+}
+
+input CityAsInput {
+  id: ID!
+  sim: ID!
+  population: Float!
+  consumables: [ConsumableAsInput!]!
+  level: CityLevelAsInput!
+  x: Int!
+  y: Int!
+}
+
+type CityConfig {
+  id: ID!
+  growthRate: Float!
+  declineRate: Float!
+  initialPopulation: Float!
+  demandsPerPersonPerStep: [ProductQuantity!]!
+  defaultLevel: ID!
+  consumables: [Consumable!]!
+  density: Float!
+}
+
+type CityLevel {
+  id: ID!
+  storageCapacityModifier: Float!
+  actionTypeRequirements: [ActionTypeRequirement!]!
+  nextLevel: ID
+}
+
+input CityLevelAsInput {
+  id: ID!
+  storageCapacityModifier: Float!
+  actionTypeRequirements: [ActionTypeRequirementAsInput!]!
+  nextLevel: ID
+}
+
+type Company {
+  id: ID!
+  name: String!
+  credit: Float!
+  facilityUnlocks: [FacilityLevel!]!
+  vehicleUnlocks: [VehicleLevel!]!
+  producerUnlocks: [ProducerLevel!]!
+  storageDepotUnlocks: [SupplyDepotLevel!]!
+  config: CompanyConfig!
+}
+
+type CompanyConfig {
+  id: ID!
+  initialCredit: Float!
+}
+
+type CompanyReport {
+  id: ID!
+  production: ProductionReport!
+  actions: ActionsReport!
+}
+
+type Consumable {
+  id: ID!
+  storage: Storage!
+  basePricePerUnit: Float!
+  minPriceBasisPct: Float!
+}
+
+input ConsumableAsInput {
+  id: ID!
+  storage: StorageAsInput!
+  basePricePerUnit: Float!
+  minPriceBasisPct: Float!
+}
+
+type CounterpartyUnion {
+  id: ID!
+  city: City
+  producer: Producer
+}
+
+input CounterpartyUnionAsInput {
+  id: ID!
+  city: CityAsInput
+  producer: ProducerAsInput
+}
+
+scalar Date
+
+scalar DateTime
+
+type FacilityLevel {
+  id: ID!
+  type: FacilityTypeEnum!
+  nextLevel: ID
+  maxVehicleLevel: ID
+  energyDemandBaseline: Float!
+  fuelDemandBaseline: Float!
+  fuelStorage: Storage!
+  perVehicleEnergyFactor: Float!
+  perVehicleFuelFactor: Float!
+  repairEfficiency: Float!
+  actionRequirements: [ActionTypeRequirement!]!
+}
+
+type FacilityTypeEnum {
+  id: ID!
+}
+
+input FieldFilterInput {
+  """
+  one of the following is required
+  """
+  fieldId: ID
+  fieldName: String
+  op: String!
+  value: FieldValueInput!
+}
+
+input FieldProjectionInput {
+  """
+  one of the following is required - except in the case of count queries
+  """
+  fieldId: ID
+  fieldName: String
+
+  """
+  optional if omitted outer query is used
+  """
+  alias: String
+  op: AggregateOp
+}
+
+type FieldValue {
+  """
+  Types
+  """
+  ID: ID
+  STRING: String
+  INT: Int
+  FLOAT: Float
+  BOOLEAN: Boolean
+  DATE: Date
+  TIME: Time
+  DATETIME: DateTime
+  JSON: JSON
+  KIND: ID
+
+  """
+  List forms
+  """
+  l_ID: [ID]
+  l_STRING: [String]
+  l_INT: [Int]
+  l_FLOAT: [Float]
+  l_BOOLEAN: [Boolean]
+  l_DATE: [Date]
+  l_TIME: [Time]
+  l_DATETIME: [DateTime]
+  l_JSON: [JSON]
+  l_KIND: [ID]
+}
+
+input FieldValueInput {
+  """
+  Types
+  """
+  ID: ID
+  STRING: String
+  INT: Int
+  FLOAT: Float
+  BOOLEAN: Boolean
+  DATE: Date
+  TIME: Time
+  DATETIME: DateTime
+  JSON: JSON
+  KIND: ID
+
+  """
+  List forms
+  """
+  l_ID: [ID]
+  l_STRING: [String]
+  l_INT: [Int]
+  l_FLOAT: [Float]
+  l_BOOLEAN: [Boolean]
+  l_DATE: [Date]
+  l_TIME: [Time]
+  l_DATETIME: [DateTime]
+  l_JSON: [JSON]
+  l_KIND: [ID]
+}
+
+type Info {
+  id: ID!
+  name: String!
+  description: String
+}
+
+type InstanceSet {
+  kindId: ID!
+
+  """
+  Continuation token
+  """
+  token: String
+  fieldIds: [ID]
+
+  """
+  rowKeys: [Int]
+  """
+  records: [[FieldValue]]
+}
+
+scalar JSON
+
+input KindQueryInput {
+  """
+  projected kind (one of the following is required)
+  """
+  kindId: ID
+  kindName: String
+  serviceId: ID
+
+  """
+  optional alias for projection binding
+  """
+  alias: String
+
+  """
+  projected fields
+  """
+  projection: [FieldProjectionInput]
+
+  """
+  distinct Projected result
+  """
+  distinct: Boolean
+
+  """
+  filters (where)
+  """
+  fieldFilters: [FieldFilterInput]
+
+  """
+  conjunction (where)
+  """
+  and: [KindQueryInput]
+
+  """
+  disjunction (where)
+  """
+  or: [KindQueryInput]
+
+  """
+  join (if conjunction or disjunction)
+  """
+  fromFieldId: ID
+  fromFieldName: String
+  toFieldId: ID
+  toFieldName: String
+  take: Int
+  token: String
+}
+
+type Map {
+  id: ID!
+  sizeX: Int!
+  sizeY: Int!
+}
+
+type MapConfig {
+  id: ID!
+  loadConfig: MapLoadConfig
+  generateConfig: MapGenerationConfig
+}
+
+type MapGenerationConfig {
+  id: ID!
+  sizeX: Int!
+  sizeY: Int!
+}
+
+type MapLoadConfig {
+  id: ID!
+}
+
+type Mutation {
+  newSimulation(companyName: String!, configId: ID): Simulation!
+  stepSimulation(
+    sim: ID!
+    actionType: ActionTypeEnumAsInput
+    actionObject: ActionObjectUnionAsInput
+  ): SimulationStepResult!
+
+  """
+  Clear cache for this service
+  """
+  clearCache: Boolean!
+}
+
+type Order {
+  id: ID!
+  product: ProductQuantity!
+  orderType: OrderTypeEnum!
+  vehicle: ID!
+  paths: [ID!]!
+  counterparty: CounterpartyUnion!
+  sim: ID!
+}
+
+input OrderAsInput {
+  id: ID!
+  product: ProductQuantityAsInput!
+  orderType: OrderTypeEnumAsInput!
+  vehicle: ID!
+  paths: [ID!]!
+  counterparty: CounterpartyUnionAsInput!
+  sim: ID!
+}
+
+type OrderTypeEnum {
+  id: ID!
+}
+
+input OrderTypeEnumAsInput {
+  id: ID!
+}
+
+type PathConfig {
+  id: ID!
+  type: PathTypeEnum!
+  actionRequirements: [ActionTypeRequirement!]!
+}
+
+type PathTypeEnum {
+  id: ID!
+}
+
+input PathTypeEnumAsInput {
+  id: ID!
+}
+
+type Producer {
+  id: ID!
+  sim: ID!
+  level: ProducerLevel!
+  storage: [Storage!]!
+  type: ProducerTypeEnum!
+  x: Int!
+  y: Int!
+}
+
+input ProducerAsInput {
+  id: ID!
+  sim: ID!
+  level: ProducerLevelAsInput!
+  storage: [StorageAsInput!]!
+  type: ProducerTypeEnumAsInput!
+  x: Int!
+  y: Int!
+}
+
+type ProducerLevel {
+  id: ID!
+  actionRequirements: [ActionTypeRequirement!]!
+  baseCostPerUnit: Float!
+  stoppageSurchargeRate: Float!
+  nextLevel: ID
+  inputs: [ProductQuantity!]!
+  outputs: [ProductQuantity!]!
+  storage: [ProductQuantity!]!
+}
+
+input ProducerLevelAsInput {
+  id: ID!
+  actionRequirements: [ActionTypeRequirementAsInput!]!
+  baseCostPerUnit: Float!
+  stoppageSurchargeRate: Float!
+  nextLevel: ID
+  inputs: [ProductQuantityAsInput!]!
+  outputs: [ProductQuantityAsInput!]!
+  storage: [ProductQuantityAsInput!]!
+}
+
+type ProducerTypeEnum {
+  id: ID!
+}
+
+input ProducerTypeEnumAsInput {
+  id: ID!
+}
+
+type ProductionReport {
+  id: ID!
+  producerReports: [StorageTransactionReport!]!
+  ok: Boolean!
+}
+
+type ProductQuantity {
+  id: ID!
+  type: ProductTypeEnum!
+  quantity: Float!
+}
+
+input ProductQuantityAsInput {
+  id: ID!
+  type: ProductTypeEnumAsInput!
+  quantity: Float!
+}
+
+type ProductTypeEnum {
+  id: ID!
+}
+
+input ProductTypeEnumAsInput {
+  id: ID!
+}
+
+type Query {
+  """
+  Mandatory service manifest.
+  """
+  info: Info!
+
+  """
+  Kind Query
+  """
+  query(input: KindQueryInput!): InstanceSet
+  queryJSON(input: KindQueryInput!): String
+  CKGErrors: [String]
+}
+
+type Simulation {
+  id: ID!
+  config: SimulationConfig!
+  company: Company!
+  map: Map!
+  step: Float!
+  status: SimulationStatusEnum!
+}
+
+type SimulationConfig {
+  id: ID!
+  seed: Float!
+  mapConfig: MapConfig!
+  companyConfig: CompanyConfig!
+  cityConfig: CityConfig!
+  pathConfigs: [PathConfig!]!
+}
+
+type SimulationStatusEnum {
+  id: ID!
+}
+
+type SimulationStepResult {
+  id: ID!
+  status: SimulationStatusEnum!
+  companyReport: CompanyReport!
+}
+
+type Storage {
+  id: ID!
+  product: ProductTypeEnum!
+  capacity: Float!
+  amount: Float!
+}
+
+input StorageAsInput {
+  id: ID!
+  product: ProductTypeEnumAsInput!
+  capacity: Float!
+  amount: Float!
+}
+
+type StorageTransaction {
+  id: ID!
+  storage: Storage!
+  originalAmount: Float!
+  requestedAmount: Float!
+  actualAmount: Float!
+  ok: Boolean!
+}
+
+type StorageTransactionReport {
+  id: ID!
+  withdrawals: [StorageTransaction!]!
+  deposits: [StorageTransaction!]!
+  withdrawalCommits: [ID!]!
+  depositCommits: [ID!]!
+  ok: Boolean!
+}
+
+type SupplyDepotLevel {
+  id: ID!
+  storage: [Storage!]!
+  nextLevel: ID
+  actionRequirements: [ActionTypeRequirement!]!
+}
+
+scalar Time
+
+type VehicleLevel {
+  id: ID!
+  cargoCapacity: [ProductQuantity!]!
+  maxSpeed: Float!
+  maxDistance: Float!
+  reliability: Float!
+  maintainAfterSteps: Int!
+  durability: Float!
+}

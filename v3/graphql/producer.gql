@@ -1,0 +1,263 @@
+mutation bootstrap {
+  addProducerTypeEnums(
+    input: [
+      { id: "OilWell" }
+      { id: "OilRefinery" }
+      { id: "Forest" }
+      { id: "LumberMill" }
+      { id: "CoalMine" }
+      { id: "PowerPlant" }
+      { id: "Cotton" }
+      { id: "TextileMill" }
+      { id: "Factory" }
+      { id: "Farm" }
+    ]
+  )
+
+  addResources(
+    input: [
+      {
+        id: "OilWell:0:Material:Crude"
+        sim: "Default"
+        type: "Crude"
+        capacity: 10000
+        quantity: 10000
+        basePricePerUnit: 1
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 1
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "OilWell:0:Product:Crude"
+        sim: "Default"
+        type: "Crude"
+        capacity: 100
+        quantity: 98
+        basePricePerUnit: 1
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 1
+        replenishRate: 1
+        consumptionRate: 0
+      }
+      {
+        id: "OilRefinery:0:Material:Crude"
+        sim: "Default"
+        type: "Crude"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 1
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 1
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "OilRefinery:0:Product:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 1
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 1
+        replenishRate: 1
+        consumptionRate: 0
+      }
+      {
+        id: "Factory:0:Material:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 1
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 1
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "Factory:0:Product:Goods"
+        sim: "Default"
+        type: "Goods"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 1
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 1
+        replenishRate: 1
+        consumptionRate: 0
+      }
+    ]
+  )
+
+  addProducers(
+    input: [
+      {
+        id: "OilWell:0"
+        sim: "Default"
+        type: "OilWell"
+        material: ["OilWell:0:Material:Crude"]
+        products: ["OilWell:0:Product:Crude"]
+        stoppageSurchargeFactor: 0.1
+        x: 0
+        y: 0
+        steps: 0
+      }
+      {
+        id: "OilRefinery:0"
+        sim: "Default"
+        type: "OilRefinery"
+        material: ["OilRefinery:0:Material:Crude"]
+        products: ["OilRefinery:0:Product:Petrochemicals"]
+        stoppageSurchargeFactor: 0.1
+        x: 2
+        y: 0
+        steps: 0
+      }
+      {
+        id: "Farm:0"
+        sim: "Default"
+        type: "Farm"
+        material: ["Farm:0:Material:Petrochemicals"]
+        products: ["Farm:0:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 11
+        y: 4
+        steps: 0
+      }
+      {
+        id: "Farm:1"
+        sim: "Default"
+        type: "Farm"
+        material: ["Farm:1:Material:Petrochemicals"]
+        products: ["Farm:1:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 10
+        y: 5
+        steps: 0
+      }
+      {
+        id: "Factory:0"
+        sim: "Default"
+        type: "Factory"
+        material: ["Factory:0:Material:Petrochemicals"]
+        products: ["Factory:0:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 9
+        y: 8
+        steps: 0
+      }
+      {
+        id: "CoalMine:0"
+        sim: "Default"
+        type: "CoalMine"
+        material: ["Factory:0:Material:Petrochemicals"]
+        products: ["Factory:0:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 4
+        y: 1
+        steps: 0
+      }
+      {
+        id: "PowerPlant:0"
+        sim: "Default"
+        type: "PowerPlant"
+        material: ["Factory:0:Material:Petrochemicals"]
+        products: ["Factory:0:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 6
+        y: 2
+        steps: 0
+      }
+      {
+        id: "PowerPlant:1"
+        sim: "Default"
+        type: "PowerPlant"
+        material: ["Factory:0:Material:Petrochemicals"]
+        products: ["Factory:0:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 7
+        y: 8
+        steps: 0
+      }
+      {
+        id: "Forest:0"
+        sim: "Default"
+        type: "Forest"
+        material: ["Factory:0:Material:Petrochemicals"]
+        products: ["Factory:0:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 5
+        y: 10
+        steps: 0
+      }
+      {
+        id: "Forest:1"
+        sim: "Default"
+        type: "Forest"
+        material: ["Factory:0:Material:Petrochemicals"]
+        products: ["Factory:0:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 6
+        y: 11
+        steps: 0
+      }
+      {
+        id: "LumberMill:0"
+        sim: "Default"
+        type: "LumberMill"
+        material: ["Factory:0:Material:Petrochemicals"]
+        products: ["Factory:0:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 7
+        y: 9
+        steps: 0
+      }
+      {
+        id: "Warehouse:0"
+        sim: "Default"
+        type: "Warehouse"
+        material: ["Factory:0:Material:Petrochemicals"]
+        products: ["Factory:0:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 6
+        y: 3
+        steps: 0
+      }
+      {
+        id: "Warehouse:1"
+        sim: "Default"
+        type: "Warehouse"
+        material: ["Factory:0:Material:Petrochemicals"]
+        products: ["Factory:0:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 8
+        y: 4
+        steps: 0
+      }
+      {
+        id: "Cotton:0"
+        sim: "Default"
+        type: "Cotton"
+        material: ["Factory:0:Material:Petrochemicals"]
+        products: ["Factory:0:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 1
+        y: 5
+        steps: 0
+      }
+      {
+        id: "TextileMill:0"
+        sim: "Default"
+        type: "TextileMill"
+        material: ["Factory:0:Material:Petrochemicals"]
+        products: ["Factory:0:Product:Goods"]
+        stoppageSurchargeFactor: 0.1
+        x: 2
+        y: 3
+        steps: 0
+      }
+    ]
+  )
+}

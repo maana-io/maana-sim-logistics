@@ -1,0 +1,46 @@
+mutation bootstrap_path {
+  addPathTypeEnums(
+    input: [
+      { id: "Road" }
+      { id: "Rail" }
+      { id: "Flight" }
+      { id: "Shipping" }
+      { id: "PowerLine" }
+    ]
+  )
+  addPathConfigs(
+    input: [
+      {
+        id: "Road:Default"
+        type: "Road"
+        actionRequirements: ["Road:Build:Default", "Road:Recycle:Default"]
+      }
+      {
+        id: "Rail:Default"
+        type: "Rail"
+        actionRequirements: ["Rail:Build:Default", "Rail:Recycle:Default"]
+      }
+      {
+        id: "Flight:Default"
+        type: "Flight"
+        actionRequirements: ["Flight:Build:Default", "Flight:Recycle:Default"]
+      }
+      {
+        id: "Shipping:Default"
+        type: "Shipping"
+        actionRequirements: [
+          "Shipping:Build:Default"
+          "Shipping:Recycle:Default"
+        ]
+      }
+      {
+        id: "PowerLine:Default"
+        type: "PowerLine"
+        actionRequirements: [
+          "PowerLine:Build:Default"
+          "PowerLine:Recycle:Default"
+        ]
+      }
+    ]
+  )
+}

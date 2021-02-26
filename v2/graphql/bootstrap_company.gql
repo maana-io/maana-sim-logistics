@@ -1,0 +1,3 @@
+mutation bootstrap_company {
+  addCompanyConfigs(input: [{ id: "Default", initialCredit: 1.0 }])
+}

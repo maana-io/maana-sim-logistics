@@ -1,0 +1,229 @@
+mutation bootstrap {
+  addRepairStatusEnums(
+    input: [
+      { id: "Pending" }
+      { id: "InTransit" }
+      { id: "Repairing" }
+      { id: "Repaired" }
+      { id: "ErrHub" }
+      { id: "ErrSupplies" }
+    ]
+  )
+
+  addHubTypeEnums(
+    input: [
+      { id: "TruckDepot" }
+      { id: "TrainStation" }
+      { id: "Airport" }
+      { id: "Port" }
+    ]
+  )
+
+  addResources(
+    input: [
+      {
+        id: "Airport:0:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "Airport:0:Energy"
+        sim: "Default"
+        type: "Energy"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "Airport:1:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "Airport:1:Energy"
+        sim: "Default"
+        type: "Energy"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "Port:0:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "Port:0:Energy"
+        sim: "Default"
+        type: "Energy"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "Port:1:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "Port:1:Energy"
+        sim: "Default"
+        type: "Energy"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "TruckDepot:0:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "TruckDepot:0:Energy"
+        sim: "Default"
+        type: "Energy"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "TruckDepot:1:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "TruckDepot:1:Energy"
+        sim: "Default"
+        type: "Energy"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 1
+      }
+    ]
+  )
+
+  addHubs(
+    input: [
+      {
+        id: "Airport:0"
+        sim: "Default"
+        type: "Airport"
+        vehicleType: "Plane"
+        supplies: ["Airport:0:Petrochemicals", "Airport:0:Energy"]
+        x: 3
+        y: 4
+      }
+      {
+        id: "Airport:1"
+        sim: "Default"
+        type: "Airport"
+        vehicleType: "Plane"
+        supplies: ["Airport:1:Petrochemicals", "Airport:1:Energy"]
+        x: 9
+        y: 7
+      }
+      {
+        id: "Port:0"
+        sim: "Default"
+        type: "Port"
+        vehicleType: "Ship"
+        supplies: ["Port:0:Petrochemicals", "Port:0:Energy"]
+        x: 9
+        y: 3
+      }
+      {
+        id: "Port:1"
+        sim: "Default"
+        type: "Port"
+        vehicleType: "Ship"
+        supplies: ["Port:1:Petrochemicals", "Port:1:Energy"]
+        x: 2
+        y: 7
+      }
+      {
+        id: "TruckDepot:0"
+        sim: "Default"
+        type: "TruckDepot"
+        vehicleType: "Truck"
+        supplies: ["TruckDepot:0:Petrochemicals", "TruckDepot:0:Energy"]
+        x: 1
+        y: 2
+      }
+      {
+        id: "TruckDepot:1"
+        sim: "Default"
+        type: "TruckDepot"
+        vehicleType: "Truck"
+        supplies: ["TruckDepot:1:Petrochemicals", "TruckDepot:1:Energy"]
+        x: 10
+        y: 9
+      }
+    ]
+  )
+}

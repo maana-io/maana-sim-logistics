@@ -1,0 +1,53 @@
+mutation add_scratch {
+  addProductTypeEnums(
+    input: [
+      { id: "Coal" }
+      { id: "Oil" }
+      { id: "Energy" }
+      { id: "Petrochemicals" }
+    ]
+  )
+  addStorages(
+    input: [
+      { id: "OilWell:0:Source", product: "Oil", capacity: 1000, amount: 1000 }
+      { id: "OilWell:0:OilOutput", product: "Oil", capacity: 1000, amount: 0 }
+      {
+        id: "PowerPlant:0:EnergyOutput"
+        product: "Energy"
+        capacity: 1000
+        amount: 1000
+      }
+    ]
+  )
+  addStorageAmounts(
+    input: [
+      {
+        id: "OilWell:0:Source:Withdrawal"
+        storage: "OilWell:0:Source"
+        amount: 1000
+      }
+      {
+        id: "OilWell:0:OilOutput:Deposit"
+        storage: "OilWell:0:OilOutput"
+        amount: 1000
+      }
+      {
+        id: "PowerPlant:0:EnergyOutput:Withdrawal"
+        storage: "PowerPlant:0:EnergyOutput"
+        amount: 1000
+      }
+    ]
+  )
+  addProducers(
+    input: [
+      {
+        id: "OilWll:0"
+        inputs: [
+          "OilWell:0:Source:Withdrawal"
+          "PowerPlant:0:EnergyOutput:Withdrawal"
+        ]
+        outputs: ["OilWell:0:OilOutput:Deposit"]
+      }
+    ]
+  )
+}

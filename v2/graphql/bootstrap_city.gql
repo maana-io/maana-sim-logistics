@@ -1,0 +1,120 @@
+mutation bootstrap_city {
+  addProductQuantitys(
+    input: [
+      { id: "CityConfig:Demands:Goods:Default", type: "Goods", quantity: 0.1 }
+      { id: "CityConfig:Demands:Food:Default", type: "Food", quantity: 0.1 }
+      { id: "CityConfig:Demands:Energy:Default", type: "Energy", quantity: 0.1 }
+    ]
+  )
+
+  addStorages(
+    input: [
+      {
+        id: "CityConfig:Consumables:Goods:Default"
+        type: "Goods"
+        capacity: 1.0
+        amount: 1.0
+      }
+      {
+        id: "CityConfig:Consumables:Food:Default"
+        type: "Food"
+        capacity: 1.0
+        amount: 1.0
+      }
+    ]
+  )
+
+  addConsumables(
+    input: [
+      {
+        id: "CityConfig:Consumables:Goods:Default"
+        storage: "CityConfig:Consumables:Goods:Default"
+        basePricePerUnit: 1.0
+        minPriceBasisPct: 1.0
+        price: 1.0
+      }
+      {
+        id: "CityConfig:Consumables:Food:Default"
+        storage: "CityConfig:Consumables:Food:Default"
+        basePricePerUnit: 1.0
+        minPriceBasisPct: 1.0
+        price: 1.0
+      }
+    ]
+  )
+
+  addActionTypeRequirements(
+    input: [
+      {
+        id: "City:Upgrade:1"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "City:Upgrade:2"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "City:Upgrade:3"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+    ]
+  )
+
+  addCityLevels(
+    input: [
+      {
+        id: 0
+        storageCapacityModifier: 1.0
+        actionRequirements: []
+        nextLevel: 1
+      }
+      {
+        id: 1
+        storageCapacityModifier: 1.0
+        actionRequirements: ["City:Upgrade:1"]
+        nextLevel: 2
+      }
+      {
+        id: 2
+        storageCapacityModifier: 1.0
+        actionRequirements: ["City:Upgrade:2"]
+        nextLevel: 3
+      }
+      {
+        id: 3
+        storageCapacityModifier: 1.0
+        actionRequirements: ["City:Upgrade:3"]
+      }
+    ]
+  )
+  addCityConfigs(
+    input: [
+      {
+        id: "Default"
+        growthRate: 1.0
+        declineRate: 1.0
+        density: 1.0
+        initialPopulation: 1
+        inputsPerPersonPerStep: [
+          "CityConfig:Demands:Goods:Default"
+          "CityConfig:Demands:Food:Default"
+          "CityConfig:Demands:Energy:Default"
+        ]
+        defaultLevel: 0
+        consumables: [
+          "CityConfig:Consumables:Goods:Default"
+          "CityConfig:Consumables:Food:Default"
+        ]
+      }
+    ]
+  )
+}

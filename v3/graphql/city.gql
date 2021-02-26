@@ -1,0 +1,104 @@
+mutation bootstrap {
+  addResources(
+    input: [
+      {
+        id: "City:0:Goods"
+        sim: "Default"
+        type: "Goods"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 5
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 2
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "City:0:Food"
+        sim: "Default"
+        type: "Food"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 5
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 2
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "City:0:Energy"
+        sim: "Default"
+        type: "Energy"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 5
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 2
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "City:1:Goods"
+        sim: "Default"
+        type: "Goods"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 5
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 2
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "City:1:Food"
+        sim: "Default"
+        type: "Food"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 5
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 2
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      {
+        id: "City:1:Energy"
+        sim: "Default"
+        type: "Energy"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 5
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 2
+        replenishRate: 0
+        consumptionRate: 1
+      }
+    ]
+  )
+
+  addCitys(
+    input: [
+      {
+        id: "City:0"
+        sim: "Default"
+        population: 100
+        populationGrowthRate: 0.1
+        populationDeclineRate: 0.1
+        x: 4
+        y: 4
+        demand: ["City:0:Goods","City:0:Food","City:0:Energy"]
+        steps: 0
+      }
+        id: "City:1"
+        sim: "Default"
+        population: 100
+        populationGrowthRate: 0.1
+        populationDeclineRate: 0.1
+        x: 8
+        y: 7
+        demand: ["City:1:Goods","City:1:Food","City:1:Energy"]
+        steps: 0
+      }
+    ]
+  )
+}

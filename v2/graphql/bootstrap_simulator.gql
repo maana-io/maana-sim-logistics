@@ -1,0 +1,25 @@
+mutation bootstrap_sim {
+  addSimulationStatusEnums(
+    input: [{ id: "Ready" }, { id: "Done" }, { id: "Error" }]
+  )
+  addOrderTypeEnums(input: [{ id: "Buy" }, { id: "Sell" }])
+
+  addActionStatusEnums(
+    input: [{ id: "InProgress" }, { id: "Complete" }, { id: "Failed" }]
+  )
+
+  addActionTypeEnums(
+    input: [
+      { id: "Build" }
+      { id: "Recycle" }
+      { id: "Research" }
+      { id: "Upgrade" }
+    ]
+  )
+
+  addSimulationConfigs(
+    input: [
+      { id: "Default", seed: 0, loadMap: "Default", companyConfig: "Default" }
+    ]
+  )
+}

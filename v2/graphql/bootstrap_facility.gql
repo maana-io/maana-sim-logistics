@@ -1,0 +1,823 @@
+mutation bootstrap_facility {
+  addFacilityTypeEnums(
+    input: [
+      { id: "TruckDepot" }
+      { id: "RailStation" }
+      { id: "Airport" }
+      { id: "Port" }
+    ]
+  )
+
+  addProductQuantitys(
+    input: [
+      # Per vehicle inputs
+      { id: "TruckDepot:Input:Energy", type: "Energy", quantity: 1.0 }
+      { id: "TruckDepot:Input:Metal", type: "Metal", quantity: 1.0 }
+      {
+        id: "TruckDepot:Input:Petrochemicals"
+        type: "Petrochemicals"
+        quantity: 1.0
+      }
+      { id: "RailStation:Input:Energy", type: "Energy", quantity: 1.0 }
+      { id: "RailStation:Input:Metal", type: "Metal", quantity: 1.0 }
+      { id: "RailStation:Input:Coal", type: "Petrochemicals", quantity: 1.0 }
+      { id: "Airport:Input:Energy", type: "Energy", quantity: 1.0 }
+      { id: "Airport:Input:Metal", type: "Metal", quantity: 1.0 }
+      {
+        id: "Airport:Input:Petrochemicals"
+        type: "Petrochemicals"
+        quantity: 1.0
+      }
+      { id: "Port:Input:Energy", type: "Energy", quantity: 1.0 }
+      { id: "Port:Input:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Port:Input:Petrochemicals", type: "Petrochemicals", quantity: 1.0 }
+      # Truck Depot
+      { id: "TruckDepot:Build:0:Wood", type: "Wood", quantity: 1.0 }
+      { id: "TruckDepot:Build:0:Metal", type: "Metal", quantity: 1.0 }
+      { id: "TruckDepot:Build:1:Wood", type: "Wood", quantity: 1.0 }
+      { id: "TruckDepot:Build:1:Metal", type: "Metal", quantity: 1.0 }
+      { id: "TruckDepot:Build:2:Wood", type: "Wood", quantity: 1.0 }
+      { id: "TruckDepot:Build:2:Metal", type: "Metal", quantity: 1.0 }
+      { id: "TruckDepot:Build:3:Wood", type: "Wood", quantity: 1.0 }
+      { id: "TruckDepot:Build:3:Metal", type: "Metal", quantity: 1.0 }
+      { id: "TruckDepot:Upgrade:1:Wood", type: "Wood", quantity: 1.0 }
+      { id: "TruckDepot:Upgrade:1:Metal", type: "Metal", quantity: 1.0 }
+      { id: "TruckDepot:Upgrade:2:Wood", type: "Wood", quantity: 1.0 }
+      { id: "TruckDepot:Upgrade:2:Metal", type: "Metal", quantity: 1.0 }
+      { id: "TruckDepot:Upgrade:3:Wood", type: "Wood", quantity: 1.0 }
+      { id: "TruckDepot:Upgrade:3:Metal", type: "Metal", quantity: 1.0 }
+      # Rail Station
+      { id: "RailStation:Build:0:Wood", type: "Wood", quantity: 1.0 }
+      { id: "RailStation:Build:0:Metal", type: "Metal", quantity: 1.0 }
+      { id: "RailStation:Build:1:Wood", type: "Wood", quantity: 1.0 }
+      { id: "RailStation:Build:1:Metal", type: "Metal", quantity: 1.0 }
+      { id: "RailStation:Build:2:Wood", type: "Wood", quantity: 1.0 }
+      { id: "RailStation:Build:2:Metal", type: "Metal", quantity: 1.0 }
+      { id: "RailStation:Build:3:Wood", type: "Wood", quantity: 1.0 }
+      { id: "RailStation:Build:3:Metal", type: "Metal", quantity: 1.0 }
+      { id: "RailStation:Upgrade:1:Wood", type: "Wood", quantity: 1.0 }
+      { id: "RailStation:Upgrade:1:Metal", type: "Metal", quantity: 1.0 }
+      { id: "RailStation:Upgrade:2:Wood", type: "Wood", quantity: 1.0 }
+      { id: "RailStation:Upgrade:2:Metal", type: "Metal", quantity: 1.0 }
+      { id: "RailStation:Upgrade:3:Wood", type: "Wood", quantity: 1.0 }
+      { id: "RailStation:Upgrade:3:Metal", type: "Metal", quantity: 1.0 }
+      # Airport
+      { id: "Airport:Build:0:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Airport:Build:0:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Airport:Build:1:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Airport:Build:1:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Airport:Build:2:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Airport:Build:2:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Airport:Build:3:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Airport:Build:3:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Airport:Upgrade:1:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Airport:Upgrade:1:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Airport:Upgrade:2:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Airport:Upgrade:2:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Airport:Upgrade:3:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Airport:Upgrade:3:Metal", type: "Metal", quantity: 1.0 }
+      # Port
+      { id: "Port:Build:0:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Port:Build:0:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Port:Build:1:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Port:Build:1:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Port:Build:2:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Port:Build:2:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Port:Build:3:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Port:Build:3:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Port:Upgrade:1:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Port:Upgrade:1:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Port:Upgrade:2:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Port:Upgrade:2:Metal", type: "Metal", quantity: 1.0 }
+      { id: "Port:Upgrade:3:Wood", type: "Wood", quantity: 1.0 }
+      { id: "Port:Upgrade:3:Metal", type: "Metal", quantity: 1.0 }
+    ]
+  )
+
+  addActionTypeRequirements(
+    input: [
+      # Truck Depot
+      {
+        id: "TruckDepot:Recycle"
+        type: "Recycle"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "TruckDepot:Build:0"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["TruckDepot:Build:0:Wood", "TruckDepot:Build:0:Metal"]
+      }
+      {
+        id: "TruckDepot:Build:1"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["TruckDepot:Build:1:Wood", "TruckDepot:Build:1:Metal"]
+      }
+      {
+        id: "TruckDepot:Build:2"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["TruckDepot:Build:2:Wood", "TruckDepot:Build:2:Metal"]
+      }
+      {
+        id: "TruckDepot:Build:3"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["TruckDepot:Build:3:Wood", "TruckDepot:Build:3:Metal"]
+      }
+      {
+        id: "TruckDepot:Research:1"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "TruckDepot:Research:2"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "TruckDepot:Research:3"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "TruckDepot:Upgrade:1"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: ["TruckDepot:Upgrade:0:Wood", "TruckDepot:Upgrade:0:Metal"]
+      }
+      {
+        id: "TruckDepot:Upgrade:2"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: ["TruckDepot:Upgrade:1:Wood", "TruckDepot:Upgrade:1:Metal"]
+      }
+      {
+        id: "TruckDepot:Upgrade:3"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: ["TruckDepot:Upgrade:2:Wood", "TruckDepot:Upgrade:2:Metal"]
+      }
+      # Rail Station
+      {
+        id: "RailStation:Recycle"
+        type: "Recycle"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "RailStation:Build:0"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["RailStation:Build:0:Wood", "RailStation:Build:0:Metal"]
+      }
+      {
+        id: "TruckDepot:Build:1"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["RailStation:Build:1:Wood", "RailStation:Build:1:Metal"]
+      }
+      {
+        id: "RailStation:Build:2"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["RailStation:Build:2:Wood", "RailStation:Build:2:Metal"]
+      }
+      {
+        id: "RailStation:Build:3"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["RailStation:Build:3:Wood", "RailStation:Build:3:Metal"]
+      }
+      {
+        id: "RailStation:Research:1"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "RailStation:Research:2"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "RailStation:Research:3"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "RailStation:Upgrade:1"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: ["RailStation:Upgrade:1:Wood", "RailStation:Upgrade:1:Metal"]
+      }
+      {
+        id: "RailStation:Upgrade:2"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: ["RailStation:Upgrade:2:Wood", "RailStation:Upgrade:2:Metal"]
+      }
+      {
+        id: "RailStation:Upgrade:3"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: ["RailStation:Upgrade:3:Wood", "RailStation:Upgrade:3:Metal"]
+      }
+      # Airport
+      {
+        id: "Airport:Recycle"
+        type: "Recycle"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Airport:Build:0"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Airport:Build:0:Wood", "Airport:Build:0:Metal"]
+      }
+      {
+        id: "Airport:Build:1"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Airport:Build:1:Wood", "Airport:Build:1:Metal"]
+      }
+      {
+        id: "Airport:Build:2"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Airport:Build:2:Wood", "Airport:Build:2:Metal"]
+      }
+      {
+        id: "Airport:Build:3"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Airport:Build:3:Wood", "Airport:Build:3:Metal"]
+      }
+      {
+        id: "Airport:Research:1"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Airport:Research:2"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Airport:Research:3"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Airport:Upgrade:1"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Airport:Upgrade:1:Wood", "Airport:Upgrade:1:Metal"]
+      }
+      {
+        id: "Airport:Upgrade:2"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Airport:Upgrade:2:Wood", "Airport:Upgrade:2:Metal"]
+      }
+      {
+        id: "Airport:Upgrade:3"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Airport:Upgrade:3:Wood", "Airport:Upgrade:3:Metal"]
+      }
+      # Port
+      { id: "Port:Recycle", type: "Recycle", time: 1.0, cost: 1.0, inputs: [] }
+      {
+        id: "Port:Build:0"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Port:Build:0:Wood", "Port:Build:0:Metal"]
+      }
+      {
+        id: "Port:Build:1"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Port:Build:1:Wood", "Port:Build:1:Metal"]
+      }
+      {
+        id: "Port:Build:2"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Port:Build:2:Wood", "Port:Build:2:Metal"]
+      }
+      {
+        id: "Port:Build:3"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Port:Build:3:Wood", "Port:Build:3:Metal"]
+      }
+      {
+        id: "Port:Research:1"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Port:Research:2"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Port:Research:3"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Port:Upgrade:1"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Port:Upgrade:1:Wood", "Port:Upgrade:1:Metal"]
+      }
+      {
+        id: "Port:Upgrade:2"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Port:Upgrade:2:Wood", "Port:Upgrade:2:Metal"]
+      }
+      {
+        id: "Port:Upgrade:3"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: ["Port:Upgrade:3:Wood", "Port:Upgrade:3:Metal"]
+      }
+    ]
+  )
+
+  addStorages(
+    input: [
+      # Truck Depot
+      {
+        id: "TruckDepot:0:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "TruckDepot:0:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "TruckDepot:1:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "TruckDepot:1:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "TruckDepot:2:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "TruckDepot:2:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "TruckDepot:3:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "TruckDepot:3:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      # Rail Station
+      { id: "RailStation:0:Coal", type: "Coal", capacity: 1.0, amount: 1.0 }
+      { id: "RailStation:0:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      { id: "RailStation:1:Coal", type: "Coal", capacity: 1.0, amount: 1.0 }
+      { id: "RailStation:1:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      { id: "RailStation:2:Coal", type: "Coal", capacity: 1.0, amount: 1.0 }
+      { id: "RailStation:2:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      { id: "RailStation:3:Coal", type: "Coal", capacity: 1.0, amount: 1.0 }
+      { id: "RailStation:3:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      # Airport
+      {
+        id: "Airport:0:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "Airport:0:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "Airport:1:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "Airport:1:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "Airport:2:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "Airport:2:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "Airport:3:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "Airport:3:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      # Port
+      {
+        id: "Port:0:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "Port:0:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "Port:1:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "Port:1:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "Port:2:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "Port:2:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "Port:3:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "Port:3:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+    ]
+  )
+
+  addFacilityLevels(
+    input: [
+      # Truck Depot
+      {
+        id: "TruckDepot:0"
+        type: "TruckDepot"
+        maxVehicles: 1
+        maxVehicleLevel: "Truck:0"
+        repairEfficiency: 1.0
+        actionRequirements: ["TruckDepot:Build:0", "TruckDepot:Recycle"]
+        nextLevel: "TruckDepot:1"
+        storage: ["TruckDepot:0:Petrochemicals", "TruckDepot:0:Metal"]
+        inputsPerVehicle: [
+          "TruckDepot:Input:Energy"
+          "TruckDepot:Input:Metal"
+          "TruckDepot:Input:Petrochemicals"
+        ]
+      }
+      {
+        id: "TruckDepot:1"
+        type: "TruckDepot"
+        maxVehicles: 1
+        maxVehicleLevel: "Truck:1"
+        repairEfficiency: 1.0
+        actionRequirements: [
+          "TruckDepot:Recycle"
+          "TruckDepot:Build:1"
+          "TruckDepot:Research:1"
+          "TruckDepot:Upgrade:1"
+        ]
+        nextLevel: "TruckDepot:2"
+        storage: ["TruckDepot:1:Petrochemicals", "TruckDepot:1:Metal"]
+        inputsPerVehicle: [
+          "TruckDepot:Input:Energy"
+          "TruckDepot:Input:Metal"
+          "TruckDepot:Input:Petrochemicals"
+        ]
+      }
+      {
+        id: "TruckDepot:2"
+        type: "TruckDepot"
+        maxVehicles: 1
+        maxVehicleLevel: "Truck:2"
+        repairEfficiency: 1.0
+        actionRequirements: [
+          "TruckDepot:Recycle"
+          "TruckDepot:Research:2"
+          "TruckDepot:Upgrade:2"
+        ]
+        nextLevel: "TruckDepot:3"
+        storage: ["TruckDepot:2:Petrochemicals", "TruckDepot:2:Metal"]
+        inputsPerVehicle: [
+          "TruckDepot:Input:Energy"
+          "TruckDepot:Input:Metal"
+          "TruckDepot:Input:Petrochemicals"
+        ]
+      }
+      {
+        id: "TruckDepot:3"
+        type: "TruckDepot"
+        maxVehicles: 1
+        maxVehicleLevel: "Truck:3"
+        repairEfficiency: 1.0
+        actionRequirements: [
+          "TruckDepot:Recycle"
+          "TruckDepot:Research:3"
+          "TruckDepot:Upgrade:3"
+        ]
+        storage: ["TruckDepot:3:Petrochemicals", "TruckDepot:3:Metal"]
+        inputsPerVehicle: [
+          "TruckDepot:Input:Energy"
+          "TruckDepot:Input:Metal"
+          "TruckDepot:Input:Petrochemicals"
+        ]
+      }
+      # Rail Station
+      {
+        id: "RailStation:0"
+        type: "RailStation"
+        maxVehicles: 1
+        maxVehicleLevel: "Train:0"
+        repairEfficiency: 1.0
+        actionRequirements: ["RailStation:Build:0", "RailStation:Recycle"]
+        nextLevel: "RailStation:1"
+        storage: ["RailStation:0:Coal", "RailStation:0:Metal"]
+        inputsPerVehicle: [
+          "RailStation:Input:Energy"
+          "RailStation:Input:Metal"
+          "RailStation:Input:Coal"
+        ]
+      }
+      {
+        id: "RailStation:1"
+        type: "RailStation"
+        maxVehicles: 1
+        maxVehicleLevel: "Train:1"
+        repairEfficiency: 1.0
+        actionRequirements: [
+          "RailStation:Recycle"
+          "RailStation:Build:1"
+          "RailStation:Research:1"
+          "RailStation:Upgrade:1"
+        ]
+        nextLevel: "RailStation:2"
+        storage: ["RailStation:1:Petrochemicals", "RailStation:1:Metal"]
+        inputsPerVehicle: [
+          "RailStation:Input:Energy"
+          "RailStation:Input:Metal"
+          "RailStation:Input:Coal"
+        ]
+      }
+      {
+        id: "RailStation:2"
+        type: "RailStation"
+        maxVehicles: 1
+        maxVehicleLevel: "Train:2"
+        repairEfficiency: 1.0
+        actionRequirements: [
+          "RailStation:Recycle"
+          "RailStation:Build:2"
+          "RailStation:Research:2"
+          "RailStation:Upgrade:2"
+        ]
+        nextLevel: "RailStation:3"
+        storage: ["RailStation:2:Petrochemicals", "RailStation:2:Metal"]
+        inputsPerVehicle: [
+          "RailStation:Input:Energy"
+          "RailStation:Input:Metal"
+          "RailStation:Input:Coal"
+        ]
+      }
+      {
+        id: "RailStation:3"
+        type: "RailStation"
+        maxVehicles: 1
+        maxVehicleLevel: "Train:3"
+        repairEfficiency: 1.0
+        actionRequirements: [
+          "RailStation:Recycle"
+          "RailStation:Build:3"
+          "RailStation:Research:3"
+          "RailStation:Upgrade:3"
+        ]
+        storage: ["RailStation:3:Petrochemicals", "RailStation:3:Metal"]
+        inputsPerVehicle: [
+          "RailStation:Input:Energy"
+          "RailStation:Input:Metal"
+          "RailStation:Input:Coal"
+        ]
+      }
+      # Airport
+      {
+        id: "Airport:0"
+        type: "Airport"
+        maxVehicles: 1
+        maxVehicleLevel: "Plane:0"
+        repairEfficiency: 1.0
+        actionRequirements: ["Airport:Build:0", "Airport:Recycle"]
+        nextLevel: "Airport:1"
+        storage: ["Airport:0:Petrochemicals", "Airport:0:Metal"]
+        inputsPerVehicle: [
+          "Airport:Input:Energy"
+          "Airport:Input:Metal"
+          "Airport:Input:Petrochemicals"
+        ]
+      }
+      {
+        id: "Airport:1"
+        type: "Airport"
+        maxVehicles: 1
+        maxVehicleLevel: "Plane:1"
+        repairEfficiency: 1.0
+        actionRequirements: [
+          "Airport:Recycle"
+          "Airport:Build:1"
+          "Airport:Research:1"
+          "Airport:Upgrade:1"
+        ]
+        nextLevel: "Airport:2"
+        storage: ["Airport:1:Petrochemicals", "Airport:1:Metal"]
+        inputsPerVehicle: [
+          "Airport:Input:Energy"
+          "Airport:Input:Metal"
+          "Airport:Input:Petrochemicals"
+        ]
+      }
+      {
+        id: "Airport:2"
+        type: "Airport"
+        maxVehicles: 1
+        maxVehicleLevel: "Plane:2"
+        repairEfficiency: 1.0
+        actionRequirements: [
+          "Airport:Recycle"
+          "Airport:Build:2"
+          "Airport:Research:2"
+          "Airport:Upgrade:2"
+        ]
+        nextLevel: "Airport:3"
+        storage: ["Airport:2:Petrochemicals", "Airport:2:Metal"]
+        inputsPerVehicle: [
+          "Airport:Input:Energy"
+          "Airport:Input:Metal"
+          "Airport:Input:Petrochemicals"
+        ]
+      }
+      {
+        id: "Airport:3"
+        type: "Airport"
+        maxVehicles: 1
+        maxVehicleLevel: "Plane:3"
+        repairEfficiency: 1.0
+        actionRequirements: [
+          "Airport:Recycle"
+          "Airport:Build:3"
+          "Airport:Research:3"
+          "Airport:Upgrade:3"
+        ]
+        storage: ["Airport:3:Petrochemicals", "Airport:3:Metal"]
+        inputsPerVehicle: [
+          "Airport:Input:Energy"
+          "Airport:Input:Metal"
+          "Airport:Input:Petrochemicals"
+        ]
+      }
+      # Port
+      {
+        id: "Port:0"
+        type: "Port"
+        maxVehicles: 1
+        maxVehicleLevel: "Ship:0"
+        repairEfficiency: 1.0
+        actionRequirements: ["Port:Build:0", "Port:Recycle"]
+        nextLevel: "Port:1"
+        storage: ["Port:0:Petrochemicals", "Port:0:Metal"]
+        inputsPerVehicle: [
+          "Port:Input:Energy"
+          "Port:Input:Metal"
+          "Port:Input:Petrochemicals"
+        ]
+      }
+      {
+        id: "Port:1"
+        type: "Port"
+        maxVehicles: 1
+        maxVehicleLevel: "Ship:1"
+        repairEfficiency: 1.0
+        actionRequirements: ["Port:Recycle", "Port:Build:1", "Port:Upgrade:1"]
+        nextLevel: "Port:2"
+        storage: ["Port:1:Petrochemicals", "Port:1:Metal"]
+        inputsPerVehicle: [
+          "Port:Input:Energy"
+          "Port:Input:Metal"
+          "Port:Input:Petrochemicals"
+        ]
+      }
+      {
+        id: "Port:2"
+        type: "Port"
+        maxVehicles: 1
+        maxVehicleLevel: "Ship:2"
+        repairEfficiency: 1.0
+        actionRequirements: [
+          "Port:Recycle"
+          "Port:Build:2"
+          "Port:Research:2"
+          "Port:Upgrade:2"
+        ]
+        nextLevel: "Port:3"
+        storage: ["Port:2:Petrochemicals", "Port:2:Metal"]
+        inputsPerVehicle: [
+          "Port:Input:Energy"
+          "Port:Input:Metal"
+          "Port:Input:Petrochemicals"
+        ]
+      }
+      {
+        id: "Port:3"
+        type: "Port"
+        maxVehicles: 1
+        maxVehicleLevel: "Ship:3"
+        repairEfficiency: 1.0
+        actionRequirements: [
+          "Port:Recycle"
+          "Port:Build:3"
+          "Port:Research:3"
+          "Port:Upgrade:3"
+        ]
+        storage: ["Port:3:Petrochemicals", "Port:3:Metal"]
+        inputsPerVehicle: [
+          "Port:Input:Energy"
+          "Port:Input:Metal"
+          "Port:Input:Petrochemicals"
+        ]
+      }
+    ]
+  )
+
+  addFacilityConfigs(
+    input: [
+      {
+        id: "TruckDepot:Default"
+        type: "TruckDepot"
+        defaultLevel: "TruckDepot:0"
+      }
+      {
+        id: "RailStation:Default"
+        type: "RailStation"
+        defaultLevel: "RailStation:0"
+      }
+      { id: "Airport:Default", type: "Airport", defaultLevel: "Airport:0" }
+      { id: "Port:Default", type: "Port", defaultLevel: "Port:0" }
+    ]
+  )
+}

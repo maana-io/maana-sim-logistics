@@ -1,0 +1,104 @@
+"""
+Scalars
+"""
+scalar Date
+
+type Grid {
+  id: ID!
+  width: Int
+  height: Int
+  nodes: [NodeRow]
+}
+
+input GridInput {
+  id: ID!
+  width: Int
+  height: Int
+  nodes: [NodeRowInput]
+}
+
+"""
+Boilerplate
+"""
+type Info {
+  id: ID!
+  name: String!
+  description: String
+}
+
+scalar JSON
+
+type Location {
+  id: ID!
+  x: Int!
+  y: Int!
+}
+
+input LocationInput {
+  x: Int!
+  y: Int!
+}
+
+type Node {
+  id: ID!
+  x: Int
+  y: Int
+  walkable: Boolean
+}
+
+input NodeInput {
+  id: ID!
+  x: Int
+  y: Int
+  walkable: Boolean
+}
+
+type NodeRow {
+  nodes: [Node]
+}
+
+input NodeRowInput {
+  nodes: [NodeInput]
+}
+
+type OrderedLocation {
+  id: ID!
+  location: Location
+  order: Int
+}
+
+input OrderedLocationInput {
+  id: ID!
+  location: LocationInput
+  order: Int
+}
+
+type Path {
+  id: ID!
+  locations: [OrderedLocation!]!
+}
+
+input PathInput {
+  id: ID!
+  locations: [OrderedLocationInput!]!
+}
+
+"""
+Query Root
+"""
+type Query {
+  astarFinder(
+    numRows: Int
+    numColumns: Int
+    unwalkableLocations: [LocationInput]
+    origin: LocationInput
+    target: LocationInput
+    allowDiagonal: Boolean
+    dontCrossCorners: Boolean
+  ): Path
+
+  """
+  Boilerplate
+  """
+  info: Info
+}

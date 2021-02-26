@@ -1,0 +1,37 @@
+mutation bootstrap_vehicle {
+  addVehicleTypeEnums(
+    input: [{ id: "Truck" }, { id: "Train" }, { id: "Plane" }, { id: "Ship" }]
+  )
+
+  addProductQuantitys(
+    input: [
+      { id: "Truck:0:Crude", type: "Crude", quantity: 1.0 }
+      { id: "Truck:0:Petrochemicals", type: "Petrochemicals", quantity: 1.0 }
+    ]
+  )
+
+  addVehicleLevels(
+    input: [
+      {
+        id: "Truck:0"
+        cargoCapacity: ["Truck:0:Crude", "Truck:0:Petrochemicals"]
+        maxCargoTypes: 1
+        maxSpeed: 1.0
+        maxDistance: 1.0
+        reliability: 1.0
+        maintainAfterSteps: 1.0
+        durability: 1.0
+        inputModifier: 1.0
+      }
+    ]
+  )
+
+  addVehicleConfigs(
+    input: [
+      { id: "Truck:Default", type: "Truck", defaultLevel: "Truck:0" }
+      { id: "Train:Default", type: "Train", defaultLevel: "Train:0" }
+      { id: "Plane:Default", type: "Plane", defaultLevel: "Plane:0" }
+      { id: "Ship:Default", type: "Ship", defaultLevel: "Ship:0" }
+    ]
+  )
+}

@@ -1,0 +1,89 @@
+mutation bootstrap_map {
+  addTileTypeEnums(input: [{ id: "Land" }, { id: "Water" }])
+
+  addMapLoadConfigs(input: [{ id: "Default" }])
+
+  addMapGenerationConfigs(input: [{ id: "Random 12x12", sizeX: 12, sizeY: 12 }])
+
+  addMapConfigs(
+    input: [
+      { id: "Default", loadConfig: "Default" }
+      { id: "Random 12x12", generateConfig: "Random 12x12" }
+    ]
+  )
+
+  addActionTypeRequirements(
+    input: [
+      {
+        id: "Road:Build:Default"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Road:Recycle:Default"
+        type: "Recycle"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Rail:Build:Default"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Rail:Recycle:Default"
+        type: "Recycle"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Flight:Build:Default"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Flight:Recycle:Default"
+        type: "Recycle"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Shipping:Build:Default"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "Shipping:Recycle:Default"
+        type: "Recycle"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "PowerLine:Build:Default"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "PowerLine:Recycle:Default"
+        type: "Recycle"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+    ]
+  )
+}

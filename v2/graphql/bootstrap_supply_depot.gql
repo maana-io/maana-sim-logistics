@@ -1,0 +1,175 @@
+mutation bootstrap_supply_depot {
+  addActionTypeRequirements(
+    input: [
+      {
+        id: "SupplyDepot:Recycle"
+        type: "Recycle"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "SupplyDepot:Build:1"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "SupplyDepot:Build:2"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "SupplyDepot:Build:3"
+        type: "Build"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "SupplyDepot:Research:1"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "SupplyDepot:Research:2"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "SupplyDepot:Research:3"
+        type: "Research"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "SupplyDepot:Upgrade:1"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "SupplyDepot:Upgrade:2"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+      {
+        id: "SupplyDepot:Upgrade:3"
+        type: "Upgrade"
+        time: 1.0
+        cost: 1.0
+        inputs: []
+      }
+    ]
+  )
+  addStorages(
+    input: [
+      { id: "SupplyDepot:0:Lumber", type: "Lumber", capacity: 1.0, amount: 1.0 }
+      { id: "SupplyDepot:0:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "SupplyDepot:0:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "SupplyDepot:1:Lumber", type: "Lumber", capacity: 1.0, amount: 1.0 }
+      { id: "SupplyDepot:1:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "SupplyDepot:1:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "SupplyDepot:2:Lumber", type: "Lumber", capacity: 1.0, amount: 1.0 }
+      { id: "SupplyDepot:2:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "SupplyDepot:2:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+      { id: "SupplyDepot:3:Lumber", type: "Lumber", capacity: 1.0, amount: 1.0 }
+      { id: "SupplyDepot:3:Metal", type: "Metal", capacity: 1.0, amount: 1.0 }
+      {
+        id: "SupplyDepot:3:Petrochemicals"
+        type: "Petrochemicals"
+        capacity: 1.0
+        amount: 1.0
+      }
+    ]
+  )
+
+  addSupplyDepotLevels(
+    input: [
+      {
+        id: "SupplyDepot:0"
+        storage: [
+          "SupplyDepot:0:Lumber"
+          "SupplyDepot:0:Metal"
+          "SupplyDepot:0:Petrochemicals"
+        ]
+        actionRequirements: ["SupplyDepot:Recycle"]
+        nextLevel: "SupplyDepot:1"
+      }
+      {
+        id: "SupplyDepot:1"
+        storage: [
+          "SupplyDepot:1:Lumber"
+          "SupplyDepot:1:Metal"
+          "SupplyDepot:1:Petrochemicals"
+        ]
+        actionRequirements: [
+          "SupplyDepot:Recycle"
+          "SupplyDepot:Build:1"
+          "SupplyDepot:Research:1"
+          "SupplyDepot:Build:1"
+        ]
+        nextLevel: "SupplyDepot:2"
+      }
+      {
+        id: "SupplyDepot:2"
+        storage: [
+          "SupplyDepot:2:Lumber"
+          "SupplyDepot:2:Metal"
+          "SupplyDepot:2:Petrochemicals"
+        ]
+        actionRequirements: [
+          "SupplyDepot:Recycle"
+          "SupplyDepot:Build:2"
+          "SupplyDepot:Research:2"
+          "SupplyDepot:Build:2"
+        ]
+        nextLevel: "SupplyDepot:3"
+      }
+      {
+        id: "SupplyDepot:3"
+        storage: [
+          "SupplyDepot:3:Lumber"
+          "SupplyDepot:3:Metal"
+          "SupplyDepot:3:Petrochemicals"
+        ]
+        actionRequirements: [
+          "SupplyDepot:Recycle"
+          "SupplyDepot:Build:3"
+          "SupplyDepot:Research:3"
+          "SupplyDepot:Build:3"
+        ]
+      }
+    ]
+  )
+
+  addSupplyDepotConfigs(
+    input: [{ id: "SupplyDepot:Default", defaultLevel: "SupplyDepot:0" }]
+  )
+}
