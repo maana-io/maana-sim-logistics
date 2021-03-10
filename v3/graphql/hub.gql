@@ -178,6 +178,7 @@ mutation bootstrap {
         supplies: ["Airport:0:Petrochemicals", "Airport:0:Energy"]
         x: 3
         y: 4
+        steps: 0
       }
       {
         id: "Airport:1"
@@ -187,6 +188,7 @@ mutation bootstrap {
         supplies: ["Airport:1:Petrochemicals", "Airport:1:Energy"]
         x: 9
         y: 7
+        steps: 0
       }
       {
         id: "Port:0"
@@ -196,6 +198,7 @@ mutation bootstrap {
         supplies: ["Port:0:Petrochemicals", "Port:0:Energy"]
         x: 9
         y: 3
+        steps: 0
       }
       {
         id: "Port:1"
@@ -205,6 +208,7 @@ mutation bootstrap {
         supplies: ["Port:1:Petrochemicals", "Port:1:Energy"]
         x: 2
         y: 7
+        steps: 0
       }
       {
         id: "TruckDepot:0"
@@ -214,6 +218,7 @@ mutation bootstrap {
         supplies: ["TruckDepot:0:Petrochemicals", "TruckDepot:0:Energy"]
         x: 1
         y: 2
+        steps: 0
       }
       {
         id: "TruckDepot:1"
@@ -223,6 +228,7 @@ mutation bootstrap {
         supplies: ["TruckDepot:1:Petrochemicals", "TruckDepot:1:Energy"]
         x: 10
         y: 9
+        steps: 0
       }
     ]
   )

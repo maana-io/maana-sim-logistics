@@ -1,7 +1,15 @@
 mutation bootstrap {
   addSimulations(
     input: [
-      { id: "Default", steps: 0, balance: 1000000, income: 0, expenses: 0 }
+      {
+        id: "Default"
+        name: "Default"
+        agentEndpoint: "maana-sim-logistics-ai-agent-v3"
+        steps: 0
+        balance: 1000000
+        income: 0
+        expenses: 0
+      }
     ]
   )
 
