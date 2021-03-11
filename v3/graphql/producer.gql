@@ -211,8 +211,8 @@ mutation bootstrap {
         material: ["Factory:0:Material:Petrochemicals"]
         products: ["Factory:0:Product:Goods"]
         stoppageSurchargeFactor: 0.1
-        x: 7
-        y: 9
+        x: 9
+        y: 11
         steps: 0
       }
       {

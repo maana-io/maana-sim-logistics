@@ -4,6 +4,7 @@ mutation bootstrap {
       { id: "Grass" }
       { id: "Sand" }
       { id: "Pavement" }
+      { id: "Pavement01" }
       { id: "Water" }
       { id: "Water01" }
     ]
@@ -14,9 +15,23 @@ mutation bootstrap {
   addTiles(
     input: [
       # Row 0
-      { id: "Default:0:0", map: "Default", type: "Sand", x: 0, y: 0, yRot: 0 }
+      {
+        id: "Default:0:0"
+        map: "Default"
+        type: "Pavement"
+        x: 0
+        y: 0
+        yRot: 0
+      }
       { id: "Default:1:0", map: "Default", type: "Sand", x: 1, y: 0, yRot: 0 }
-      { id: "Default:2:0", map: "Default", type: "Sand", x: 2, y: 0, yRot: 0 }
+      {
+        id: "Default:2:0"
+        map: "Default"
+        type: "Pavement"
+        x: 2
+        y: 0
+        yRot: 0
+      }
       { id: "Default:3:0", map: "Default", type: "Sand", x: 3, y: 0, yRot: 0 }
       { id: "Default:4:0", map: "Default", type: "Sand", x: 4, y: 0, yRot: 0 }
       { id: "Default:5:0", map: "Default", type: "Sand", x: 5, y: 0, yRot: 0 }
@@ -75,7 +90,7 @@ mutation bootstrap {
         type: "Pavement"
         x: 1
         y: 2
-        yRot: 0
+        yRot: 180
       }
       { id: "Default:2:2", map: "Default", type: "Sand", x: 2, y: 2, yRot: 0 }
       { id: "Default:3:2", map: "Default", type: "Sand", x: 3, y: 2, yRot: 0 }
@@ -87,7 +102,7 @@ mutation bootstrap {
         type: "Pavement"
         x: 6
         y: 2
-        yRot: 0
+        yRot: 180
       }
       { id: "Default:7:2", map: "Default", type: "Water", x: 7, y: 2, yRot: 0 }
       { id: "Default:8:2", map: "Default", type: "Water", x: 8, y: 2, yRot: 0 }
@@ -185,7 +200,7 @@ mutation bootstrap {
         type: "Pavement"
         x: 8
         y: 4
-        yRot: 0
+        yRot: 180
       }
       { id: "Default:9:4", map: "Default", type: "Grass", x: 9, y: 4, yRot: 0 }
       {
@@ -322,7 +337,14 @@ mutation bootstrap {
         y: 8
         yRot: 0
       }
-      { id: "Default:8:8", map: "Default", type: "Grass", x: 8, y: 8, yRot: 0 }
+      {
+        id: "Default:8:8"
+        map: "Default"
+        type: "Pavement01"
+        x: 8
+        y: 8
+        yRot: 0
+      }
       {
         id: "Default:9:8"
         map: "Default"
@@ -547,7 +569,7 @@ mutation bootstrap {
       {
         id: "Default:9:11"
         map: "Default"
-        type: "Water"
+        type: "Pavement"
         x: 9
         y: 11
         yRot: 0
