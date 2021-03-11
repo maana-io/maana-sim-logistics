@@ -1,16 +1,17 @@
 mutation bootstrap {
   addProducerTypeEnums(
     input: [
-      { id: "OilWell" }
-      { id: "OilRefinery" }
+      { id: "CoalMine" }
+      { id: "Cotton" }
+      { id: "Farm" }
+      { id: "Factory" }
       { id: "Forest" }
       { id: "LumberMill" }
-      { id: "CoalMine" }
+      { id: "OilRefinery" }
+      { id: "OilWell" }
       { id: "PowerPlant" }
-      { id: "Cotton" }
       { id: "TextileMill" }
-      { id: "Factory" }
-      { id: "Farm" }
+      { id: "Warehouse" }
     ]
   )
 
@@ -221,7 +222,7 @@ mutation bootstrap {
         material: ["Factory:0:Material:Petrochemicals"]
         products: ["Factory:0:Product:Goods"]
         stoppageSurchargeFactor: 0.1
-        x: 6
+        x: 5
         y: 3
         steps: 0
       }

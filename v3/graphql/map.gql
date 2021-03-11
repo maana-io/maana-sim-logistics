@@ -5,6 +5,7 @@ mutation bootstrap {
       { id: "Sand" }
       { id: "Pavement" }
       { id: "Water" }
+      { id: "Water01" }
     ]
   )
 
@@ -120,15 +121,15 @@ mutation bootstrap {
       }
       { id: "Default:3:3", map: "Default", type: "Sand", x: 3, y: 3, yRot: 0 }
       { id: "Default:4:3", map: "Default", type: "Sand", x: 4, y: 3, yRot: 0 }
-      { id: "Default:5:3", map: "Default", type: "Sand", x: 5, y: 3, yRot: 0 }
       {
-        id: "Default:6:3"
+        id: "Default:5:3"
         map: "Default"
         type: "Pavement"
-        x: 6
+        x: 5
         y: 3
         yRot: 0
       }
+      { id: "Default:6:3", map: "Default", type: "Water", x: 6, y: 3, yRot: 0 }
       { id: "Default:7:3", map: "Default", type: "Water", x: 7, y: 3, yRot: 0 }
       { id: "Default:8:3", map: "Default", type: "Water", x: 8, y: 3, yRot: 0 }
       { id: "Default:9:3", map: "Default", type: "Water", x: 9, y: 3, yRot: 0 }
@@ -169,7 +170,14 @@ mutation bootstrap {
         yRot: 180
       }
       { id: "Default:5:4", map: "Default", type: "Water", x: 5, y: 4, yRot: 0 }
-      { id: "Default:6:4", map: "Default", type: "Water", x: 6, y: 4, yRot: 0 }
+      {
+        id: "Default:6:4"
+        map: "Default"
+        type: "Water01"
+        x: 6
+        y: 4
+        yRot: -90
+      }
       { id: "Default:7:4", map: "Default", type: "Water", x: 7, y: 4, yRot: 0 }
       {
         id: "Default:8:4"
