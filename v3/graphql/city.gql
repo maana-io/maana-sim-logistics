@@ -1,6 +1,7 @@
 mutation bootstrap {
   addResources(
     input: [
+      # City:0
       {
         id: "City:0:Textiles"
         sim: "Default"
@@ -41,6 +42,19 @@ mutation bootstrap {
         id: "City:0:Energy"
         sim: "Default"
         type: "Energy"
+        capacity: 1000
+        quantity: 1000
+        basePricePerUnit: 5
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 2
+        replenishRate: 0
+        consumptionRate: 1
+      }
+      # City:1
+      {
+        id: "City:1:Textiles"
+        sim: "Default"
+        type: "Textiles"
         capacity: 1000
         quantity: 1000
         basePricePerUnit: 5
@@ -108,7 +122,7 @@ mutation bootstrap {
         populationDeclineRate: 0.1
         x: 8
         y: 7
-        demand: ["City:1:Goods","City:1:Food","City:1:Energy"]
+        demand: ["City:1:Goods","City:1:Food","City:1:Energy", "City:1:Textiles"]
         steps: 0
       }
     ]

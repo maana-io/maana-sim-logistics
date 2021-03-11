@@ -179,6 +179,7 @@ mutation bootstrap {
         x: 3
         y: 4
         steps: 0
+        repairSurcharge: 100
       }
       {
         id: "Airport:1"
@@ -189,6 +190,7 @@ mutation bootstrap {
         x: 9
         y: 7
         steps: 0
+        repairSurcharge: 100
       }
       {
         id: "Port:0"
@@ -199,6 +201,7 @@ mutation bootstrap {
         x: 9
         y: 3
         steps: 0
+        repairSurcharge: 100
       }
       {
         id: "Port:1"
@@ -209,6 +212,7 @@ mutation bootstrap {
         x: 2
         y: 7
         steps: 0
+        repairSurcharge: 100
       }
       {
         id: "TruckDepot:0"
@@ -219,6 +223,7 @@ mutation bootstrap {
         x: 1
         y: 2
         steps: 0
+        repairSurcharge: 100
       }
       {
         id: "TruckDepot:1"
@@ -229,6 +234,7 @@ mutation bootstrap {
         x: 10
         y: 9
         steps: 0
+        repairSurcharge: 100
       }
     ]
   )
