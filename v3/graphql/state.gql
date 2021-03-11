@@ -9,6 +9,8 @@ mutation bootstrap {
             "Warehouse:1", "Farm:0", "Farm:1", "PowerPlant:1", "Factory:0", "LumberMill:0", "Forest:0", "Forest:1"]
         hubs: ["Airport:0", "Airport:1", "Port:0", "Port:1", "TruckDepot:0", "TruckDepot:1"]
         vehicles: ["Truck:0", "Truck:1", "Truck:2", "Truck:3", "Truck:4", "Truck:5", "Ship:0", "Plane:0"]
+        transfers: []
+        transitOrders: []
       }
     ]
   )

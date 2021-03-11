@@ -141,7 +141,6 @@ mutation bootstrap {
         replenishRate: 0
         consumptionRate: 0
       }
-      #   Assumed a consumption rate of 1
       {
         id: "Truck:0:Fuel"
         sim: "Default"
@@ -152,7 +151,7 @@ mutation bootstrap {
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 0
       }
       # Truck:1
       {
@@ -263,7 +262,6 @@ mutation bootstrap {
         replenishRate: 0
         consumptionRate: 0
       }
-      #   ssumed a consumption rate of 1
       {
         id: "Truck:1:Fuel"
         sim: "Default"
@@ -274,7 +272,7 @@ mutation bootstrap {
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 0
       }
       # Truck:2
       {
@@ -385,7 +383,6 @@ mutation bootstrap {
         replenishRate: 0
         consumptionRate: 0
       }
-      #   Assumed a consumption rate of 1
       {
         id: "Truck:2:Fuel"
         sim: "Default"
@@ -396,7 +393,7 @@ mutation bootstrap {
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 0
       }
       # Truck:3
       {
@@ -507,7 +504,6 @@ mutation bootstrap {
         replenishRate: 0
         consumptionRate: 0
       }
-      #   Assumed a consumption rate of 1
       {
         id: "Truck:3:Fuel"
         sim: "Default"
@@ -518,7 +514,7 @@ mutation bootstrap {
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 0
       }
       # Truck:4
       {
@@ -629,7 +625,6 @@ mutation bootstrap {
         replenishRate: 0
         consumptionRate: 0
       }
-      #   Assumed a consumption rate of 1
       {
         id: "Truck:4:Fuel"
         sim: "Default"
@@ -640,7 +635,7 @@ mutation bootstrap {
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 0
       }
       # Truck:5
       {
@@ -751,7 +746,6 @@ mutation bootstrap {
         replenishRate: 0
         consumptionRate: 0
       }
-      #   Assumed a consumption rate of 1
       {
         id: "Truck:5:Fuel"
         sim: "Default"
@@ -762,7 +756,7 @@ mutation bootstrap {
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 0
       }
       # Ship:0
       {
@@ -861,7 +855,6 @@ mutation bootstrap {
         replenishRate: 0
         consumptionRate: 0
       }
-      # Assumed a consumption rate of comsumption = (2000 x Truck Consumption)
       {
         id: "Ship:0:Fuel"
         sim: "Default"
@@ -872,7 +865,7 @@ mutation bootstrap {
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
         replenishRate: 0
-        consumptionRate: 2000
+        consumptionRate: 0
       }
       # Plane:0
       
@@ -924,7 +917,6 @@ mutation bootstrap {
         replenishRate: 0
         consumptionRate: 0
       }
-      # Assumed a consumption rate of fuel consumption = (125 x Truck Consumption)
       {
         id: "Plane:0:Fuel"
         sim: "Default"
@@ -935,7 +927,7 @@ mutation bootstrap {
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
         replenishRate: 0
-        consumptionRate: 125
+        consumptionRate: 0
       }
     ]
   )
@@ -1069,6 +1061,7 @@ mutation bootstrap {
         fuel: "Truck:5:Fuel"
       }
       # Assumed a slower speed than trucks (0.8 x Truck Velocity)
+      # Assumed a fuel efficiency of (0.0005 x Truck Efficiency)
       {
         id: "Ship:0"
         sim: "Default"
@@ -1079,7 +1072,7 @@ mutation bootstrap {
         maxDistance: 1.0
         reliability: 0.98
         durability: 0.9
-        efficiency: 1.0
+        efficiency: 0.0005
         cargo: ["Ship:0:Crude", "Ship:0:Petrochemicals", "Ship:0:Textiles",
           "Ship:0:Coal", "Ship:0:Trees","Ship:0:Lumber", "Ship:0:Food", "Ship:0:Goods"]
         cargoModeAND: true
@@ -1090,18 +1083,19 @@ mutation bootstrap {
         serviceInterval: 100
         fuel: "Ship:0:Fuel"
       }
-      # Assumed a plane velocity of (15 x Truck Velocity)
+      # Assumed a plane velocity of (4 x Truck Velocity)
+      # Assumed a fuel efficiency of (0.008 x Truck Efficiency)
       {
         id: "Plane:0"
         sim: "Default"
         type: "Plane"
         hub: "Airport:0"
         steps: 0
-        speed: 15.0
+        speed: 4.0
         maxDistance: 1.0
         reliability: 0.99
         durability: 0.9
-        efficiency: 1.0
+        efficiency: 0.008
         cargo: ["Plane:0:Petrochemicals", "Plane:0:Textiles", "Plane:0:Food", "Plane:0:Goods"]
         cargoModeAND: true
         x: 7
