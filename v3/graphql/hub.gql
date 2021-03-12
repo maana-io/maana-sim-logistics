@@ -175,60 +175,66 @@ mutation bootstrap {
         sim: "Default"
         type: "Airport"
         vehicleType: "Plane"
-        supplies: ["Airport:0:Petrochemicals", "Airport:0:Energy"]
+        supplies: ["Airport:0:Petrochemicals", "PowerPlant:0:Energy"]
         x: 3
         y: 4
         steps: 0
+        repairSurcharge: 100
       }
       {
         id: "Airport:1"
         sim: "Default"
         type: "Airport"
         vehicleType: "Plane"
-        supplies: ["Airport:1:Petrochemicals", "Airport:1:Energy"]
+        supplies: ["Airport:1:Petrochemicals", "PowerPlant:1:Energy"]
         x: 9
         y: 7
         steps: 0
+        repairSurcharge: 100
       }
       {
         id: "Port:0"
         sim: "Default"
         type: "Port"
         vehicleType: "Ship"
-        supplies: ["Port:0:Petrochemicals", "Port:0:Energy"]
+        supplies: ["Port:0:Petrochemicals", "PowerPlant:1:Energy"]
         x: 9
         y: 3
         steps: 0
+        repairSurcharge: 100
       }
       {
         id: "Port:1"
         sim: "Default"
         type: "Port"
         vehicleType: "Ship"
-        supplies: ["Port:1:Petrochemicals", "Port:1:Energy"]
+        supplies: ["Port:1:Petrochemicals", "PowerPlant:0:Energy"]
         x: 2
         y: 7
         steps: 0
+        repairSurcharge: 100
       }
       {
         id: "TruckDepot:0"
         sim: "Default"
         type: "TruckDepot"
         vehicleType: "Truck"
-        supplies: ["TruckDepot:0:Petrochemicals", "TruckDepot:0:Energy"]
+        supplies: ["TruckDepot:0:Petrochemicals", "PowerPlant:0:Energy"]
         x: 1
         y: 2
         steps: 0
+        repairSurcharge: 100
       }
       {
         id: "TruckDepot:1"
         sim: "Default"
         type: "TruckDepot"
         vehicleType: "Truck"
-        supplies: ["TruckDepot:1:Petrochemicals", "TruckDepot:1:Energy"]
+        supplies: ["TruckDepot:1:Petrochemicals", "PowerPlant:1:Energy"]
         x: 10
         y: 9
         steps: 0
+        repairSurcharge: 100
       }
     ]
   )

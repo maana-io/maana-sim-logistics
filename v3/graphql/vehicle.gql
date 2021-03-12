@@ -31,6 +31,8 @@ mutation bootstrap {
 
   addResources(
     input: [
+      # Trucks carry Crude, Petrochemicals, Cotton, Textiles, Trees, Lumber, Food, Goods.
+      # Truck:0
       {
         id: "Truck:0:Crude"
         sim: "Default"
@@ -56,10 +58,870 @@ mutation bootstrap {
         consumptionRate: 0
       }
       {
+        id: "Truck:0:Coal"
+        sim: "Default"
+        type: "Coal"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:0:Cotton"
+        sim: "Default"
+        type: "Cotton"
+        capacity: 3000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:0:Textiles"
+        sim: "Default"
+        type: "Textiles"
+        capacity: 2000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:0:Trees"
+        sim: "Default"
+        type: "Trees"
+        capacity: 500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:0:Lumber"
+        sim: "Default"
+        type: "Lumber"
+        capacity: 300
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:0:Food"
+        sim: "Default"
+        type: "Food"
+        capacity: 500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
         id: "Truck:0:Goods"
         sim: "Default"
         type: "Goods"
         capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:0:Fuel"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      # Truck:1
+      {
+        id: "Truck:1:Crude"
+        sim: "Default"
+        type: "Crude"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:1:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:1:Coal"
+        sim: "Default"
+        type: "Coal"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:1:Cotton"
+        sim: "Default"
+        type: "Cotton"
+        capacity: 3000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:1:Textiles"
+        sim: "Default"
+        type: "Textiles"
+        capacity: 2000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:1:Trees"
+        sim: "Default"
+        type: "Trees"
+        capacity: 500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:1:Lumber"
+        sim: "Default"
+        type: "Lumber"
+        capacity: 300
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:1:Food"
+        sim: "Default"
+        type: "Food"
+        capacity: 500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:1:Goods"
+        sim: "Default"
+        type: "Goods"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:1:Fuel"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      # Truck:2
+      {
+        id: "Truck:2:Crude"
+        sim: "Default"
+        type: "Crude"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:2:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:2:Coal"
+        sim: "Default"
+        type: "Coal"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:2:Cotton"
+        sim: "Default"
+        type: "Cotton"
+        capacity: 3000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:2:Textiles"
+        sim: "Default"
+        type: "Textiles"
+        capacity: 2000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:2:Trees"
+        sim: "Default"
+        type: "Trees"
+        capacity: 500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:2:Lumber"
+        sim: "Default"
+        type: "Lumber"
+        capacity: 300
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:2:Food"
+        sim: "Default"
+        type: "Food"
+        capacity: 500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:2:Goods"
+        sim: "Default"
+        type: "Goods"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:2:Fuel"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      # Truck:3
+      {
+        id: "Truck:3:Crude"
+        sim: "Default"
+        type: "Crude"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:3:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:3:Coal"
+        sim: "Default"
+        type: "Coal"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:3:Cotton"
+        sim: "Default"
+        type: "Cotton"
+        capacity: 3000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:3:Textiles"
+        sim: "Default"
+        type: "Textiles"
+        capacity: 2000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:3:Trees"
+        sim: "Default"
+        type: "Trees"
+        capacity: 500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:3:Lumber"
+        sim: "Default"
+        type: "Lumber"
+        capacity: 300
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:3:Food"
+        sim: "Default"
+        type: "Food"
+        capacity: 500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:3:Goods"
+        sim: "Default"
+        type: "Goods"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:3:Fuel"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      # Truck:4
+      {
+        id: "Truck:4:Crude"
+        sim: "Default"
+        type: "Crude"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:4:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:4:Coal"
+        sim: "Default"
+        type: "Coal"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:4:Cotton"
+        sim: "Default"
+        type: "Cotton"
+        capacity: 3000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:4:Textiles"
+        sim: "Default"
+        type: "Textiles"
+        capacity: 2000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:4:Trees"
+        sim: "Default"
+        type: "Trees"
+        capacity: 500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:4:Lumber"
+        sim: "Default"
+        type: "Lumber"
+        capacity: 300
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:4:Food"
+        sim: "Default"
+        type: "Food"
+        capacity: 500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:4:Goods"
+        sim: "Default"
+        type: "Goods"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:4:Fuel"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      # Truck:5
+      {
+        id: "Truck:5:Crude"
+        sim: "Default"
+        type: "Crude"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:5:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:5:Coal"
+        sim: "Default"
+        type: "Coal"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:5:Cotton"
+        sim: "Default"
+        type: "Cotton"
+        capacity: 3000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:5:Textiles"
+        sim: "Default"
+        type: "Textiles"
+        capacity: 2000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:5:Trees"
+        sim: "Default"
+        type: "Trees"
+        capacity: 500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:5:Lumber"
+        sim: "Default"
+        type: "Lumber"
+        capacity: 300
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:5:Food"
+        sim: "Default"
+        type: "Food"
+        capacity: 500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:5:Goods"
+        sim: "Default"
+        type: "Goods"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Truck:5:Fuel"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 1000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      # Ship:0
+      {
+        id: "Ship:0:Crude"
+        sim: "Default"
+        type: "Crude"
+        capacity: 20000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Ship:0:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 20000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Ship:0:Textiles"
+        sim: "Default"
+        type: "Textiles"
+        capacity: 8000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Ship:0:Coal"
+        sim: "Default"
+        type: "Coal"
+        capacity: 25000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Ship:0:Trees"
+        sim: "Default"
+        type: "Trees"
+        capacity: 9500
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Ship:0:Lumber"
+        sim: "Default"
+        type: "Lumber"
+        capacity: 9000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Ship:0:Food"
+        sim: "Default"
+        type: "Food"
+        capacity: 12000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Ship:0:Goods"
+        sim: "Default"
+        type: "Goods"
+        capacity: 11000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Ship:0:Fuel"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 20000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      # Plane:0
+      
+      {
+        id: "Plane:0:Petrochemicals"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 10000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Plane:0:Textiles"
+        sim: "Default"
+        type: "Textiles"
+        capacity: 6000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Plane:0:Food"
+        sim: "Default"
+        type: "Food"
+        capacity: 6000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Plane:0:Goods"
+        sim: "Default"
+        type: "Goods"
+        capacity: 10000
+        quantity: 0
+        basePricePerUnit: 0
+        adjustedPricePerUnit: 0
+        scarcitySurchargeFactor: 0
+        replenishRate: 0
+        consumptionRate: 0
+      }
+      {
+        id: "Plane:0:Fuel"
+        sim: "Default"
+        type: "Petrochemicals"
+        capacity: 10000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -80,16 +942,18 @@ mutation bootstrap {
         steps: 0
         speed: 1.0
         maxDistance: 1.0
-        reliability: 0.9
+        reliability: 0.96
         durability: 0.9
         efficiency: 1.0
-        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Coal", "Truck:0:Cotton", "Truck:0:Textiles",
+          "Truck:0:Trees", "Truck:0:Lumber", "Truck:0:Food", "Truck:0:Goods"]
         cargoModeAND: false
         x: 1
         y: 1
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
+        fuel: "Truck:0:Fuel"
       }
       {
         id: "Truck:1"
@@ -99,16 +963,18 @@ mutation bootstrap {
         steps: 0
         speed: 1.0
         maxDistance: 1.0
-        reliability: 0.9
+        reliability: 0.96
         durability: 0.9
         efficiency: 1.0
-        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargo: ["Truck:1:Crude", "Truck:1:Petrochemicals", "Truck:1:Coal", "Truck:1:Cotton", "Truck:1:Textiles",
+          "Truck:1:Trees", "Truck:1:Lumber", "Truck:1:Food", "Truck:1:Goods"]
         cargoModeAND: false
         x: 4
         y: 2
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
+        fuel: "Truck:1:Fuel"
       }
       {
         id: "Truck:2"
@@ -118,111 +984,126 @@ mutation bootstrap {
         steps: 0
         speed: 1.0
         maxDistance: 1.0
-        reliability: 0.9
+        reliability: 0.96
         durability: 0.9
         efficiency: 1.0
-        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargo: ["Truck:2:Crude", "Truck:2:Petrochemicals", "Truck:2:Coal", "Truck:2:Cotton", "Truck:2:Textiles",
+          "Truck:2:Trees", "Truck:2:Lumber", "Truck:2:Food", "Truck:2:Goods"]
         cargoModeAND: false
         x: 2
         y: 6
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
+        fuel: "Truck:2:Fuel"
       }
       {
         id: "Truck:3"
         sim: "Default"
         type: "Truck"
-        hub: "TruckDepot:0"
+        hub: "TruckDepot:1"
         steps: 0
         speed: 1.0
         maxDistance: 1.0
-        reliability: 0.9
+        reliability: 0.96
         durability: 0.9
         efficiency: 1.0
-        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargo: ["Truck:3:Crude", "Truck:3:Petrochemicals", "Truck:3:Coal", "Truck:3:Cotton", "Truck:3:Textiles",
+          "Truck:3:Trees", "Truck:3:Lumber", "Truck:3:Food", "Truck:3:Goods"]
         cargoModeAND: false
         x: 9
         y: 4
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
+        fuel: "Truck:3:Fuel"
       }
       {
         id: "Truck:4"
         sim: "Default"
         type: "Truck"
-        hub: "TruckDepot:0"
+        hub: "TruckDepot:1"
         steps: 0
         speed: 1.0
         maxDistance: 1.0
-        reliability: 0.9
+        reliability: 0.96
         durability: 0.9
         efficiency: 1.0
-        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargo: ["Truck:4:Crude", "Truck:4:Petrochemicals", "Truck:4:Coal", "Truck:4:Cotton", "Truck:4:Textiles",
+          "Truck:4:Trees", "Truck:4:Lumber", "Truck:4:Food", "Truck:4:Goods"]
         cargoModeAND: false
         x: 8
         y: 8
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
+        fuel: "Truck:4:Fuel"
       }
       {
         id: "Truck:5"
         sim: "Default"
         type: "Truck"
-        hub: "TruckDepot:0"
+        hub: "TruckDepot:1"
         steps: 0
         speed: 1.0
         maxDistance: 1.0
-        reliability: 0.9
+        reliability: 0.96
         durability: 0.9
         efficiency: 1.0
-        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
+        cargo: ["Truck:5:Crude", "Truck:5:Petrochemicals", "Truck:5:Coal", "Truck:5:Cotton", "Truck:5:Textiles",
+          "Truck:5:Trees", "Truck:5:Lumber", "Truck:5:Food", "Truck:5:Goods"]
         cargoModeAND: false
         x: 6
         y: 10
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
+        fuel: "Truck:5:Fuel"
       }
+      # Assumed a slower speed than trucks (0.8 x Truck Velocity)
+      # Assumed a fuel efficiency of (0.0005 x Truck Efficiency)
       {
         id: "Ship:0"
         sim: "Default"
         type: "Ship"
-        hub: "TruckDepot:0"
+        hub: "Port:0"
         steps: 0
-        speed: 1.0
+        speed: 0.8
         maxDistance: 1.0
-        reliability: 0.9
+        reliability: 0.98
         durability: 0.9
-        efficiency: 1.0
-        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
-        cargoModeAND: false
+        efficiency: 0.0005
+        cargo: ["Ship:0:Crude", "Ship:0:Petrochemicals", "Ship:0:Textiles",
+          "Ship:0:Coal", "Ship:0:Trees","Ship:0:Lumber", "Ship:0:Food", "Ship:0:Goods"]
+        cargoModeAND: true
         x: 5
         y: 6
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
+        fuel: "Ship:0:Fuel"
       }
+      # Assumed a plane velocity of (4 x Truck Velocity)
+      # Assumed a fuel efficiency of (0.008 x Truck Efficiency)
       {
         id: "Plane:0"
         sim: "Default"
         type: "Plane"
-        hub: "TruckDepot:0"
+        hub: "Airport:0"
         steps: 0
-        speed: 1.0
+        speed: 4.0
         maxDistance: 1.0
-        reliability: 0.9
+        reliability: 0.99
         durability: 0.9
-        efficiency: 1.0
-        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Goods"]
-        cargoModeAND: false
+        efficiency: 0.008
+        cargo: ["Plane:0:Petrochemicals", "Plane:0:Textiles", "Plane:0:Food", "Plane:0:Goods"]
+        cargoModeAND: true
         x: 7
         y: 6
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
+        fuel: "Plane:0:Fuel"
       }
     ]
   )
