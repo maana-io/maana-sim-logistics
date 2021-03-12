@@ -145,8 +145,8 @@ mutation bootstrap {
         id: "Truck:0:Fuel"
         sim: "Default"
         type: "Petrochemicals"
-        capacity: 1000
-        quantity: 0
+        capacity: 40
+        quantity: 40
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
@@ -266,8 +266,8 @@ mutation bootstrap {
         id: "Truck:1:Fuel"
         sim: "Default"
         type: "Petrochemicals"
-        capacity: 1000
-        quantity: 0
+        capacity: 40
+        quantity: 40
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
@@ -387,8 +387,8 @@ mutation bootstrap {
         id: "Truck:2:Fuel"
         sim: "Default"
         type: "Petrochemicals"
-        capacity: 1000
-        quantity: 0
+        capacity: 40
+        quantity: 40
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
@@ -508,8 +508,8 @@ mutation bootstrap {
         id: "Truck:3:Fuel"
         sim: "Default"
         type: "Petrochemicals"
-        capacity: 1000
-        quantity: 0
+        capacity: 40
+        quantity: 40
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
@@ -629,8 +629,8 @@ mutation bootstrap {
         id: "Truck:4:Fuel"
         sim: "Default"
         type: "Petrochemicals"
-        capacity: 1000
-        quantity: 0
+        capacity: 40
+        quantity: 40
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
@@ -750,8 +750,8 @@ mutation bootstrap {
         id: "Truck:5:Fuel"
         sim: "Default"
         type: "Petrochemicals"
-        capacity: 1000
-        quantity: 0
+        capacity: 40
+        quantity: 40
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
@@ -859,8 +859,8 @@ mutation bootstrap {
         id: "Ship:0:Fuel"
         sim: "Default"
         type: "Petrochemicals"
-        capacity: 20000
-        quantity: 0
+        capacity: 200
+        quantity: 200
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
@@ -921,8 +921,8 @@ mutation bootstrap {
         id: "Plane:0:Fuel"
         sim: "Default"
         type: "Petrochemicals"
-        capacity: 10000
-        quantity: 0
+        capacity: 100
+        quantity: 100
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
@@ -1072,7 +1072,7 @@ mutation bootstrap {
         maxDistance: 1.0
         reliability: 0.98
         durability: 0.9
-        efficiency: 0.0005
+        efficiency: 0.05
         cargo: ["Ship:0:Crude", "Ship:0:Petrochemicals", "Ship:0:Textiles",
           "Ship:0:Coal", "Ship:0:Trees","Ship:0:Lumber", "Ship:0:Food", "Ship:0:Goods"]
         cargoModeAND: true
@@ -1095,7 +1095,7 @@ mutation bootstrap {
         maxDistance: 1.0
         reliability: 0.99
         durability: 0.9
-        efficiency: 0.008
+        efficiency: 0.08
         cargo: ["Plane:0:Petrochemicals", "Plane:0:Textiles", "Plane:0:Food", "Plane:0:Goods"]
         cargoModeAND: true
         x: 7
