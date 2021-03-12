@@ -988,7 +988,7 @@ mutation bootstrap {
           "Truck:1:Goods"
         ]
         cargoModeAND: false
-        x: 4
+        x: 5
         y: 2
         transitOrder: "Idle"
         lastServiceStep: 0
@@ -1019,8 +1019,8 @@ mutation bootstrap {
           "Truck:2:Goods"
         ]
         cargoModeAND: false
-        x: 2
-        y: 6
+        x: 1
+        y: 5
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
@@ -1144,13 +1144,13 @@ mutation bootstrap {
           "Ship:0:Goods"
         ]
         cargoModeAND: true
-        x: 5
-        y: 6
+        x: 4
+        y: 7
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Ship:0:Fuel"
-        yRot: 0
+        yRot: 50
       }
       # Assumed a plane velocity of (4 x Truck Velocity)
       # Assumed a fuel efficiency of (0.008 x Truck Efficiency)
@@ -1172,13 +1172,13 @@ mutation bootstrap {
           "Plane:0:Goods"
         ]
         cargoModeAND: true
-        x: 7
-        y: 6
+        x: 6
+        y: 5
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Plane:0:Fuel"
-        yRot: 0
+        yRot: -75
       }
     ]
   )
