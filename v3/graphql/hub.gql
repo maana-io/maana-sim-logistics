@@ -176,7 +176,7 @@ mutation bootstrap {
         type: "Airport"
         vehicleType: "Plane"
         supplies: ["Airport:0:Petrochemicals", "PowerPlant:0:Energy"]
-        x: 3
+        x: 2
         y: 4
         steps: 0
         repairSurcharge: 100
@@ -187,8 +187,8 @@ mutation bootstrap {
         type: "Airport"
         vehicleType: "Plane"
         supplies: ["Airport:1:Petrochemicals", "PowerPlant:1:Energy"]
-        x: 9
-        y: 7
+        x: 8
+        y: 5
         steps: 0
         repairSurcharge: 100
       }
@@ -220,7 +220,7 @@ mutation bootstrap {
         type: "TruckDepot"
         vehicleType: "Truck"
         supplies: ["TruckDepot:0:Petrochemicals", "PowerPlant:0:Energy"]
-        x: 1
+        x: 0
         y: 2
         steps: 0
         repairSurcharge: 100
@@ -231,7 +231,7 @@ mutation bootstrap {
         type: "TruckDepot"
         vehicleType: "Truck"
         supplies: ["TruckDepot:1:Petrochemicals", "PowerPlant:1:Energy"]
-        x: 10
+        x: 11
         y: 9
         steps: 0
         repairSurcharge: 100

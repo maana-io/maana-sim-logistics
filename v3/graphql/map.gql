@@ -3,10 +3,19 @@ mutation bootstrap {
     input: [
       { id: "Grass" }
       { id: "Sand" }
+      { id: "Sand01" }
+      { id: "Sand02" }
+      { id: "Sand03" }
+      { id: "Sand04" }
+      { id: "Sand05" }
       { id: "Pavement" }
       { id: "Pavement01" }
       { id: "Water" }
       { id: "Water01" }
+      { id: "Water02" }
+      { id: "Water03" }
+      { id: "Water04" }
+      { id: "Water05" }
     ]
   )
 
@@ -18,27 +27,48 @@ mutation bootstrap {
       {
         id: "Default:0:0"
         map: "Default"
-        type: "Pavement"
+        type: "Sand03"
         x: 0
         y: 0
-        yRot: 0
+        yRot: -90
       }
       { id: "Default:1:0", map: "Default", type: "Sand", x: 1, y: 0, yRot: 0 }
       {
         id: "Default:2:0"
         map: "Default"
-        type: "Pavement"
+        type: "Sand03"
         x: 2
+        y: 0
+        yRot: -90
+      }
+      { id: "Default:3:0", map: "Default", type: "Sand", x: 3, y: 0, yRot: 0 }
+      {
+        id: "Default:4:0"
+        map: "Default"
+        type: "Sand03"
+        x: 4
+        y: 0
+        yRot: -90
+      }
+      { id: "Default:5:0", map: "Default", type: "Sand", x: 5, y: 0, yRot: 0 }
+      { id: "Default:6:0", map: "Default", type: "Sand", x: 6, y: 0, yRot: 0 }
+      {
+        id: "Default:7:0"
+        map: "Default"
+        type: "Water02"
+        x: 7
+        y: 0
+        yRot: 180
+      }
+      { id: "Default:8:0", map: "Default", type: "Water", x: 8, y: 0, yRot: 0 }
+      {
+        id: "Default:9:0"
+        map: "Default"
+        type: "Water02"
+        x: 9
         y: 0
         yRot: 0
       }
-      { id: "Default:3:0", map: "Default", type: "Sand", x: 3, y: 0, yRot: 0 }
-      { id: "Default:4:0", map: "Default", type: "Sand", x: 4, y: 0, yRot: 0 }
-      { id: "Default:5:0", map: "Default", type: "Sand", x: 5, y: 0, yRot: 0 }
-      { id: "Default:6:0", map: "Default", type: "Sand", x: 6, y: 0, yRot: 0 }
-      { id: "Default:7:0", map: "Default", type: "Water", x: 7, y: 0, yRot: 0 }
-      { id: "Default:8:0", map: "Default", type: "Water", x: 8, y: 0, yRot: 0 }
-      { id: "Default:9:0", map: "Default", type: "Water", x: 9, y: 0, yRot: 0 }
       {
         id: "Default:10:0"
         map: "Default"
@@ -56,16 +86,65 @@ mutation bootstrap {
         yRot: 0
       }
       # Row 1
-      { id: "Default:0:1", map: "Default", type: "Sand", x: 0, y: 1, yRot: 0 }
-      { id: "Default:1:1", map: "Default", type: "Sand", x: 1, y: 1, yRot: 0 }
-      { id: "Default:2:1", map: "Default", type: "Sand", x: 2, y: 1, yRot: 0 }
-      { id: "Default:3:1", map: "Default", type: "Sand", x: 3, y: 1, yRot: 0 }
-      { id: "Default:4:1", map: "Default", type: "Sand", x: 4, y: 1, yRot: 0 }
-      { id: "Default:5:1", map: "Default", type: "Sand", x: 5, y: 1, yRot: 0 }
+      {
+        id: "Default:0:1"
+        map: "Default"
+        type: "Sand04"
+        x: 0
+        y: 1
+        yRot: 180
+      }
+      {
+        id: "Default:1:1"
+        map: "Default"
+        type: "Sand06"
+        x: 1
+        y: 1
+        yRot: -90
+      }
+      {
+        id: "Default:2:1"
+        map: "Default"
+        type: "Sand06"
+        x: 2
+        y: 1
+        yRot: 90
+      }
+      { id: "Default:3:1", map: "Default", type: "Sand02", x: 3, y: 1, yRot: 0 }
+      {
+        id: "Default:4:1"
+        map: "Default"
+        type: "Sand06"
+        x: 4
+        y: 1
+        yRot: 90
+      }
+      {
+        id: "Default:5:1"
+        map: "Default"
+        type: "Sand05"
+        x: 5
+        y: 1
+        yRot: 180
+      }
       { id: "Default:6:1", map: "Default", type: "Sand", x: 6, y: 1, yRot: 0 }
-      { id: "Default:7:1", map: "Default", type: "Water", x: 7, y: 1, yRot: 0 }
+      {
+        id: "Default:7:1"
+        map: "Default"
+        type: "Water02"
+        x: 7
+        y: 1
+        yRot: 180
+      }
       { id: "Default:8:1", map: "Default", type: "Water", x: 8, y: 1, yRot: 0 }
-      { id: "Default:9:1", map: "Default", type: "Grass", x: 9, y: 1, yRot: 0 }
+      {
+        id: "Default:9:1"
+        map: "Default"
+        type: "Water02"
+        x: 9
+        y: 1
+        yRot: 0
+      }
       {
         id: "Default:10:1"
         map: "Default"
@@ -83,30 +162,51 @@ mutation bootstrap {
         yRot: 0
       }
       # Row 2
-      { id: "Default:0:2", map: "Default", type: "Sand", x: 0, y: 2, yRot: 0 }
       {
-        id: "Default:1:2"
+        id: "Default:0:2"
         map: "Default"
-        type: "Pavement"
-        x: 1
+        type: "Sand03"
+        x: 0
         y: 2
         yRot: 180
       }
+      { id: "Default:1:2", map: "Default", type: "Sand06", x: 1, y: 2, yRot: 0 }
       { id: "Default:2:2", map: "Default", type: "Sand", x: 2, y: 2, yRot: 0 }
       { id: "Default:3:2", map: "Default", type: "Sand", x: 3, y: 2, yRot: 0 }
       { id: "Default:4:2", map: "Default", type: "Sand", x: 4, y: 2, yRot: 0 }
-      { id: "Default:5:2", map: "Default", type: "Sand", x: 5, y: 2, yRot: 0 }
+      {
+        id: "Default:5:2"
+        map: "Default"
+        type: "Sand02"
+        x: 5
+        y: 2
+        yRot: 90
+      }
       {
         id: "Default:6:2"
         map: "Default"
-        type: "Pavement"
+        type: "Water03"
         x: 6
         y: 2
-        yRot: 180
+        yRot: -90
       }
-      { id: "Default:7:2", map: "Default", type: "Water", x: 7, y: 2, yRot: 0 }
+      {
+        id: "Default:7:2"
+        map: "Default"
+        type: "Water04"
+        x: 7
+        y: 2
+        yRot: -90
+      }
       { id: "Default:8:2", map: "Default", type: "Water", x: 8, y: 2, yRot: 0 }
-      { id: "Default:9:2", map: "Default", type: "Water", x: 9, y: 2, yRot: 0 }
+      {
+        id: "Default:9:2"
+        map: "Default"
+        type: "Water02"
+        x: 9
+        y: 2
+        yRot: 0
+      }
       {
         id: "Default:10:2"
         map: "Default"
@@ -182,7 +282,7 @@ mutation bootstrap {
         type: "Pavement"
         x: 4
         y: 4
-        yRot: 180
+        yRot: -90
       }
       { id: "Default:5:4", map: "Default", type: "Water", x: 5, y: 4, yRot: 0 }
       {

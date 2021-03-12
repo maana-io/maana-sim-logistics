@@ -409,7 +409,7 @@ mutation bootstrap {
         id: "OilRefinery:0"
         sim: "Default"
         type: "OilRefinery"
-        material: ["OilRefinery:0:Material:Crude","PowerPlant:0:Energy"]
+        material: ["OilRefinery:0:Material:Crude", "PowerPlant:0:Energy"]
         products: ["OilRefinery:0:Product:Petrochemicals"]
         stoppageSurchargeFactor: 0.1
         x: 2
@@ -424,7 +424,7 @@ mutation bootstrap {
         products: ["CoalMine:0:Product:Coal"]
         stoppageSurchargeFactor: 0.1
         x: 4
-        y: 1
+        y: 0
         steps: 0
       }
       {
@@ -435,7 +435,7 @@ mutation bootstrap {
         products: ["PowerPlant:0:Energy"]
         stoppageSurchargeFactor: 0.1
         x: 6
-        y: 2
+        y: 1
         steps: 0
       }
       {
@@ -446,7 +446,7 @@ mutation bootstrap {
         products: ["PowerPlant:1:Energy"]
         stoppageSurchargeFactor: 0.1
         x: 7
-        y: 8
+        y: 9
         steps: 0
       }
       {
@@ -497,8 +497,20 @@ mutation bootstrap {
         id: "Warehouse:0"
         sim: "Default"
         type: "Warehouse"
-        material: ["Warehouse:0:Product:Petrochemicals", "Warehouse:0:Product:Food", "Warehouse:0:Product:Goods", "Warehouse:0:Product:Lumber", "Warehouse:0:Product:Textiles"]
-        products: ["Warehouse:0:Product:Petrochemicals", "Warehouse:0:Product:Food", "Warehouse:0:Product:Goods", "Warehouse:0:Product:Lumber", "Warehouse:0:Product:Textiles"]
+        material: [
+          "Warehouse:0:Product:Petrochemicals"
+          "Warehouse:0:Product:Food"
+          "Warehouse:0:Product:Goods"
+          "Warehouse:0:Product:Lumber"
+          "Warehouse:0:Product:Textiles"
+        ]
+        products: [
+          "Warehouse:0:Product:Petrochemicals"
+          "Warehouse:0:Product:Food"
+          "Warehouse:0:Product:Goods"
+          "Warehouse:0:Product:Lumber"
+          "Warehouse:0:Product:Textiles"
+        ]
         stoppageSurchargeFactor: 0.1
         x: 5
         y: 3
@@ -508,8 +520,20 @@ mutation bootstrap {
         id: "Warehouse:1"
         sim: "Default"
         type: "Warehouse"
-        material: ["Warehouse:1:Product:Petrochemicals", "Warehouse:1:Product:Food", "Warehouse:1:Product:Goods", "Warehouse:1:Product:Lumber", "Warehouse:0:Product:Textiles"]
-        products: ["Warehouse:1:Product:Petrochemicals", "Warehouse:1:Product:Food", "Warehouse:1:Product:Goods", "Warehouse:1:Product:Lumber", "Warehouse:0:Product:Textiles"]
+        material: [
+          "Warehouse:1:Product:Petrochemicals"
+          "Warehouse:1:Product:Food"
+          "Warehouse:1:Product:Goods"
+          "Warehouse:1:Product:Lumber"
+          "Warehouse:0:Product:Textiles"
+        ]
+        products: [
+          "Warehouse:1:Product:Petrochemicals"
+          "Warehouse:1:Product:Food"
+          "Warehouse:1:Product:Goods"
+          "Warehouse:1:Product:Lumber"
+          "Warehouse:0:Product:Textiles"
+        ]
         stoppageSurchargeFactor: 0.1
         x: 8
         y: 4
@@ -522,8 +546,8 @@ mutation bootstrap {
         material: ["Textile:0:Material:Cotton", "PowerPlant:0:Energy"]
         products: ["Textile:0:Product:Textile"]
         stoppageSurchargeFactor: 0.1
-        x: 2
-        y: 3
+        x: 0
+        y: 4
         steps: 0
       }
       {
@@ -533,19 +557,24 @@ mutation bootstrap {
         material: []
         products: ["Cotton:0:Product:Cotton"]
         stoppageSurchargeFactor: 0.1
-        x: 1
-        y: 5
+        x: 0
+        y: 6
         steps: 0
       }
       {
         id: "Factory:0"
         sim: "Default"
         type: "Factory"
-        material: ["Factory:0:Material:Petrochemicals", "Factory:0:Material:Textiles", "Factory:0:Material:Lumber", "PowerPlant:1:Energy"]
+        material: [
+          "Factory:0:Material:Petrochemicals"
+          "Factory:0:Material:Textiles"
+          "Factory:0:Material:Lumber"
+          "PowerPlant:1:Energy"
+        ]
         products: ["Factory:0:Product:Goods"]
         stoppageSurchargeFactor: 0.1
-        x: 9
-        y: 8
+        x: 11
+        y: 7
         steps: 0
       }
       {
