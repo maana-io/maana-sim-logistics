@@ -868,7 +868,7 @@ mutation bootstrap {
         consumptionRate: 0
       }
       # Plane:0
-      
+
       {
         id: "Plane:0:Petrochemicals"
         sim: "Default"
@@ -945,8 +945,17 @@ mutation bootstrap {
         reliability: 0.96
         durability: 0.9
         efficiency: 1.0
-        cargo: ["Truck:0:Crude", "Truck:0:Petrochemicals", "Truck:0:Coal", "Truck:0:Cotton", "Truck:0:Textiles",
-          "Truck:0:Trees", "Truck:0:Lumber", "Truck:0:Food", "Truck:0:Goods"]
+        cargo: [
+          "Truck:0:Crude"
+          "Truck:0:Petrochemicals"
+          "Truck:0:Coal"
+          "Truck:0:Cotton"
+          "Truck:0:Textiles"
+          "Truck:0:Trees"
+          "Truck:0:Lumber"
+          "Truck:0:Food"
+          "Truck:0:Goods"
+        ]
         cargoModeAND: false
         x: 1
         y: 1
@@ -954,6 +963,7 @@ mutation bootstrap {
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Truck:0:Fuel"
+        yRot: 0
       }
       {
         id: "Truck:1"
@@ -966,8 +976,17 @@ mutation bootstrap {
         reliability: 0.96
         durability: 0.9
         efficiency: 1.0
-        cargo: ["Truck:1:Crude", "Truck:1:Petrochemicals", "Truck:1:Coal", "Truck:1:Cotton", "Truck:1:Textiles",
-          "Truck:1:Trees", "Truck:1:Lumber", "Truck:1:Food", "Truck:1:Goods"]
+        cargo: [
+          "Truck:1:Crude"
+          "Truck:1:Petrochemicals"
+          "Truck:1:Coal"
+          "Truck:1:Cotton"
+          "Truck:1:Textiles"
+          "Truck:1:Trees"
+          "Truck:1:Lumber"
+          "Truck:1:Food"
+          "Truck:1:Goods"
+        ]
         cargoModeAND: false
         x: 4
         y: 2
@@ -975,6 +994,7 @@ mutation bootstrap {
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Truck:1:Fuel"
+        yRot: 0
       }
       {
         id: "Truck:2"
@@ -987,8 +1007,17 @@ mutation bootstrap {
         reliability: 0.96
         durability: 0.9
         efficiency: 1.0
-        cargo: ["Truck:2:Crude", "Truck:2:Petrochemicals", "Truck:2:Coal", "Truck:2:Cotton", "Truck:2:Textiles",
-          "Truck:2:Trees", "Truck:2:Lumber", "Truck:2:Food", "Truck:2:Goods"]
+        cargo: [
+          "Truck:2:Crude"
+          "Truck:2:Petrochemicals"
+          "Truck:2:Coal"
+          "Truck:2:Cotton"
+          "Truck:2:Textiles"
+          "Truck:2:Trees"
+          "Truck:2:Lumber"
+          "Truck:2:Food"
+          "Truck:2:Goods"
+        ]
         cargoModeAND: false
         x: 2
         y: 6
@@ -996,6 +1025,7 @@ mutation bootstrap {
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Truck:2:Fuel"
+        yRot: 0
       }
       {
         id: "Truck:3"
@@ -1008,8 +1038,17 @@ mutation bootstrap {
         reliability: 0.96
         durability: 0.9
         efficiency: 1.0
-        cargo: ["Truck:3:Crude", "Truck:3:Petrochemicals", "Truck:3:Coal", "Truck:3:Cotton", "Truck:3:Textiles",
-          "Truck:3:Trees", "Truck:3:Lumber", "Truck:3:Food", "Truck:3:Goods"]
+        cargo: [
+          "Truck:3:Crude"
+          "Truck:3:Petrochemicals"
+          "Truck:3:Coal"
+          "Truck:3:Cotton"
+          "Truck:3:Textiles"
+          "Truck:3:Trees"
+          "Truck:3:Lumber"
+          "Truck:3:Food"
+          "Truck:3:Goods"
+        ]
         cargoModeAND: false
         x: 9
         y: 4
@@ -1017,6 +1056,7 @@ mutation bootstrap {
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Truck:3:Fuel"
+        yRot: 0
       }
       {
         id: "Truck:4"
@@ -1029,8 +1069,17 @@ mutation bootstrap {
         reliability: 0.96
         durability: 0.9
         efficiency: 1.0
-        cargo: ["Truck:4:Crude", "Truck:4:Petrochemicals", "Truck:4:Coal", "Truck:4:Cotton", "Truck:4:Textiles",
-          "Truck:4:Trees", "Truck:4:Lumber", "Truck:4:Food", "Truck:4:Goods"]
+        cargo: [
+          "Truck:4:Crude"
+          "Truck:4:Petrochemicals"
+          "Truck:4:Coal"
+          "Truck:4:Cotton"
+          "Truck:4:Textiles"
+          "Truck:4:Trees"
+          "Truck:4:Lumber"
+          "Truck:4:Food"
+          "Truck:4:Goods"
+        ]
         cargoModeAND: false
         x: 8
         y: 8
@@ -1038,6 +1087,7 @@ mutation bootstrap {
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Truck:4:Fuel"
+        yRot: 0
       }
       {
         id: "Truck:5"
@@ -1050,8 +1100,17 @@ mutation bootstrap {
         reliability: 0.96
         durability: 0.9
         efficiency: 1.0
-        cargo: ["Truck:5:Crude", "Truck:5:Petrochemicals", "Truck:5:Coal", "Truck:5:Cotton", "Truck:5:Textiles",
-          "Truck:5:Trees", "Truck:5:Lumber", "Truck:5:Food", "Truck:5:Goods"]
+        cargo: [
+          "Truck:5:Crude"
+          "Truck:5:Petrochemicals"
+          "Truck:5:Coal"
+          "Truck:5:Cotton"
+          "Truck:5:Textiles"
+          "Truck:5:Trees"
+          "Truck:5:Lumber"
+          "Truck:5:Food"
+          "Truck:5:Goods"
+        ]
         cargoModeAND: false
         x: 6
         y: 10
@@ -1059,6 +1118,7 @@ mutation bootstrap {
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Truck:5:Fuel"
+        yRot: 0
       }
       # Assumed a slower speed than trucks (0.8 x Truck Velocity)
       # Assumed a fuel efficiency of (0.0005 x Truck Efficiency)
@@ -1073,8 +1133,16 @@ mutation bootstrap {
         reliability: 0.98
         durability: 0.9
         efficiency: 0.05
-        cargo: ["Ship:0:Crude", "Ship:0:Petrochemicals", "Ship:0:Textiles",
-          "Ship:0:Coal", "Ship:0:Trees","Ship:0:Lumber", "Ship:0:Food", "Ship:0:Goods"]
+        cargo: [
+          "Ship:0:Crude"
+          "Ship:0:Petrochemicals"
+          "Ship:0:Textiles"
+          "Ship:0:Coal"
+          "Ship:0:Trees"
+          "Ship:0:Lumber"
+          "Ship:0:Food"
+          "Ship:0:Goods"
+        ]
         cargoModeAND: true
         x: 5
         y: 6
@@ -1082,6 +1150,7 @@ mutation bootstrap {
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Ship:0:Fuel"
+        yRot: 0
       }
       # Assumed a plane velocity of (4 x Truck Velocity)
       # Assumed a fuel efficiency of (0.008 x Truck Efficiency)
@@ -1096,7 +1165,12 @@ mutation bootstrap {
         reliability: 0.99
         durability: 0.9
         efficiency: 0.08
-        cargo: ["Plane:0:Petrochemicals", "Plane:0:Textiles", "Plane:0:Food", "Plane:0:Goods"]
+        cargo: [
+          "Plane:0:Petrochemicals"
+          "Plane:0:Textiles"
+          "Plane:0:Food"
+          "Plane:0:Goods"
+        ]
         cargoModeAND: true
         x: 7
         y: 6
@@ -1104,6 +1178,7 @@ mutation bootstrap {
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Plane:0:Fuel"
+        yRot: 0
       }
     ]
   )
