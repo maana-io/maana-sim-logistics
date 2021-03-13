@@ -957,13 +957,13 @@ mutation bootstrap {
           "Truck:0:Goods"
         ]
         cargoModeAND: false
-        x: 1
+        x: 3
         y: 1
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Truck:0:Fuel"
-        yRot: 0
+        yRot: 90
       }
       {
         id: "Truck:1"
@@ -1056,7 +1056,7 @@ mutation bootstrap {
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Truck:3:Fuel"
-        yRot: 0
+        yRot: -90
       }
       {
         id: "Truck:4"
@@ -1118,7 +1118,7 @@ mutation bootstrap {
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Truck:5:Fuel"
-        yRot: 0
+        yRot: 90
       }
       # Assumed a slower speed than trucks (0.8 x Truck Velocity)
       # Assumed a fuel efficiency of (0.0005 x Truck Efficiency)
@@ -1172,13 +1172,13 @@ mutation bootstrap {
           "Plane:0:Goods"
         ]
         cargoModeAND: true
-        x: 6
-        y: 5
+        x: 9
+        y: 9
         transitOrder: "Idle"
         lastServiceStep: 0
         serviceInterval: 100
         fuel: "Plane:0:Fuel"
-        yRot: -75
+        yRot: 0
       }
     ]
   )

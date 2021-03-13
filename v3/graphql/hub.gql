@@ -188,8 +188,8 @@ mutation bootstrap {
         type: "Airport"
         vehicleType: "Plane"
         supplies: ["Airport:1:Petrochemicals", "PowerPlant:1:Energy"]
-        x: 8
-        y: 5
+        x: 9
+        y: 9
         steps: 0
         repairSurcharge: 100
         yRot: 0
@@ -201,7 +201,7 @@ mutation bootstrap {
         vehicleType: "Ship"
         supplies: ["Port:0:Petrochemicals", "PowerPlant:1:Energy"]
         x: 9
-        y: 3
+        y: 2
         steps: 0
         repairSurcharge: 100
         yRot: 0

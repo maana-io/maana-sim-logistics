@@ -473,7 +473,7 @@ mutation bootstrap {
         material: ["PowerPlant:1:Energy"]
         products: ["Farm:1:Product:Food"]
         stoppageSurchargeFactor: 0.1
-        x: 10
+        x: 11
         y: 5
         steps: 0
         yRot: 90
@@ -488,7 +488,7 @@ mutation bootstrap {
         x: 5
         y: 10
         steps: 0
-        yRot: 0
+        yRot: 90
       }
       {
         id: "Forest:1"
@@ -548,7 +548,7 @@ mutation bootstrap {
         x: 8
         y: 4
         steps: 0
-        yRot: 180
+        yRot: -90
       }
       {
         id: "TextileMill:0"
