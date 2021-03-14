@@ -38,8 +38,8 @@ mutation bootstrap {
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
         scarcitySurchargeFactor: 1
-        replenishRate: 300 // units per turn
-        consumptionRate: 1 // units per unit produced
+        replenishRate: 300 
+        consumptionRate: 30
       }
       {
         id: "OilWell:0:Product:Crude"
@@ -50,7 +50,7 @@ mutation bootstrap {
         basePricePerUnit: 1.6
         adjustedPricePerUnit: 1.6
         scarcitySurchargeFactor: 0.5
-        replenishRate: 25 // units per turn
+        replenishRate: 25 
         consumptionRate: 0
       }
       {
@@ -303,7 +303,7 @@ mutation bootstrap {
         adjustedPricePerUnit: 2
         scarcitySurchargeFactor: 0.5
         replenishRate: 40
-        consumptionRate: -
+        consumptionRate: 0
       }
       {
         id: "Cotton:0:Product:Cotton"

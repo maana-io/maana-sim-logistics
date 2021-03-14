@@ -96,8 +96,8 @@ mutation bootstrap {
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
         scarcitySurchargeFactor: 1
-        replenishRate: 300 // units per turn
-        consumptionRate: 1 // units per unit produced
+        replenishRate: 300
+        consumptionRate: 30
       }
     ]
   )
