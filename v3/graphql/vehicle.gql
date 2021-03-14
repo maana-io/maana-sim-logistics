@@ -21,8 +21,8 @@ mutation bootstrap {
         id: "Idle"
         sim: "Default"
         vehicle: 0
-        destX: 0
-        destY: 0
+        waypoints:[]
+        visited:[]
         steps: 0
         status: "Idle"
       }
