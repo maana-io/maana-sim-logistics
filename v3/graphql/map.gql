@@ -1,38 +1,87 @@
 mutation bootstrap {
-  addTileTypeEnums(
+
+  addTraversalTypeEnums(
+    input: [{id:"*"}, { id: "None" }, { id: "Road" }, { id: "Water" }]
+  )
+
+addEntityTraversalCompatibilitys(
+  input: [
+    {
+    id: "Truck:Road",
+    entityType: "Truck",
+    traversalType: "Road"
+  }
+    {
+    id: "Ship:Water",
+    entityType: "Ship",
+    traversalType: "Water"
+  }
+    {
+    id: "Plane:*",
+    entityType: "Plane",
+    traversalType: "*"
+  }
+  ]
+)
+
+  addTileDescriptors(
     input: [
-      { id: "Grass" }
-      { id: "Grass01" }
-      { id: "Grass02" }
-      { id: "Grass03" }
-      { id: "Grass04" }
-      { id: "Grass05" }
-      { id: "Grass06" }
-      { id: "Grass07" }
-      { id: "Grass08" }
-      { id: "Sand" }
-      { id: "Sand01" }
-      { id: "Sand02" }
-      { id: "Sand03" }
-      { id: "Sand04" }
-      { id: "Sand05" }
-      { id: "Sand06" }
-      { id: "Pavement" }
-      { id: "Pavement01" }
-      { id: "Water" }
-      { id: "Water01" }
-      { id: "Water02" }
-      { id: "Water03" }
-      { id: "Water04" }
-      { id: "Water05" }
+      { id: "Grass", traversabilityGrid:[] }
+      { id: "Grass01", traversabilityGrid:[] }
+      { id: "Grass02", traversabilityGrid:[] }
+      { id: "Grass03", traversabilityGrid:[] }
+      { id: "Grass04", traversabilityGrid:[] }
+      { id: "Grass05", traversabilityGrid:[] }
+      { id: "Grass06", traversabilityGrid:[] }
+      { id: "Grass07", traversabilityGrid:[] }
+      { id: "Grass08", traversabilityGrid:[] }
+      { id: "Sand", traversabilityGrid:[] }
+      { id: "Sand01", traversabilityGrid:[] }
+      { id: "Sand02", traversabilityGrid:[] }
+      { id: "Sand03", traversabilityGrid:[] }
+      { id: "Sand04", traversabilityGrid:[] }
+      { id: "Sand05", traversabilityGrid:[] }
+      { id: "Sand06", traversabilityGrid:[] }
+      { id: "Pavement", traversabilityGrid:[] }
+      { id: "Pavement01", traversabilityGrid:[] }
+      { id: "Water", traversabilityGrid:[] }
+      { id: "Water01", traversabilityGrid:[] }
+      { id: "Water02", traversabilityGrid:[] }
+      { id: "Water03", traversabilityGrid:[] }
+      { id: "Water04", traversabilityGrid:[] }
+      { id: "Water05", traversabilityGrid:[] }
     ]
   )
 
-  addMaps(input: [{ id: "Default", tilesX: 12, tilesY: 12 }])
 
-  addTraversalTypeEnums(
-    input: [{ id: "None" }, { id: "Road" }, { id: "Water" }]
-  )
+  addMaps(input: [{ id: "Default", tilesX: 12, tilesY: 12, tileDescriptors: [
+      "Grass"
+      "Grass01"
+      "Grass02"
+      "Grass03"
+      "Grass04"
+      "Grass05"
+      "Grass06"
+      "Grass07"
+      "Grass08"
+      "Sand"
+      "Sand01"
+      "Sand02"
+      "Sand03"
+      "Sand04"
+      "Sand05"
+      "Sand06"
+      "Pavement"
+      "Pavement01"
+      "Water"
+      "Water01"
+      "Water02"
+      "Water03"
+      "Water04"
+      "Water05"
+  ]
+  entityTraversalCompatibilities: ["Truck:Road","Ship:Water","Plane:*"] }])
+
 
   addTiles(
     input: [
@@ -44,7 +93,7 @@ mutation bootstrap {
         x: 0
         y: 0
         yRot: -90
-        traversalType: "None"
+        docks: []
       }
       {
         id: "Default:1:0"
@@ -53,7 +102,7 @@ mutation bootstrap {
         x: 1
         y: 0
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:2:0"
@@ -61,8 +110,8 @@ mutation bootstrap {
         type: "Sand03"
         x: 2
         y: 0
-        yRot: -90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:3:0"
@@ -71,7 +120,7 @@ mutation bootstrap {
         x: 3
         y: 0
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:4:0"
@@ -79,8 +128,8 @@ mutation bootstrap {
         type: "Sand03"
         x: 4
         y: 0
-        yRot: -90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:5:0"
@@ -89,7 +138,7 @@ mutation bootstrap {
         x: 5
         y: 0
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:6:0"
@@ -98,7 +147,7 @@ mutation bootstrap {
         x: 6
         y: 0
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:7:0"
@@ -106,8 +155,8 @@ mutation bootstrap {
         type: "Water02"
         x: 7
         y: 0
-        yRot: 180
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:8:0"
@@ -116,7 +165,7 @@ mutation bootstrap {
         x: 8
         y: 0
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:9:0"
@@ -125,7 +174,7 @@ mutation bootstrap {
         x: 9
         y: 0
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:10:0"
@@ -134,7 +183,7 @@ mutation bootstrap {
         x: 10
         y: 0
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:11:0"
@@ -142,8 +191,8 @@ mutation bootstrap {
         type: "Grass05"
         x: 11
         y: 0
-        yRot: 90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       # Row 1
       {
@@ -152,8 +201,8 @@ mutation bootstrap {
         type: "Sand04"
         x: 0
         y: 1
-        yRot: 180
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:1:1"
@@ -161,8 +210,8 @@ mutation bootstrap {
         type: "Sand06"
         x: 1
         y: 1
-        yRot: -90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:2:1"
@@ -170,8 +219,8 @@ mutation bootstrap {
         type: "Sand06"
         x: 2
         y: 1
-        yRot: 90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:3:1"
@@ -180,7 +229,7 @@ mutation bootstrap {
         x: 3
         y: 1
         yRot: 0
-        traversalType: "Road"
+       docks: []
       }
       {
         id: "Default:4:1"
@@ -188,8 +237,8 @@ mutation bootstrap {
         type: "Sand06"
         x: 4
         y: 1
-        yRot: 90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:5:1"
@@ -197,8 +246,8 @@ mutation bootstrap {
         type: "Sand05"
         x: 5
         y: 1
-        yRot: 180
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:6:1"
@@ -207,7 +256,7 @@ mutation bootstrap {
         x: 6
         y: 1
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:7:1"
@@ -215,8 +264,8 @@ mutation bootstrap {
         type: "Water02"
         x: 7
         y: 1
-        yRot: 180
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:8:1"
@@ -225,7 +274,7 @@ mutation bootstrap {
         x: 8
         y: 1
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:9:1"
@@ -234,7 +283,7 @@ mutation bootstrap {
         x: 9
         y: 1
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:10:1"
@@ -243,7 +292,7 @@ mutation bootstrap {
         x: 10
         y: 1
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:11:1"
@@ -251,8 +300,8 @@ mutation bootstrap {
         type: "Grass07"
         x: 11
         y: 1
-        yRot: -90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       # Row 2
       {
@@ -262,7 +311,7 @@ mutation bootstrap {
         x: 0
         y: 2
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:1:2"
@@ -271,7 +320,7 @@ mutation bootstrap {
         x: 1
         y: 2
         yRot: 0
-        traversalType: "Road"
+       docks: []
       }
       {
         id: "Default:2:2"
@@ -280,7 +329,7 @@ mutation bootstrap {
         x: 2
         y: 2
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:3:2"
@@ -289,7 +338,7 @@ mutation bootstrap {
         x: 3
         y: 2
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:4:2"
@@ -298,7 +347,7 @@ mutation bootstrap {
         x: 4
         y: 2
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:5:2"
@@ -306,8 +355,8 @@ mutation bootstrap {
         type: "Sand02"
         x: 5
         y: 2
-        yRot: 90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:6:2"
@@ -315,8 +364,8 @@ mutation bootstrap {
         type: "Water03"
         x: 6
         y: 2
-        yRot: -90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:7:2"
@@ -324,8 +373,8 @@ mutation bootstrap {
         type: "Water04"
         x: 7
         y: 2
-        yRot: -90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:8:2"
@@ -334,7 +383,7 @@ mutation bootstrap {
         x: 8
         y: 2
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:9:2"
@@ -343,7 +392,7 @@ mutation bootstrap {
         x: 9
         y: 2
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:10:2"
@@ -352,7 +401,7 @@ mutation bootstrap {
         x: 10
         y: 2
         yRot: 0
-        traversalType: "Road"
+       docks: []
       }
       {
         id: "Default:11:2"
@@ -361,7 +410,7 @@ mutation bootstrap {
         x: 11
         y: 2
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       # Row 3
       {
@@ -371,7 +420,7 @@ mutation bootstrap {
         x: 0
         y: 3
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:1:3"
@@ -379,8 +428,8 @@ mutation bootstrap {
         type: "Sand05"
         x: 1
         y: 3
-        yRot: 90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:2:3"
@@ -388,8 +437,8 @@ mutation bootstrap {
         type: "Sand06"
         x: 2
         y: 3
-        yRot: -90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:3:3"
@@ -398,7 +447,7 @@ mutation bootstrap {
         x: 3
         y: 3
         yRot: 0
-        traversalType: "Road"
+       docks: []
       }
       {
         id: "Default:4:3"
@@ -406,8 +455,8 @@ mutation bootstrap {
         type: "Sand06"
         x: 4
         y: 3
-        yRot: -90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:5:3"
@@ -416,7 +465,7 @@ mutation bootstrap {
         x: 5
         y: 3
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:6:3"
@@ -424,8 +473,8 @@ mutation bootstrap {
         type: "Water02"
         x: 6
         y: 3
-        yRot: 180
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:7:3"
@@ -433,8 +482,8 @@ mutation bootstrap {
         type: "Water04"
         x: 7
         y: 3
-        yRot: 90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:8:3"
@@ -442,8 +491,8 @@ mutation bootstrap {
         type: "Water02"
         x: 8
         y: 3
-        yRot: 90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:9:3"
@@ -451,8 +500,8 @@ mutation bootstrap {
         type: "Water03"
         x: 9
         y: 3
-        yRot: 90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:10:3"
@@ -460,8 +509,8 @@ mutation bootstrap {
         type: "Grass02"
         x: 10
         y: 3
-        yRot: 90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:11:3"
@@ -470,7 +519,7 @@ mutation bootstrap {
         x: 11
         y: 3
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       # Row 4
       {
@@ -480,7 +529,7 @@ mutation bootstrap {
         x: 0
         y: 4
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:1:4"
@@ -489,7 +538,7 @@ mutation bootstrap {
         x: 1
         y: 4
         yRot: 0
-        traversalType: "Road"
+       docks: []
       }
       {
         id: "Default:2:4"
@@ -498,7 +547,7 @@ mutation bootstrap {
         x: 2
         y: 4
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:3:4"
@@ -507,7 +556,7 @@ mutation bootstrap {
         x: 3
         y: 4
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:4:4"
@@ -515,8 +564,8 @@ mutation bootstrap {
         type: "Pavement"
         x: 4
         y: 4
-        yRot: -90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:5:4"
@@ -524,8 +573,8 @@ mutation bootstrap {
         type: "Water03"
         x: 5
         y: 4
-        yRot: -90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:6:4"
@@ -533,8 +582,8 @@ mutation bootstrap {
         type: "Water04"
         x: 6
         y: 4
-        yRot: -90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:7:4"
@@ -543,7 +592,7 @@ mutation bootstrap {
         x: 7
         y: 4
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:8:4"
@@ -552,7 +601,7 @@ mutation bootstrap {
         x: 8
         y: 4
         yRot: 0
-        traversalType: "Road"
+       docks: []
       }
       {
         id: "Default:9:4"
@@ -561,7 +610,7 @@ mutation bootstrap {
         x: 9
         y: 4
         yRot: 0
-        traversalType: "Road"
+       docks: []
       }
       {
         id: "Default:10:4"
@@ -570,7 +619,7 @@ mutation bootstrap {
         x: 10
         y: 4
         yRot: 0
-        traversalType: "Road"
+       docks: []
       }
       {
         id: "Default:11:4"
@@ -579,7 +628,7 @@ mutation bootstrap {
         x: 11
         y: 4
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       # Row 5
       {
@@ -589,7 +638,7 @@ mutation bootstrap {
         x: 0
         y: 5
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:1:5"
@@ -597,8 +646,8 @@ mutation bootstrap {
         type: "Grass02"
         x: 1
         y: 5
-        yRot: 90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:2:5"
@@ -607,7 +656,7 @@ mutation bootstrap {
         x: 2
         y: 5
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:3:5"
@@ -615,8 +664,8 @@ mutation bootstrap {
         type: "Water03"
         x: 3
         y: 5
-        yRot: -90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:4:5"
@@ -624,8 +673,8 @@ mutation bootstrap {
         type: "Water02"
         x: 4
         y: 5
-        yRot: -90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:5:5"
@@ -633,8 +682,8 @@ mutation bootstrap {
         type: "Water04"
         x: 5
         y: 5
-        yRot: -90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:6:5"
@@ -643,7 +692,7 @@ mutation bootstrap {
         x: 6
         y: 5
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:7:5"
@@ -652,7 +701,7 @@ mutation bootstrap {
         x: 7
         y: 5
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:8:5"
@@ -660,8 +709,8 @@ mutation bootstrap {
         type: "Grass02"
         x: 8
         y: 5
-        yRot: 90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:9:5"
@@ -670,7 +719,7 @@ mutation bootstrap {
         x: 9
         y: 5
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:10:5"
@@ -678,8 +727,8 @@ mutation bootstrap {
         type: "Grass01"
         x: 10
         y: 5
-        yRot: 180
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:11:5"
@@ -688,7 +737,7 @@ mutation bootstrap {
         x: 11
         y: 5
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       # Row 6
       {
@@ -697,8 +746,8 @@ mutation bootstrap {
         type: "Grass03"
         x: 0
         y: 6
-        yRot: 180
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:1:6"
@@ -707,7 +756,7 @@ mutation bootstrap {
         x: 1
         y: 6
         yRot: 0
-        traversalType: "Road"
+       docks: []
       }
       {
         id: "Default:2:6"
@@ -715,8 +764,8 @@ mutation bootstrap {
         type: "Water03"
         x: 2
         y: 6
-        yRot: -90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:3:6"
@@ -724,8 +773,8 @@ mutation bootstrap {
         type: "Water04"
         x: 3
         y: 6
-        yRot: -90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:4:6"
@@ -734,7 +783,7 @@ mutation bootstrap {
         x: 4
         y: 6
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:5:6"
@@ -743,7 +792,7 @@ mutation bootstrap {
         x: 5
         y: 6
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:6:6"
@@ -752,7 +801,7 @@ mutation bootstrap {
         x: 6
         y: 6
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:7:6"
@@ -761,7 +810,7 @@ mutation bootstrap {
         x: 7
         y: 6
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:8:6"
@@ -769,8 +818,8 @@ mutation bootstrap {
         type: "Grass02"
         x: 8
         y: 6
-        yRot: 90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:9:6"
@@ -778,8 +827,8 @@ mutation bootstrap {
         type: "Grass07"
         x: 9
         y: 6
-        yRot: 90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:10:6"
@@ -787,8 +836,8 @@ mutation bootstrap {
         type: "Grass02"
         x: 10
         y: 6
-        yRot: 90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:11:6"
@@ -797,7 +846,7 @@ mutation bootstrap {
         x: 11
         y: 6
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       # Row 7
       {
@@ -807,7 +856,7 @@ mutation bootstrap {
         x: 0
         y: 7
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:1:7"
@@ -815,8 +864,8 @@ mutation bootstrap {
         type: "Grass04"
         x: 1
         y: 7
-        yRot: 180
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:2:7"
@@ -824,8 +873,8 @@ mutation bootstrap {
         type: "Water02"
         x: 2
         y: 7
-        yRot: 180
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:3:7"
@@ -834,7 +883,7 @@ mutation bootstrap {
         x: 3
         y: 7
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:4:7"
@@ -843,7 +892,7 @@ mutation bootstrap {
         x: 4
         y: 7
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:5:7"
@@ -852,7 +901,7 @@ mutation bootstrap {
         x: 5
         y: 7
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:6:7"
@@ -861,7 +910,7 @@ mutation bootstrap {
         x: 6
         y: 7
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:7:7"
@@ -870,7 +919,7 @@ mutation bootstrap {
         x: 7
         y: 7
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:8:7"
@@ -879,7 +928,7 @@ mutation bootstrap {
         x: 8
         y: 7
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:9:7"
@@ -887,8 +936,8 @@ mutation bootstrap {
         type: "Grass07"
         x: 9
         y: 7
-        yRot: -90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:10:7"
@@ -896,8 +945,8 @@ mutation bootstrap {
         type: "Grass01"
         x: 10
         y: 7
-        yRot: 180
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:11:7"
@@ -906,7 +955,7 @@ mutation bootstrap {
         x: 11
         y: 7
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       # Row 8
       {
@@ -915,8 +964,8 @@ mutation bootstrap {
         type: "Grass07"
         x: 0
         y: 8
-        yRot: 90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:1:8"
@@ -924,8 +973,8 @@ mutation bootstrap {
         type: "Water03"
         x: 1
         y: 8
-        yRot: -90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:2:8"
@@ -933,8 +982,8 @@ mutation bootstrap {
         type: "Water04"
         x: 2
         y: 8
-        yRot: -90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:3:8"
@@ -943,7 +992,7 @@ mutation bootstrap {
         x: 3
         y: 8
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:4:8"
@@ -952,7 +1001,7 @@ mutation bootstrap {
         x: 4
         y: 8
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:5:8"
@@ -961,7 +1010,7 @@ mutation bootstrap {
         x: 5
         y: 8
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:6:8"
@@ -969,8 +1018,8 @@ mutation bootstrap {
         type: "Water04"
         x: 6
         y: 8
-        yRot: 90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:7:8"
@@ -978,8 +1027,8 @@ mutation bootstrap {
         type: "Water03"
         x: 7
         y: 8
-        yRot: 90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:8:8"
@@ -987,8 +1036,8 @@ mutation bootstrap {
         type: "Grass06"
         x: 8
         y: 8
-        yRot: 90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:9:8"
@@ -996,8 +1045,8 @@ mutation bootstrap {
         type: "Grass01"
         x: 9
         y: 8
-        yRot: -90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:10:8"
@@ -1005,8 +1054,8 @@ mutation bootstrap {
         type: "Grass06"
         x: 10
         y: 8
-        yRot: -90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:11:8"
@@ -1015,7 +1064,7 @@ mutation bootstrap {
         x: 11
         y: 8
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       # Row 9
       {
@@ -1024,8 +1073,8 @@ mutation bootstrap {
         type: "Grass07"
         x: 0
         y: 9
-        yRot: -90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:1:9"
@@ -1033,8 +1082,8 @@ mutation bootstrap {
         type: "Water02"
         x: 1
         y: 9
-        yRot: 180
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:2:9"
@@ -1043,7 +1092,7 @@ mutation bootstrap {
         x: 2
         y: 9
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:3:9"
@@ -1052,7 +1101,7 @@ mutation bootstrap {
         x: 3
         y: 9
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:4:9"
@@ -1060,8 +1109,8 @@ mutation bootstrap {
         type: "Water04"
         x: 4
         y: 9
-        yRot: 90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:5:9"
@@ -1069,8 +1118,8 @@ mutation bootstrap {
         type: "Water02"
         x: 5
         y: 9
-        yRot: 90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:6:9"
@@ -1078,8 +1127,8 @@ mutation bootstrap {
         type: "Water03"
         x: 6
         y: 9
-        yRot: 90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:7:9"
@@ -1088,7 +1137,7 @@ mutation bootstrap {
         x: 7
         y: 9
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:8:9"
@@ -1097,7 +1146,7 @@ mutation bootstrap {
         x: 8
         y: 9
         yRot: 0
-        traversalType: "Road"
+       docks: []
       }
       {
         id: "Default:9:9"
@@ -1106,7 +1155,7 @@ mutation bootstrap {
         x: 9
         y: 9
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:10:9"
@@ -1114,8 +1163,8 @@ mutation bootstrap {
         type: "Grass01"
         x: 10
         y: 9
-        yRot: 180
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:11:9"
@@ -1124,7 +1173,7 @@ mutation bootstrap {
         x: 11
         y: 9
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       # Row 10
       {
@@ -1133,8 +1182,8 @@ mutation bootstrap {
         type: "Water02"
         x: 0
         y: 10
-        yRot: -90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:1:10"
@@ -1142,8 +1191,8 @@ mutation bootstrap {
         type: "Water04"
         x: 1
         y: 10
-        yRot: -90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:2:10"
@@ -1151,8 +1200,8 @@ mutation bootstrap {
         type: "Water04"
         x: 2
         y: 10
-        yRot: 90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:3:10"
@@ -1160,8 +1209,8 @@ mutation bootstrap {
         type: "Water02"
         x: 3
         y: 10
-        yRot: 90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:4:10"
@@ -1169,8 +1218,8 @@ mutation bootstrap {
         type: "Water03"
         x: 4
         y: 10
-        yRot: 90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:5:10"
@@ -1178,8 +1227,8 @@ mutation bootstrap {
         type: "Grass03"
         x: 5
         y: 10
-        yRot: 180
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:6:10"
@@ -1187,8 +1236,8 @@ mutation bootstrap {
         type: "Grass01"
         x: 6
         y: 10
-        yRot: -90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:7:10"
@@ -1197,7 +1246,7 @@ mutation bootstrap {
         x: 7
         y: 10
         yRot: 0
-        traversalType: "Road"
+       docks: []
       }
       {
         id: "Default:8:10"
@@ -1206,7 +1255,7 @@ mutation bootstrap {
         x: 8
         y: 10
         yRot: 0
-        traversalType: "Road"
+       docks: []
       }
       {
         id: "Default:9:10"
@@ -1214,8 +1263,8 @@ mutation bootstrap {
         type: "Grass01"
         x: 9
         y: 10
-        yRot: -90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:10:10"
@@ -1223,8 +1272,8 @@ mutation bootstrap {
         type: "Grass04"
         x: 10
         y: 10
-        yRot: 90
-        traversalType: "Road"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:11:10"
@@ -1233,7 +1282,7 @@ mutation bootstrap {
         x: 11
         y: 10
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       # Row 11
       {
@@ -1243,7 +1292,7 @@ mutation bootstrap {
         x: 0
         y: 11
         yRot: 0
-        traversalType: "Water"
+       docks: []
       }
       {
         id: "Default:1:11"
@@ -1251,8 +1300,8 @@ mutation bootstrap {
         type: "Water04"
         x: 1
         y: 11
-        yRot: 90
-        traversalType: "Water"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:2:11"
@@ -1260,8 +1309,8 @@ mutation bootstrap {
         type: "Water03"
         x: 2
         y: 11
-        yRot: 90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:3:11"
@@ -1270,7 +1319,7 @@ mutation bootstrap {
         x: 3
         y: 11
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:4:11"
@@ -1278,8 +1327,8 @@ mutation bootstrap {
         type: "Grass05"
         x: 4
         y: 11
-        yRot: 90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:5:11"
@@ -1288,7 +1337,7 @@ mutation bootstrap {
         x: 5
         y: 11
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:6:11"
@@ -1296,8 +1345,8 @@ mutation bootstrap {
         type: "Grass03"
         x: 6
         y: 11
-        yRot: 90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:7:11"
@@ -1305,8 +1354,8 @@ mutation bootstrap {
         type: "Grass07"
         x: 7
         y: 11
-        yRot: 180
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:8:11"
@@ -1315,7 +1364,7 @@ mutation bootstrap {
         x: 8
         y: 11
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:9:11"
@@ -1323,8 +1372,8 @@ mutation bootstrap {
         type: "Grass03"
         x: 9
         y: 11
-        yRot: 90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
       {
         id: "Default:10:11"
@@ -1333,7 +1382,7 @@ mutation bootstrap {
         x: 10
         y: 11
         yRot: 0
-        traversalType: "None"
+       docks: []
       }
       {
         id: "Default:11:11"
@@ -1341,8 +1390,8 @@ mutation bootstrap {
         type: "Grass07"
         x: 11
         y: 11
-        yRot: 90
-        traversalType: "None"
+        yRot: 0
+       docks: []
       }
     ]
   )
