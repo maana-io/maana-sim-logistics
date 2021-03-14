@@ -8,11 +8,11 @@ mutation bootstrap {
         type: "Textiles"
         capacity: 1000
         quantity: 1000
-        basePricePerUnit: 5
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 2
+        basePricePerUnit: 2
+        adjustedPricePerUnit: 2
+        scarcitySurchargeFactor: 0.5
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 0.1
       }
       {
         id: "City:0:Goods"
@@ -20,11 +20,11 @@ mutation bootstrap {
         type: "Goods"
         capacity: 1000
         quantity: 1000
-        basePricePerUnit: 5
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 2
+        basePricePerUnit: 10
+        adjustedPricePerUnit: 10
+        scarcitySurchargeFactor: 0.5
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 0.1
       }
       {
         id: "City:0:Food"
@@ -32,23 +32,11 @@ mutation bootstrap {
         type: "Food"
         capacity: 1000
         quantity: 1000
-        basePricePerUnit: 5
+        basePricePerUnit: 1
         adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 2
+        scarcitySurchargeFactor: 0.5
         replenishRate: 0
-        consumptionRate: 1
-      }
-      {
-        id: "City:0:Energy"
-        sim: "Default"
-        type: "Energy"
-        capacity: 1000
-        quantity: 1000
-        basePricePerUnit: 5
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 2
-        replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 0.1
       }
       # City:1
       {
@@ -57,11 +45,11 @@ mutation bootstrap {
         type: "Textiles"
         capacity: 1000
         quantity: 1000
-        basePricePerUnit: 5
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 2
+        basePricePerUnit: 2
+        adjustedPricePerUnit: 2
+        scarcitySurchargeFactor: 0.5
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 0.1
       }
       {
         id: "City:1:Goods"
@@ -69,11 +57,11 @@ mutation bootstrap {
         type: "Goods"
         capacity: 1000
         quantity: 1000
-        basePricePerUnit: 5
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 2
+        basePricePerUnit: 10
+        adjustedPricePerUnit: 10
+        scarcitySurchargeFactor: 0.5
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 0.1
       }
       {
         id: "City:1:Food"
@@ -81,23 +69,35 @@ mutation bootstrap {
         type: "Food"
         capacity: 1000
         quantity: 1000
-        basePricePerUnit: 5
+        basePricePerUnit: 1
         adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 2
+        scarcitySurchargeFactor: 0.5
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 0.1
       }
       {
-        id: "City:1:Energy"
+        id: "PowerPlant:0:Energy"
         sim: "Default"
         type: "Energy"
-        capacity: 1000
+        capacity: 5000
         quantity: 1000
-        basePricePerUnit: 5
+        basePricePerUnit: 1
         adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 2
-        replenishRate: 0
-        consumptionRate: 1
+        scarcitySurchargeFactor: 1
+        replenishRate: 300 
+        consumptionRate: 30 
+      }
+      {
+        id: "PowerPlant:1:Energy"
+        sim: "Default"
+        type: "Energy"
+        capacity: 5000
+        quantity: 1000
+        basePricePerUnit: 1
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 1
+        replenishRate: 300 // units per turn
+        consumptionRate: 1 // units per unit produced
       }
     ]
   )
@@ -108,7 +108,7 @@ mutation bootstrap {
         id: "City:0"
         sim: "Default"
         population: 100
-        populationGrowthRate: 0.1
+        populationGrowthRate: 0.01
         populationDeclineRate: 0.1
         x: 4
         y: 4
@@ -125,7 +125,7 @@ mutation bootstrap {
         id: "City:1"
         sim: "Default"
         population: 100
-        populationGrowthRate: 0.1
+        populationGrowthRate: 0.01
         populationDeclineRate: 0.1
         x: 8
         y: 7
