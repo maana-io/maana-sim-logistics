@@ -1,87 +1,81 @@
 mutation bootstrap {
-
   addTraversalTypeEnums(
-    input: [{id:"*"}, { id: "None" }, { id: "Road" }, { id: "Water" }]
+    input: [{ id: "*" }, { id: "None" }, { id: "Road" }, { id: "Water" }]
   )
 
-addEntityTraversalCompatibilitys(
-  input: [
-    {
-    id: "Truck:Road",
-    entityType: "Truck",
-    traversalType: "Road"
-  }
-    {
-    id: "Ship:Water",
-    entityType: "Ship",
-    traversalType: "Water"
-  }
-    {
-    id: "Plane:*",
-    entityType: "Plane",
-    traversalType: "*"
-  }
-  ]
-)
-
-  addTileDescriptors(
+  addEntityTraversalCompatibilitys(
     input: [
-      { id: "Grass", traversabilityGrid:[] }
-      { id: "Grass01", traversabilityGrid:[] }
-      { id: "Grass02", traversabilityGrid:[] }
-      { id: "Grass03", traversabilityGrid:[] }
-      { id: "Grass04", traversabilityGrid:[] }
-      { id: "Grass05", traversabilityGrid:[] }
-      { id: "Grass06", traversabilityGrid:[] }
-      { id: "Grass07", traversabilityGrid:[] }
-      { id: "Grass08", traversabilityGrid:[] }
-      { id: "Sand", traversabilityGrid:[] }
-      { id: "Sand01", traversabilityGrid:[] }
-      { id: "Sand02", traversabilityGrid:[] }
-      { id: "Sand03", traversabilityGrid:[] }
-      { id: "Sand04", traversabilityGrid:[] }
-      { id: "Sand05", traversabilityGrid:[] }
-      { id: "Sand06", traversabilityGrid:[] }
-      { id: "Pavement", traversabilityGrid:[] }
-      { id: "Pavement01", traversabilityGrid:[] }
-      { id: "Water", traversabilityGrid:[] }
-      { id: "Water01", traversabilityGrid:[] }
-      { id: "Water02", traversabilityGrid:[] }
-      { id: "Water03", traversabilityGrid:[] }
-      { id: "Water04", traversabilityGrid:[] }
-      { id: "Water05", traversabilityGrid:[] }
+      { id: "Truck:Road", entityType: "Truck", traversalType: "Road" }
+      { id: "Ship:Water", entityType: "Ship", traversalType: "Water" }
+      { id: "Plane:*", entityType: "Plane", traversalType: "*" }
     ]
   )
 
+  addTileDescriptors(
+    input: [
+      { id: "Grass", traversabilityGrid: [] }
+      { id: "Grass01", traversabilityGrid: [] }
+      { id: "Grass02", traversabilityGrid: [] }
+      { id: "Grass03", traversabilityGrid: [] }
+      { id: "Grass04", traversabilityGrid: [] }
+      { id: "Grass05", traversabilityGrid: [] }
+      { id: "Grass06", traversabilityGrid: [] }
+      { id: "Grass07", traversabilityGrid: [] }
+      { id: "Grass08", traversabilityGrid: [] }
+      { id: "Sand", traversabilityGrid: [] }
+      { id: "Sand01", traversabilityGrid: [] }
+      { id: "Sand02", traversabilityGrid: [] }
+      { id: "Sand03", traversabilityGrid: [] }
+      { id: "Sand04", traversabilityGrid: [] }
+      { id: "Sand05", traversabilityGrid: [] }
+      { id: "Sand06", traversabilityGrid: [] }
+      { id: "Pavement", traversabilityGrid: [] }
+      { id: "Pavement01", traversabilityGrid: [] }
+      { id: "Water", traversabilityGrid: [] }
+      { id: "Water01", traversabilityGrid: [] }
+      { id: "Water02", traversabilityGrid: [] }
+      { id: "Water03", traversabilityGrid: [] }
+      { id: "Water04", traversabilityGrid: [] }
+      { id: "Water05", traversabilityGrid: [] }
+    ]
+  )
 
-  addMaps(input: [{ id: "Default", tilesX: 12, tilesY: 12, tileDescriptors: [
-      "Grass"
-      "Grass01"
-      "Grass02"
-      "Grass03"
-      "Grass04"
-      "Grass05"
-      "Grass06"
-      "Grass07"
-      "Grass08"
-      "Sand"
-      "Sand01"
-      "Sand02"
-      "Sand03"
-      "Sand04"
-      "Sand05"
-      "Sand06"
-      "Pavement"
-      "Pavement01"
-      "Water"
-      "Water01"
-      "Water02"
-      "Water03"
-      "Water04"
-      "Water05"
-  ]
-  entityTraversalCompatibilities: ["Truck:Road","Ship:Water","Plane:*"] }])
-
+  addMaps(
+    input: [
+      {
+        id: "Default"
+        tilesX: 12
+        tilesY: 12
+        tileDescriptors: [
+          "Grass"
+          "Grass01"
+          "Grass02"
+          "Grass03"
+          "Grass04"
+          "Grass05"
+          "Grass06"
+          "Grass07"
+          "Grass08"
+          "Sand"
+          "Sand01"
+          "Sand02"
+          "Sand03"
+          "Sand04"
+          "Sand05"
+          "Sand06"
+          "Pavement"
+          "Pavement01"
+          "Water"
+          "Water01"
+          "Water02"
+          "Water03"
+          "Water04"
+          "Water05"
+        ]
+        entityTraversalCompatibilities: ["Truck:Road", "Ship:Water", "Plane:*"]
+      }
+    ]
+  )
 
   addTiles(
     input: [
@@ -102,7 +96,7 @@ addEntityTraversalCompatibilitys(
         x: 1
         y: 0
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:2:0"
@@ -111,7 +105,7 @@ addEntityTraversalCompatibilitys(
         x: 2
         y: 0
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:3:0"
@@ -120,7 +114,7 @@ addEntityTraversalCompatibilitys(
         x: 3
         y: 0
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:4:0"
@@ -129,7 +123,7 @@ addEntityTraversalCompatibilitys(
         x: 4
         y: 0
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:5:0"
@@ -138,7 +132,7 @@ addEntityTraversalCompatibilitys(
         x: 5
         y: 0
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:6:0"
@@ -147,7 +141,7 @@ addEntityTraversalCompatibilitys(
         x: 6
         y: 0
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:7:0"
@@ -156,7 +150,7 @@ addEntityTraversalCompatibilitys(
         x: 7
         y: 0
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:8:0"
@@ -165,7 +159,7 @@ addEntityTraversalCompatibilitys(
         x: 8
         y: 0
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:9:0"
@@ -174,7 +168,7 @@ addEntityTraversalCompatibilitys(
         x: 9
         y: 0
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:10:0"
@@ -183,7 +177,7 @@ addEntityTraversalCompatibilitys(
         x: 10
         y: 0
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:11:0"
@@ -192,7 +186,7 @@ addEntityTraversalCompatibilitys(
         x: 11
         y: 0
         yRot: 0
-       docks: []
+        docks: []
       }
       # Row 1
       {
@@ -202,7 +196,7 @@ addEntityTraversalCompatibilitys(
         x: 0
         y: 1
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:1:1"
@@ -211,7 +205,7 @@ addEntityTraversalCompatibilitys(
         x: 1
         y: 1
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:2:1"
@@ -220,7 +214,7 @@ addEntityTraversalCompatibilitys(
         x: 2
         y: 1
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:3:1"
@@ -229,7 +223,7 @@ addEntityTraversalCompatibilitys(
         x: 3
         y: 1
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:4:1"
@@ -238,7 +232,7 @@ addEntityTraversalCompatibilitys(
         x: 4
         y: 1
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:5:1"
@@ -247,7 +241,7 @@ addEntityTraversalCompatibilitys(
         x: 5
         y: 1
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:6:1"
@@ -256,7 +250,7 @@ addEntityTraversalCompatibilitys(
         x: 6
         y: 1
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:7:1"
@@ -265,7 +259,7 @@ addEntityTraversalCompatibilitys(
         x: 7
         y: 1
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:8:1"
@@ -274,7 +268,7 @@ addEntityTraversalCompatibilitys(
         x: 8
         y: 1
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:9:1"
@@ -283,7 +277,7 @@ addEntityTraversalCompatibilitys(
         x: 9
         y: 1
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:10:1"
@@ -292,7 +286,7 @@ addEntityTraversalCompatibilitys(
         x: 10
         y: 1
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:11:1"
@@ -301,7 +295,7 @@ addEntityTraversalCompatibilitys(
         x: 11
         y: 1
         yRot: 0
-       docks: []
+        docks: []
       }
       # Row 2
       {
@@ -311,7 +305,7 @@ addEntityTraversalCompatibilitys(
         x: 0
         y: 2
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:1:2"
@@ -320,7 +314,7 @@ addEntityTraversalCompatibilitys(
         x: 1
         y: 2
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:2:2"
@@ -329,7 +323,7 @@ addEntityTraversalCompatibilitys(
         x: 2
         y: 2
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:3:2"
@@ -338,7 +332,7 @@ addEntityTraversalCompatibilitys(
         x: 3
         y: 2
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:4:2"
@@ -347,7 +341,7 @@ addEntityTraversalCompatibilitys(
         x: 4
         y: 2
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:5:2"
@@ -356,7 +350,7 @@ addEntityTraversalCompatibilitys(
         x: 5
         y: 2
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:6:2"
@@ -365,7 +359,7 @@ addEntityTraversalCompatibilitys(
         x: 6
         y: 2
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:7:2"
@@ -374,7 +368,7 @@ addEntityTraversalCompatibilitys(
         x: 7
         y: 2
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:8:2"
@@ -383,7 +377,7 @@ addEntityTraversalCompatibilitys(
         x: 8
         y: 2
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:9:2"
@@ -392,7 +386,7 @@ addEntityTraversalCompatibilitys(
         x: 9
         y: 2
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:10:2"
@@ -401,7 +395,7 @@ addEntityTraversalCompatibilitys(
         x: 10
         y: 2
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:11:2"
@@ -410,7 +404,7 @@ addEntityTraversalCompatibilitys(
         x: 11
         y: 2
         yRot: 0
-       docks: []
+        docks: []
       }
       # Row 3
       {
@@ -420,7 +414,7 @@ addEntityTraversalCompatibilitys(
         x: 0
         y: 3
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:1:3"
@@ -429,7 +423,7 @@ addEntityTraversalCompatibilitys(
         x: 1
         y: 3
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:2:3"
@@ -438,7 +432,7 @@ addEntityTraversalCompatibilitys(
         x: 2
         y: 3
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:3:3"
@@ -447,7 +441,7 @@ addEntityTraversalCompatibilitys(
         x: 3
         y: 3
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:4:3"
@@ -456,7 +450,7 @@ addEntityTraversalCompatibilitys(
         x: 4
         y: 3
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:5:3"
@@ -465,7 +459,7 @@ addEntityTraversalCompatibilitys(
         x: 5
         y: 3
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:6:3"
@@ -474,7 +468,7 @@ addEntityTraversalCompatibilitys(
         x: 6
         y: 3
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:7:3"
@@ -483,7 +477,7 @@ addEntityTraversalCompatibilitys(
         x: 7
         y: 3
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:8:3"
@@ -492,7 +486,7 @@ addEntityTraversalCompatibilitys(
         x: 8
         y: 3
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:9:3"
@@ -501,7 +495,7 @@ addEntityTraversalCompatibilitys(
         x: 9
         y: 3
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:10:3"
@@ -510,7 +504,7 @@ addEntityTraversalCompatibilitys(
         x: 10
         y: 3
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:11:3"
@@ -519,7 +513,7 @@ addEntityTraversalCompatibilitys(
         x: 11
         y: 3
         yRot: 0
-       docks: []
+        docks: []
       }
       # Row 4
       {
@@ -529,7 +523,7 @@ addEntityTraversalCompatibilitys(
         x: 0
         y: 4
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:1:4"
@@ -538,7 +532,7 @@ addEntityTraversalCompatibilitys(
         x: 1
         y: 4
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:2:4"
@@ -547,7 +541,7 @@ addEntityTraversalCompatibilitys(
         x: 2
         y: 4
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:3:4"
@@ -556,7 +550,7 @@ addEntityTraversalCompatibilitys(
         x: 3
         y: 4
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:4:4"
@@ -565,7 +559,7 @@ addEntityTraversalCompatibilitys(
         x: 4
         y: 4
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:5:4"
@@ -574,7 +568,7 @@ addEntityTraversalCompatibilitys(
         x: 5
         y: 4
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:6:4"
@@ -583,7 +577,7 @@ addEntityTraversalCompatibilitys(
         x: 6
         y: 4
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:7:4"
@@ -592,7 +586,7 @@ addEntityTraversalCompatibilitys(
         x: 7
         y: 4
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:8:4"
@@ -601,7 +595,7 @@ addEntityTraversalCompatibilitys(
         x: 8
         y: 4
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:9:4"
@@ -610,7 +604,7 @@ addEntityTraversalCompatibilitys(
         x: 9
         y: 4
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:10:4"
@@ -619,7 +613,7 @@ addEntityTraversalCompatibilitys(
         x: 10
         y: 4
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:11:4"
@@ -628,7 +622,7 @@ addEntityTraversalCompatibilitys(
         x: 11
         y: 4
         yRot: 0
-       docks: []
+        docks: []
       }
       # Row 5
       {
@@ -638,7 +632,7 @@ addEntityTraversalCompatibilitys(
         x: 0
         y: 5
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:1:5"
@@ -647,7 +641,7 @@ addEntityTraversalCompatibilitys(
         x: 1
         y: 5
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:2:5"
@@ -656,7 +650,7 @@ addEntityTraversalCompatibilitys(
         x: 2
         y: 5
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:3:5"
@@ -665,7 +659,7 @@ addEntityTraversalCompatibilitys(
         x: 3
         y: 5
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:4:5"
@@ -674,7 +668,7 @@ addEntityTraversalCompatibilitys(
         x: 4
         y: 5
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:5:5"
@@ -683,7 +677,7 @@ addEntityTraversalCompatibilitys(
         x: 5
         y: 5
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:6:5"
@@ -692,7 +686,7 @@ addEntityTraversalCompatibilitys(
         x: 6
         y: 5
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:7:5"
@@ -701,7 +695,7 @@ addEntityTraversalCompatibilitys(
         x: 7
         y: 5
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:8:5"
@@ -710,7 +704,7 @@ addEntityTraversalCompatibilitys(
         x: 8
         y: 5
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:9:5"
@@ -719,7 +713,7 @@ addEntityTraversalCompatibilitys(
         x: 9
         y: 5
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:10:5"
@@ -728,7 +722,7 @@ addEntityTraversalCompatibilitys(
         x: 10
         y: 5
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:11:5"
@@ -737,7 +731,7 @@ addEntityTraversalCompatibilitys(
         x: 11
         y: 5
         yRot: 0
-       docks: []
+        docks: []
       }
       # Row 6
       {
@@ -747,7 +741,7 @@ addEntityTraversalCompatibilitys(
         x: 0
         y: 6
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:1:6"
@@ -756,7 +750,7 @@ addEntityTraversalCompatibilitys(
         x: 1
         y: 6
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:2:6"
@@ -765,7 +759,7 @@ addEntityTraversalCompatibilitys(
         x: 2
         y: 6
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:3:6"
@@ -774,7 +768,7 @@ addEntityTraversalCompatibilitys(
         x: 3
         y: 6
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:4:6"
@@ -783,7 +777,7 @@ addEntityTraversalCompatibilitys(
         x: 4
         y: 6
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:5:6"
@@ -792,7 +786,7 @@ addEntityTraversalCompatibilitys(
         x: 5
         y: 6
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:6:6"
@@ -801,7 +795,7 @@ addEntityTraversalCompatibilitys(
         x: 6
         y: 6
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:7:6"
@@ -810,7 +804,7 @@ addEntityTraversalCompatibilitys(
         x: 7
         y: 6
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:8:6"
@@ -819,7 +813,7 @@ addEntityTraversalCompatibilitys(
         x: 8
         y: 6
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:9:6"
@@ -828,7 +822,7 @@ addEntityTraversalCompatibilitys(
         x: 9
         y: 6
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:10:6"
@@ -837,7 +831,7 @@ addEntityTraversalCompatibilitys(
         x: 10
         y: 6
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:11:6"
@@ -846,7 +840,7 @@ addEntityTraversalCompatibilitys(
         x: 11
         y: 6
         yRot: 0
-       docks: []
+        docks: []
       }
       # Row 7
       {
@@ -856,7 +850,7 @@ addEntityTraversalCompatibilitys(
         x: 0
         y: 7
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:1:7"
@@ -865,7 +859,7 @@ addEntityTraversalCompatibilitys(
         x: 1
         y: 7
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:2:7"
@@ -874,7 +868,7 @@ addEntityTraversalCompatibilitys(
         x: 2
         y: 7
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:3:7"
@@ -883,7 +877,7 @@ addEntityTraversalCompatibilitys(
         x: 3
         y: 7
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:4:7"
@@ -892,7 +886,7 @@ addEntityTraversalCompatibilitys(
         x: 4
         y: 7
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:5:7"
@@ -901,7 +895,7 @@ addEntityTraversalCompatibilitys(
         x: 5
         y: 7
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:6:7"
@@ -910,7 +904,7 @@ addEntityTraversalCompatibilitys(
         x: 6
         y: 7
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:7:7"
@@ -919,7 +913,7 @@ addEntityTraversalCompatibilitys(
         x: 7
         y: 7
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:8:7"
@@ -928,7 +922,7 @@ addEntityTraversalCompatibilitys(
         x: 8
         y: 7
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:9:7"
@@ -937,7 +931,7 @@ addEntityTraversalCompatibilitys(
         x: 9
         y: 7
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:10:7"
@@ -946,7 +940,7 @@ addEntityTraversalCompatibilitys(
         x: 10
         y: 7
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:11:7"
@@ -955,7 +949,7 @@ addEntityTraversalCompatibilitys(
         x: 11
         y: 7
         yRot: 0
-       docks: []
+        docks: []
       }
       # Row 8
       {
@@ -965,7 +959,7 @@ addEntityTraversalCompatibilitys(
         x: 0
         y: 8
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:1:8"
@@ -974,7 +968,7 @@ addEntityTraversalCompatibilitys(
         x: 1
         y: 8
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:2:8"
@@ -983,7 +977,7 @@ addEntityTraversalCompatibilitys(
         x: 2
         y: 8
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:3:8"
@@ -992,7 +986,7 @@ addEntityTraversalCompatibilitys(
         x: 3
         y: 8
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:4:8"
@@ -1001,7 +995,7 @@ addEntityTraversalCompatibilitys(
         x: 4
         y: 8
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:5:8"
@@ -1010,7 +1004,7 @@ addEntityTraversalCompatibilitys(
         x: 5
         y: 8
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:6:8"
@@ -1019,7 +1013,7 @@ addEntityTraversalCompatibilitys(
         x: 6
         y: 8
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:7:8"
@@ -1028,7 +1022,7 @@ addEntityTraversalCompatibilitys(
         x: 7
         y: 8
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:8:8"
@@ -1037,7 +1031,7 @@ addEntityTraversalCompatibilitys(
         x: 8
         y: 8
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:9:8"
@@ -1046,7 +1040,7 @@ addEntityTraversalCompatibilitys(
         x: 9
         y: 8
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:10:8"
@@ -1055,7 +1049,7 @@ addEntityTraversalCompatibilitys(
         x: 10
         y: 8
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:11:8"
@@ -1064,7 +1058,7 @@ addEntityTraversalCompatibilitys(
         x: 11
         y: 8
         yRot: 0
-       docks: []
+        docks: []
       }
       # Row 9
       {
@@ -1074,7 +1068,7 @@ addEntityTraversalCompatibilitys(
         x: 0
         y: 9
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:1:9"
@@ -1083,7 +1077,7 @@ addEntityTraversalCompatibilitys(
         x: 1
         y: 9
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:2:9"
@@ -1092,7 +1086,7 @@ addEntityTraversalCompatibilitys(
         x: 2
         y: 9
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:3:9"
@@ -1101,7 +1095,7 @@ addEntityTraversalCompatibilitys(
         x: 3
         y: 9
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:4:9"
@@ -1110,7 +1104,7 @@ addEntityTraversalCompatibilitys(
         x: 4
         y: 9
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:5:9"
@@ -1119,7 +1113,7 @@ addEntityTraversalCompatibilitys(
         x: 5
         y: 9
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:6:9"
@@ -1128,7 +1122,7 @@ addEntityTraversalCompatibilitys(
         x: 6
         y: 9
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:7:9"
@@ -1137,7 +1131,7 @@ addEntityTraversalCompatibilitys(
         x: 7
         y: 9
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:8:9"
@@ -1146,7 +1140,7 @@ addEntityTraversalCompatibilitys(
         x: 8
         y: 9
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:9:9"
@@ -1155,7 +1149,7 @@ addEntityTraversalCompatibilitys(
         x: 9
         y: 9
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:10:9"
@@ -1164,7 +1158,7 @@ addEntityTraversalCompatibilitys(
         x: 10
         y: 9
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:11:9"
@@ -1173,7 +1167,7 @@ addEntityTraversalCompatibilitys(
         x: 11
         y: 9
         yRot: 0
-       docks: []
+        docks: []
       }
       # Row 10
       {
@@ -1183,7 +1177,7 @@ addEntityTraversalCompatibilitys(
         x: 0
         y: 10
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:1:10"
@@ -1192,7 +1186,7 @@ addEntityTraversalCompatibilitys(
         x: 1
         y: 10
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:2:10"
@@ -1201,7 +1195,7 @@ addEntityTraversalCompatibilitys(
         x: 2
         y: 10
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:3:10"
@@ -1210,7 +1204,7 @@ addEntityTraversalCompatibilitys(
         x: 3
         y: 10
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:4:10"
@@ -1219,7 +1213,7 @@ addEntityTraversalCompatibilitys(
         x: 4
         y: 10
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:5:10"
@@ -1228,7 +1222,7 @@ addEntityTraversalCompatibilitys(
         x: 5
         y: 10
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:6:10"
@@ -1237,7 +1231,7 @@ addEntityTraversalCompatibilitys(
         x: 6
         y: 10
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:7:10"
@@ -1246,7 +1240,7 @@ addEntityTraversalCompatibilitys(
         x: 7
         y: 10
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:8:10"
@@ -1255,7 +1249,7 @@ addEntityTraversalCompatibilitys(
         x: 8
         y: 10
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:9:10"
@@ -1264,7 +1258,7 @@ addEntityTraversalCompatibilitys(
         x: 9
         y: 10
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:10:10"
@@ -1273,7 +1267,7 @@ addEntityTraversalCompatibilitys(
         x: 10
         y: 10
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:11:10"
@@ -1282,7 +1276,7 @@ addEntityTraversalCompatibilitys(
         x: 11
         y: 10
         yRot: 0
-       docks: []
+        docks: []
       }
       # Row 11
       {
@@ -1292,7 +1286,7 @@ addEntityTraversalCompatibilitys(
         x: 0
         y: 11
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:1:11"
@@ -1301,7 +1295,7 @@ addEntityTraversalCompatibilitys(
         x: 1
         y: 11
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:2:11"
@@ -1310,7 +1304,7 @@ addEntityTraversalCompatibilitys(
         x: 2
         y: 11
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:3:11"
@@ -1319,7 +1313,7 @@ addEntityTraversalCompatibilitys(
         x: 3
         y: 11
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:4:11"
@@ -1328,7 +1322,7 @@ addEntityTraversalCompatibilitys(
         x: 4
         y: 11
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:5:11"
@@ -1337,7 +1331,7 @@ addEntityTraversalCompatibilitys(
         x: 5
         y: 11
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:6:11"
@@ -1346,7 +1340,7 @@ addEntityTraversalCompatibilitys(
         x: 6
         y: 11
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:7:11"
@@ -1355,7 +1349,7 @@ addEntityTraversalCompatibilitys(
         x: 7
         y: 11
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:8:11"
@@ -1364,7 +1358,7 @@ addEntityTraversalCompatibilitys(
         x: 8
         y: 11
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:9:11"
@@ -1373,7 +1367,7 @@ addEntityTraversalCompatibilitys(
         x: 9
         y: 11
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:10:11"
@@ -1382,7 +1376,7 @@ addEntityTraversalCompatibilitys(
         x: 10
         y: 11
         yRot: 0
-       docks: []
+        docks: []
       }
       {
         id: "Default:11:11"
@@ -1391,7 +1385,7 @@ addEntityTraversalCompatibilitys(
         x: 11
         y: 11
         yRot: 0
-       docks: []
+        docks: []
       }
     ]
   )
