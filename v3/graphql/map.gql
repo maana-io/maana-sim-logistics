@@ -104,7 +104,7 @@ mutation bootstrap {
         type: "Sand03"
         x: 2
         y: 0
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -122,7 +122,7 @@ mutation bootstrap {
         type: "Sand03"
         x: 4
         y: 0
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -149,7 +149,7 @@ mutation bootstrap {
         type: "Water02"
         x: 7
         y: 0
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -185,7 +185,7 @@ mutation bootstrap {
         type: "Grass05"
         x: 11
         y: 0
-        yRot: 0
+        yRot: 90
         docks: []
       }
       # Row 1
@@ -195,7 +195,7 @@ mutation bootstrap {
         type: "Sand04"
         x: 0
         y: 1
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -204,7 +204,7 @@ mutation bootstrap {
         type: "Sand06"
         x: 1
         y: 1
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -213,7 +213,7 @@ mutation bootstrap {
         type: "Sand06"
         x: 2
         y: 1
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -231,7 +231,7 @@ mutation bootstrap {
         type: "Sand06"
         x: 4
         y: 1
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -240,7 +240,7 @@ mutation bootstrap {
         type: "Sand05"
         x: 5
         y: 1
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -258,7 +258,7 @@ mutation bootstrap {
         type: "Water02"
         x: 7
         y: 1
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -294,7 +294,7 @@ mutation bootstrap {
         type: "Grass07"
         x: 11
         y: 1
-        yRot: 0
+        yRot: -90
         docks: []
       }
       # Row 2
@@ -349,7 +349,7 @@ mutation bootstrap {
         type: "Sand02"
         x: 5
         y: 2
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -358,7 +358,7 @@ mutation bootstrap {
         type: "Water03"
         x: 6
         y: 2
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -367,7 +367,7 @@ mutation bootstrap {
         type: "Water04"
         x: 7
         y: 2
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -422,7 +422,7 @@ mutation bootstrap {
         type: "Sand05"
         x: 1
         y: 3
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -431,7 +431,7 @@ mutation bootstrap {
         type: "Sand06"
         x: 2
         y: 3
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -449,7 +449,7 @@ mutation bootstrap {
         type: "Sand06"
         x: 4
         y: 3
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -467,7 +467,7 @@ mutation bootstrap {
         type: "Water02"
         x: 6
         y: 3
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -476,7 +476,7 @@ mutation bootstrap {
         type: "Water04"
         x: 7
         y: 3
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -485,7 +485,7 @@ mutation bootstrap {
         type: "Water02"
         x: 8
         y: 3
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -494,7 +494,7 @@ mutation bootstrap {
         type: "Water03"
         x: 9
         y: 3
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -503,7 +503,7 @@ mutation bootstrap {
         type: "Grass02"
         x: 10
         y: 3
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -558,7 +558,7 @@ mutation bootstrap {
         type: "Pavement"
         x: 4
         y: 4
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -567,7 +567,7 @@ mutation bootstrap {
         type: "Water03"
         x: 5
         y: 4
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -576,7 +576,7 @@ mutation bootstrap {
         type: "Water04"
         x: 6
         y: 4
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -640,7 +640,7 @@ mutation bootstrap {
         type: "Grass02"
         x: 1
         y: 5
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -658,7 +658,7 @@ mutation bootstrap {
         type: "Water03"
         x: 3
         y: 5
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -667,7 +667,7 @@ mutation bootstrap {
         type: "Water02"
         x: 4
         y: 5
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -676,7 +676,7 @@ mutation bootstrap {
         type: "Water04"
         x: 5
         y: 5
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -703,7 +703,7 @@ mutation bootstrap {
         type: "Grass02"
         x: 8
         y: 5
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -721,7 +721,7 @@ mutation bootstrap {
         type: "Grass01"
         x: 10
         y: 5
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -740,7 +740,7 @@ mutation bootstrap {
         type: "Grass03"
         x: 0
         y: 6
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -758,7 +758,7 @@ mutation bootstrap {
         type: "Water03"
         x: 2
         y: 6
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -767,7 +767,7 @@ mutation bootstrap {
         type: "Water04"
         x: 3
         y: 6
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -812,7 +812,7 @@ mutation bootstrap {
         type: "Grass02"
         x: 8
         y: 6
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -821,7 +821,7 @@ mutation bootstrap {
         type: "Grass07"
         x: 9
         y: 6
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -830,7 +830,7 @@ mutation bootstrap {
         type: "Grass02"
         x: 10
         y: 6
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -858,7 +858,7 @@ mutation bootstrap {
         type: "Grass04"
         x: 1
         y: 7
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -867,7 +867,7 @@ mutation bootstrap {
         type: "Water02"
         x: 2
         y: 7
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -930,7 +930,7 @@ mutation bootstrap {
         type: "Grass07"
         x: 9
         y: 7
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -939,7 +939,7 @@ mutation bootstrap {
         type: "Grass01"
         x: 10
         y: 7
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -958,7 +958,7 @@ mutation bootstrap {
         type: "Grass07"
         x: 0
         y: 8
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -967,7 +967,7 @@ mutation bootstrap {
         type: "Water03"
         x: 1
         y: 8
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -976,7 +976,7 @@ mutation bootstrap {
         type: "Water04"
         x: 2
         y: 8
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -1012,7 +1012,7 @@ mutation bootstrap {
         type: "Water04"
         x: 6
         y: 8
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1021,7 +1021,7 @@ mutation bootstrap {
         type: "Water03"
         x: 7
         y: 8
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1030,7 +1030,7 @@ mutation bootstrap {
         type: "Grass06"
         x: 8
         y: 8
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1039,7 +1039,7 @@ mutation bootstrap {
         type: "Grass01"
         x: 9
         y: 8
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -1048,7 +1048,7 @@ mutation bootstrap {
         type: "Grass06"
         x: 10
         y: 8
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -1067,7 +1067,7 @@ mutation bootstrap {
         type: "Grass07"
         x: 0
         y: 9
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -1076,7 +1076,7 @@ mutation bootstrap {
         type: "Water02"
         x: 1
         y: 9
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -1103,7 +1103,7 @@ mutation bootstrap {
         type: "Water04"
         x: 4
         y: 9
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1112,7 +1112,7 @@ mutation bootstrap {
         type: "Water02"
         x: 5
         y: 9
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1121,7 +1121,7 @@ mutation bootstrap {
         type: "Water03"
         x: 6
         y: 9
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1157,7 +1157,7 @@ mutation bootstrap {
         type: "Grass01"
         x: 10
         y: 9
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -1176,7 +1176,7 @@ mutation bootstrap {
         type: "Water02"
         x: 0
         y: 10
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -1185,7 +1185,7 @@ mutation bootstrap {
         type: "Water04"
         x: 1
         y: 10
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -1194,7 +1194,7 @@ mutation bootstrap {
         type: "Water04"
         x: 2
         y: 10
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1203,7 +1203,7 @@ mutation bootstrap {
         type: "Water02"
         x: 3
         y: 10
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1212,7 +1212,7 @@ mutation bootstrap {
         type: "Water03"
         x: 4
         y: 10
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1221,7 +1221,7 @@ mutation bootstrap {
         type: "Grass03"
         x: 5
         y: 10
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -1230,7 +1230,7 @@ mutation bootstrap {
         type: "Grass01"
         x: 6
         y: 10
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -1257,7 +1257,7 @@ mutation bootstrap {
         type: "Grass01"
         x: 9
         y: 10
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -1266,7 +1266,7 @@ mutation bootstrap {
         type: "Grass04"
         x: 10
         y: 10
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1294,7 +1294,7 @@ mutation bootstrap {
         type: "Water04"
         x: 1
         y: 11
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1303,7 +1303,7 @@ mutation bootstrap {
         type: "Water03"
         x: 2
         y: 11
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1321,7 +1321,7 @@ mutation bootstrap {
         type: "Grass05"
         x: 4
         y: 11
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1339,7 +1339,7 @@ mutation bootstrap {
         type: "Grass03"
         x: 6
         y: 11
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1348,7 +1348,7 @@ mutation bootstrap {
         type: "Grass07"
         x: 7
         y: 11
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -1366,7 +1366,7 @@ mutation bootstrap {
         type: "Grass03"
         x: 9
         y: 11
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1384,7 +1384,7 @@ mutation bootstrap {
         type: "Grass07"
         x: 11
         y: 11
-        yRot: 0
+        yRot: 90
         docks: []
       }
     ]
