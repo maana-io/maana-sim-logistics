@@ -1,6 +1,6 @@
 mutation bootstrap {
   addTraversalTypeEnums(
-    input: [{ id: "*" }, { id: "None" }, { id: "Road" }, { id: "Water" }]
+    input: [{ id: "*" }, { id: "!" }, { id: "Road" }, { id: "Water" }]
   )
 
   addEntityTraversalCompatibilitys(
@@ -14,29 +14,242 @@ mutation bootstrap {
   addTileDescriptors(
     input: [
       { id: "Grass", traversabilityGrid: [] }
-      { id: "Grass01", traversabilityGrid: [] }
-      { id: "Grass02", traversabilityGrid: [] }
-      { id: "Grass03", traversabilityGrid: [] }
-      { id: "Grass04", traversabilityGrid: [] }
+      {
+        id: "Grass01"
+        traversabilityGrid: [
+          "!"
+          "Road"
+          "!"
+          "Road"
+          "Road"
+          "!"
+          "!"
+          "Road"
+          "!"
+        ]
+      }
+      {
+        id: "Grass02"
+        traversabilityGrid: [
+          "!"
+          "!"
+          "!"
+          "Road"
+          "Road"
+          "Road"
+          "!"
+          "!"
+          "!"
+        ]
+      }
+      {
+        id: "Grass03"
+        traversabilityGrid: ["!", "!", "!", "Road", "Road", "!", "!", "!", "!"]
+      }
+      {
+        id: "Grass04"
+        traversabilityGrid: [
+          "!"
+          "!"
+          "!"
+          "Road"
+          "Road"
+          "!"
+          "!"
+          "Road"
+          "!"
+        ]
+      }
       { id: "Grass05", traversabilityGrid: [] }
-      { id: "Grass06", traversabilityGrid: [] }
+      {
+        id: "Grass06"
+        traversabilityGrid: [
+          "!"
+          "Road"
+          "!"
+          "Road"
+          "Road"
+          "Road"
+          "!"
+          "!"
+          "!"
+        ]
+      }
       { id: "Grass07", traversabilityGrid: [] }
-      { id: "Grass08", traversabilityGrid: [] }
+      {
+        id: "Grass08"
+        traversabilityGrid: [
+          "!"
+          "Road"
+          "!"
+          "Road"
+          "Road"
+          "Road"
+          "!"
+          "Road"
+          "!"
+        ]
+      }
       { id: "Sand", traversabilityGrid: [] }
-      { id: "Sand01", traversabilityGrid: [] }
-      { id: "Sand02", traversabilityGrid: [] }
-      { id: "Sand03", traversabilityGrid: [] }
-      { id: "Sand04", traversabilityGrid: [] }
-      { id: "Sand05", traversabilityGrid: [] }
-      { id: "Sand06", traversabilityGrid: [] }
-      { id: "Pavement", traversabilityGrid: [] }
-      { id: "Pavement01", traversabilityGrid: [] }
-      { id: "Water", traversabilityGrid: [] }
-      { id: "Water01", traversabilityGrid: [] }
-      { id: "Water02", traversabilityGrid: [] }
-      { id: "Water03", traversabilityGrid: [] }
-      { id: "Water04", traversabilityGrid: [] }
-      { id: "Water05", traversabilityGrid: [] }
+      {
+        id: "Sand01"
+        traversabilityGrid: [
+          "!"
+          "Road"
+          "!"
+          "Road"
+          "Road"
+          "Road"
+          "!"
+          "Road"
+          "!"
+        ]
+      }
+      {
+        id: "Sand02"
+        traversabilityGrid: [
+          "!"
+          "!"
+          "!"
+          "Road"
+          "Road"
+          "Road"
+          "!"
+          "!"
+          "!"
+        ]
+      }
+      {
+        id: "Sand03"
+        traversabilityGrid: ["!", "!", "!", "Road", "Road", "!", "!", "!", "!"]
+      }
+      {
+        id: "Sand04"
+        traversabilityGrid: [
+          "!"
+          "!"
+          "!"
+          "Road"
+          "Road"
+          "!"
+          "!"
+          "Road"
+          "!"
+        ]
+      }
+      {
+        id: "Sand05"
+        traversabilityGrid: [
+          "!"
+          "Road"
+          "!"
+          "Road"
+          "Road"
+          "Road"
+          "!"
+          "!"
+          "!"
+        ]
+      }
+      {
+        id: "Sand06"
+        traversabilityGrid: [
+          "!"
+          "Road"
+          "!"
+          "Road"
+          "Road"
+          "!"
+          "!"
+          "Road"
+          "!"
+        ]
+      }
+      {
+        id: "Water"
+        traversabilityGrid: [
+          "Water"
+          "Water"
+          "Water"
+          "Water"
+          "Water"
+          "Water"
+          "Water"
+          "Water"
+          "Water"
+        ]
+      }
+      {
+        id: "Water01"
+        traversabilityGrid: [
+          "Water"
+          "!"
+          "!"
+          "Water"
+          "!"
+          "!"
+          "Water"
+          "Water"
+          "Water"
+        ]
+      }
+      {
+        id: "Water02"
+        traversabilityGrid: [
+          "Water"
+          "Water"
+          "!"
+          "Water"
+          "Water"
+          "!"
+          "Water"
+          "Water"
+          "!"
+        ]
+      }
+      {
+        id: "Water03"
+        traversabilityGrid: [
+          "!"
+          "!"
+          "!"
+          "Water"
+          "!"
+          "!"
+          "Water"
+          "Water"
+          "Water"
+          "!"
+        ]
+      }
+      {
+        id: "Water04"
+        traversabilityGrid: [
+          "Water"
+          "Water"
+          "!"
+          "Water"
+          "Water"
+          "Water"
+          "Water"
+          "Water"
+          "Water"
+        ]
+      }
+      {
+        id: "Water05"
+        traversabilityGrid: [
+          "!"
+          "!"
+          "!"
+          "Water"
+          "Water"
+          "Water"
+          "!"
+          "!"
+          "!"
+        ]
+      }
     ]
   )
 
@@ -63,8 +276,6 @@ mutation bootstrap {
           "Sand04"
           "Sand05"
           "Sand06"
-          "Pavement"
-          "Pavement01"
           "Water"
           "Water01"
           "Water02"
@@ -246,7 +457,7 @@ mutation bootstrap {
       {
         id: "Default:6:1"
         map: "Default"
-        type: "Sand"
+        type: "Sand03"
         x: 6
         y: 1
         yRot: 0
@@ -301,10 +512,10 @@ mutation bootstrap {
       {
         id: "Default:0:2"
         map: "Default"
-        type: "Pavement"
+        type: "Sand03"
         x: 0
         y: 2
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -455,10 +666,10 @@ mutation bootstrap {
       {
         id: "Default:5:3"
         map: "Default"
-        type: "Pavement"
+        type: "Sand04"
         x: 5
         y: 3
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -519,10 +730,10 @@ mutation bootstrap {
       {
         id: "Default:0:4"
         map: "Default"
-        type: "Pavement"
+        type: "Grass03"
         x: 0
         y: 4
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -537,10 +748,10 @@ mutation bootstrap {
       {
         id: "Default:2:4"
         map: "Default"
-        type: "Pavement"
+        type: "Grass03"
         x: 2
         y: 4
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -555,10 +766,10 @@ mutation bootstrap {
       {
         id: "Default:4:4"
         map: "Default"
-        type: "Pavement"
+        type: "Grass03"
         x: 4
         y: 4
-        yRot: -90
+        yRot: 90
         docks: []
       }
       {
@@ -591,10 +802,10 @@ mutation bootstrap {
       {
         id: "Default:8:4"
         map: "Default"
-        type: "Pavement"
+        type: "Grass04"
         x: 8
         y: 4
-        yRot: 0
+        yRot: -90
         docks: []
       }
       {
@@ -918,10 +1129,10 @@ mutation bootstrap {
       {
         id: "Default:8:7"
         map: "Default"
-        type: "Pavement"
+        type: "Grass02"
         x: 8
         y: 7
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -945,7 +1156,7 @@ mutation bootstrap {
       {
         id: "Default:11:7"
         map: "Default"
-        type: "Pavement"
+        type: "Grass03"
         x: 11
         y: 7
         yRot: 0
@@ -1127,10 +1338,10 @@ mutation bootstrap {
       {
         id: "Default:7:9"
         map: "Default"
-        type: "Grass"
+        type: "Grass03"
         x: 7
         y: 9
-        yRot: 0
+        yRot: 180
         docks: []
       }
       {
@@ -1145,10 +1356,10 @@ mutation bootstrap {
       {
         id: "Default:9:9"
         map: "Default"
-        type: "Pavement"
+        type: "Grass03"
         x: 9
         y: 9
-        yRot: 0
+        yRot: 90
         docks: []
       }
       {
@@ -1163,7 +1374,7 @@ mutation bootstrap {
       {
         id: "Default:11:9"
         map: "Default"
-        type: "Pavement"
+        type: "Grass03"
         x: 11
         y: 9
         yRot: 0
