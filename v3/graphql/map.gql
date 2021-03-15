@@ -672,7 +672,7 @@ mutation bootstrap {
         x: 9
         y: 2
         yRot: 0
-        docks: ["Dock:Adjacent:W:Truck:0", "Dock:Center:S:Ship:0"]
+        docks: ["Dock:Adjacent:W:Truck:0", "Dock:Center:N:Ship:0"]
       }
       {
         id: "Default:10:2"
@@ -1534,7 +1534,7 @@ mutation bootstrap {
         x: 8
         y: 10
         yRot: 0
-        docks: ["Dock:Adjacent:W:Truck:0"]
+        docks: []
       }
       {
         id: "Default:9:10"

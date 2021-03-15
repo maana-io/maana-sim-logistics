@@ -12,7 +12,7 @@ const ROT_IDX_TABLE = {
 };
 
 // Convert input tile-space point to traversal grid-space
-const tileToGrid = (pos) => TRAVERSABILITY_GRID_SIZE * pos + 1;
+const tileToGrid = (pos) => Math.floor(TRAVERSABILITY_GRID_SIZE * pos + 1);
 
 // --- Compatibility testing
 
