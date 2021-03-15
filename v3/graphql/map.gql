@@ -239,14 +239,14 @@ mutation bootstrap {
       {
         id: "Water05"
         traversabilityGrid: [
-          "!"
-          "!"
-          "!"
-          "Water"
           "Water"
           "Water"
           "!"
-          "!"
+          "Water"
+          "*"
+          "Road"
+          "Water"
+          "Water"
           "!"
         ]
       }
@@ -288,6 +288,81 @@ mutation bootstrap {
     ]
   )
 
+  addDocks(
+    input: [
+      {
+        id: "Dock:Center:N:Ship:0"
+        vehicleType: "Ship"
+        xOffset: 0
+        yOffset: 0
+        yRot: 0
+      }
+      {
+        id: "Dock:Center:S:Ship:0"
+        vehicleType: "Ship"
+        xOffset: 0
+        yOffset: 0
+        yRot: 180
+      }
+      {
+        id: "Dock:Center:N:Truck:0"
+        vehicleType: "Truck"
+        xOffset: 0
+        yOffset: 0
+        yRot: 0
+      }
+      {
+        id: "Dock:Center:E:Truck:0"
+        vehicleType: "Truck"
+        xOffset: 0
+        yOffset: 0
+        yRot: 90
+      }
+      {
+        id: "Dock:Center:S:Truck:0"
+        vehicleType: "Truck"
+        xOffset: 0
+        yOffset: 0
+        yRot: 180
+      }
+      {
+        id: "Dock:Center:W:Truck:0"
+        vehicleType: "Truck"
+        xOffset: 0
+        yOffset: 0
+        yRot: -90
+      }
+      {
+        id: "Dock:Adjacent:N:Truck:0"
+        vehicleType: "Truck"
+        xOffset: 0
+        yOffset: 1.5
+        yRot: 0
+      }
+      {
+        id: "Dock:Adjacent:E:Truck:0"
+        vehicleType: "Truck"
+        xOffset: 1.5
+        yOffset: 0
+        yRot: 90
+      }
+      {
+        id: "Dock:Adjacent:S:Truck:0"
+        vehicleType: "Truck"
+        xOffset: 0
+        yOffset: -1.5
+        yRot: 180
+      }
+      {
+        id: "Dock:Adjacent:W:Truck:0"
+        vehicleType: "Truck"
+        xOffset: -1.5
+        yOffset: 0
+        yRot: -90
+      }
+    ]
+  )
+
   addTiles(
     input: [
       # Row 0
@@ -298,7 +373,7 @@ mutation bootstrap {
         x: 0
         y: 0
         yRot: -90
-        docks: []
+        docks: ["Dock:Center:S:Truck:0"]
       }
       {
         id: "Default:1:0"
@@ -316,7 +391,7 @@ mutation bootstrap {
         x: 2
         y: 0
         yRot: -90
-        docks: []
+        docks: ["Dock:Center:S:Truck:0"]
       }
       {
         id: "Default:3:0"
@@ -334,7 +409,7 @@ mutation bootstrap {
         x: 4
         y: 0
         yRot: -90
-        docks: []
+        docks: ["Dock:Center:S:Truck:0"]
       }
       {
         id: "Default:5:0"
@@ -461,7 +536,7 @@ mutation bootstrap {
         x: 6
         y: 1
         yRot: 0
-        docks: []
+        docks: ["Dock:Adjacent:W:Truck:0"]
       }
       {
         id: "Default:7:1"
@@ -516,7 +591,7 @@ mutation bootstrap {
         x: 0
         y: 2
         yRot: 180
-        docks: []
+        docks: ["Dock:Center:E:Truck:0"]
       }
       {
         id: "Default:1:2"
@@ -593,11 +668,11 @@ mutation bootstrap {
       {
         id: "Default:9:2"
         map: "Default"
-        type: "Water02"
+        type: "Water05"
         x: 9
         y: 2
         yRot: 0
-        docks: []
+        docks: ["Dock:Adjacent:W:Truck:0", "Dock:Center:S:Ship:0"]
       }
       {
         id: "Default:10:2"
@@ -670,7 +745,7 @@ mutation bootstrap {
         x: 5
         y: 3
         yRot: 90
-        docks: []
+        docks: ["Dock:Center:W:Truck:0"]
       }
       {
         id: "Default:6:3"
@@ -734,7 +809,7 @@ mutation bootstrap {
         x: 0
         y: 4
         yRot: 180
-        docks: []
+        docks: ["Dock:Center:E:Truck:0"]
       }
       {
         id: "Default:1:4"
@@ -752,7 +827,7 @@ mutation bootstrap {
         x: 2
         y: 4
         yRot: 90
-        docks: []
+        docks: ["Dock:Center:N:Truck:0"]
       }
       {
         id: "Default:3:4"
@@ -770,7 +845,7 @@ mutation bootstrap {
         x: 4
         y: 4
         yRot: 90
-        docks: []
+        docks: ["Dock:Center:N:Truck:0"]
       }
       {
         id: "Default:5:4"
@@ -806,7 +881,7 @@ mutation bootstrap {
         x: 8
         y: 4
         yRot: -90
-        docks: []
+        docks: ["Dock:Center:S:Truck:0"]
       }
       {
         id: "Default:9:4"
@@ -833,7 +908,7 @@ mutation bootstrap {
         x: 11
         y: 4
         yRot: 0
-        docks: []
+        docks: ["Dock:Center:W:Truck:0"]
       }
       # Row 5
       {
@@ -942,7 +1017,7 @@ mutation bootstrap {
         x: 11
         y: 5
         yRot: 0
-        docks: []
+        docks: ["Dock:Center:W:Truck:0"]
       }
       # Row 6
       {
@@ -952,7 +1027,7 @@ mutation bootstrap {
         x: 0
         y: 6
         yRot: 180
-        docks: []
+        docks: ["Dock:Center:E:Truck:0"]
       }
       {
         id: "Default:1:6"
@@ -1075,11 +1150,11 @@ mutation bootstrap {
       {
         id: "Default:2:7"
         map: "Default"
-        type: "Water02"
+        type: "Water05"
         x: 2
         y: 7
         yRot: 180
-        docks: []
+        docks: ["Dock:Adjacent:W:Truck:0", "Dock:Center:S:Ship:0"]
       }
       {
         id: "Default:3:7"
@@ -1133,7 +1208,7 @@ mutation bootstrap {
         x: 8
         y: 7
         yRot: 90
-        docks: []
+        docks: ["Dock:Center:E:Truck:0"]
       }
       {
         id: "Default:9:7"
@@ -1160,7 +1235,7 @@ mutation bootstrap {
         x: 11
         y: 7
         yRot: 0
-        docks: []
+        docks: ["Dock:Center:W:Truck:0"]
       }
       # Row 8
       {
@@ -1342,7 +1417,7 @@ mutation bootstrap {
         x: 7
         y: 9
         yRot: 180
-        docks: []
+        docks: ["Dock:Adjacent:E:Truck:0"]
       }
       {
         id: "Default:8:9"
@@ -1351,7 +1426,6 @@ mutation bootstrap {
         x: 8
         y: 9
         yRot: 0
-        docks: []
       }
       {
         id: "Default:9:9"
@@ -1360,7 +1434,7 @@ mutation bootstrap {
         x: 9
         y: 9
         yRot: 90
-        docks: []
+        docks: ["Dock:Center:N:Truck:0"]
       }
       {
         id: "Default:10:9"
@@ -1378,7 +1452,7 @@ mutation bootstrap {
         x: 11
         y: 9
         yRot: 0
-        docks: []
+        docks: ["Dock:Center:W:Truck:0"]
       }
       # Row 10
       {
@@ -1433,7 +1507,7 @@ mutation bootstrap {
         x: 5
         y: 10
         yRot: 180
-        docks: []
+        docks: ["Dock:Center:E:Truck:0"]
       }
       {
         id: "Default:6:10"
@@ -1460,7 +1534,7 @@ mutation bootstrap {
         x: 8
         y: 10
         yRot: 0
-        docks: []
+        docks: ["Dock:Adjacent:W:Truck:0"]
       }
       {
         id: "Default:9:10"
@@ -1551,7 +1625,7 @@ mutation bootstrap {
         x: 6
         y: 11
         yRot: 90
-        docks: []
+        docks: ["Dock:Center:N:Truck:0"]
       }
       {
         id: "Default:7:11"
@@ -1578,7 +1652,7 @@ mutation bootstrap {
         x: 9
         y: 11
         yRot: 90
-        docks: []
+        docks: ["Dock:Center:N:Truck:0"]
       }
       {
         id: "Default:10:11"

@@ -21,7 +21,9 @@ const compatibility = map.entityTraversalCompatibilities
   .map((x) => x.traversalType);
 
 const isCompatible = (traversalType) =>
-  compatibility.includes(traversalType) || compatibility.includes("*");
+  traversalType === "*" ||
+  compatibility.includes(traversalType) ||
+  compatibility.includes("*");
 
 const isUnwalkable = (traversalType) =>
   traversalType === "!" || !isCompatible(traversalType);
@@ -41,7 +43,7 @@ const aStarArgs = {
   numColumns: map.tilesX * TRAVERSABILITY_GRID_SIZE,
   origin: { ...mkLoc(tileToGrid(fromX), tileToGrid(fromY)) },
   target: { ...mkLoc(tileToGrid(toX), tileToGrid(toY)) },
-  allowDiagonal: vehicleType == "Plane", // TODO: should be a config
+  allowDiagonal: vehicleType !== "Truck", // TODO: should be a config
   dontCrossCorners: vehicleType != "Plane", // TODO: should be a cong
   unwalkableLocations: [],
 };
