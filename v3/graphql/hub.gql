@@ -58,33 +58,9 @@ mutation bootstrap {
         consumptionRate: 1
       }
       {
-        id: "Airport:1:Energy"
-        sim: "Default"
-        type: "Energy"
-        capacity: 1000
-        quantity: 1000
-        basePricePerUnit: 0
-        adjustedPricePerUnit: 0
-        scarcitySurchargeFactor: 0
-        replenishRate: 0
-        consumptionRate: 1
-      }
-      {
         id: "Port:0:Petrochemicals"
         sim: "Default"
         type: "Petrochemicals"
-        capacity: 1000
-        quantity: 1000
-        basePricePerUnit: 0
-        adjustedPricePerUnit: 0
-        scarcitySurchargeFactor: 0
-        replenishRate: 0
-        consumptionRate: 1
-      }
-      {
-        id: "Port:0:Energy"
-        sim: "Default"
-        type: "Energy"
         capacity: 1000
         quantity: 1000
         basePricePerUnit: 0
@@ -106,35 +82,11 @@ mutation bootstrap {
         consumptionRate: 1
       }
       {
-        id: "Port:1:Energy"
-        sim: "Default"
-        type: "Energy"
-        capacity: 1000
-        quantity: 1000
-        basePricePerUnit: 0
-        adjustedPricePerUnit: 0
-        scarcitySurchargeFactor: 0
-        replenishRate: 0
-        consumptionRate: 1
-      }
-      {
         id: "TruckDepot:0:Petrochemicals"
         sim: "Default"
         type: "Petrochemicals"
         capacity: 1000
         quantity: 0
-        basePricePerUnit: 0
-        adjustedPricePerUnit: 0
-        scarcitySurchargeFactor: 0
-        replenishRate: 0
-        consumptionRate: 1
-      }
-      {
-        id: "TruckDepot:0:Energy"
-        sim: "Default"
-        type: "Energy"
-        capacity: 1000
-        quantity: 1000
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
         scarcitySurchargeFactor: 0
@@ -154,16 +106,28 @@ mutation bootstrap {
         consumptionRate: 1
       }
       {
-        id: "TruckDepot:1:Energy"
+        id: "PowerPlant:0:Energy"
         sim: "Default"
         type: "Energy"
-        capacity: 1000
+        capacity: 5000
         quantity: 1000
-        basePricePerUnit: 0
-        adjustedPricePerUnit: 0
-        scarcitySurchargeFactor: 0
-        replenishRate: 0
-        consumptionRate: 1
+        basePricePerUnit: 1
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 1
+        replenishRate: 300 
+        consumptionRate: 30 
+      }
+      {
+        id: "PowerPlant:1:Energy"
+        sim: "Default"
+        type: "Energy"
+        capacity: 5000
+        quantity: 1000
+        basePricePerUnit: 1
+        adjustedPricePerUnit: 1
+        scarcitySurchargeFactor: 1
+        replenishRate: 300
+        consumptionRate: 30
       }
     ]
   )

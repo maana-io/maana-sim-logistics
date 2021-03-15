@@ -73,7 +73,7 @@ mutation bootstrap {
         id: "Truck:0:Cotton"
         sim: "Default"
         type: "Cotton"
-        capacity: 3000
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -97,7 +97,7 @@ mutation bootstrap {
         id: "Truck:0:Trees"
         sim: "Default"
         type: "Trees"
-        capacity: 500
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -109,7 +109,7 @@ mutation bootstrap {
         id: "Truck:0:Lumber"
         sim: "Default"
         type: "Lumber"
-        capacity: 300
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -121,7 +121,7 @@ mutation bootstrap {
         id: "Truck:0:Food"
         sim: "Default"
         type: "Food"
-        capacity: 500
+        capacity: 1000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -194,7 +194,7 @@ mutation bootstrap {
         id: "Truck:1:Cotton"
         sim: "Default"
         type: "Cotton"
-        capacity: 3000
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -218,7 +218,7 @@ mutation bootstrap {
         id: "Truck:1:Trees"
         sim: "Default"
         type: "Trees"
-        capacity: 500
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -230,7 +230,7 @@ mutation bootstrap {
         id: "Truck:1:Lumber"
         sim: "Default"
         type: "Lumber"
-        capacity: 300
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -242,7 +242,7 @@ mutation bootstrap {
         id: "Truck:1:Food"
         sim: "Default"
         type: "Food"
-        capacity: 500
+        capacity: 1000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -315,7 +315,7 @@ mutation bootstrap {
         id: "Truck:2:Cotton"
         sim: "Default"
         type: "Cotton"
-        capacity: 3000
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -339,7 +339,7 @@ mutation bootstrap {
         id: "Truck:2:Trees"
         sim: "Default"
         type: "Trees"
-        capacity: 500
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -351,7 +351,7 @@ mutation bootstrap {
         id: "Truck:2:Lumber"
         sim: "Default"
         type: "Lumber"
-        capacity: 300
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -363,7 +363,7 @@ mutation bootstrap {
         id: "Truck:2:Food"
         sim: "Default"
         type: "Food"
-        capacity: 500
+        capacity: 1000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -436,7 +436,7 @@ mutation bootstrap {
         id: "Truck:3:Cotton"
         sim: "Default"
         type: "Cotton"
-        capacity: 3000
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -460,7 +460,7 @@ mutation bootstrap {
         id: "Truck:3:Trees"
         sim: "Default"
         type: "Trees"
-        capacity: 500
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -472,7 +472,7 @@ mutation bootstrap {
         id: "Truck:3:Lumber"
         sim: "Default"
         type: "Lumber"
-        capacity: 300
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -484,7 +484,7 @@ mutation bootstrap {
         id: "Truck:3:Food"
         sim: "Default"
         type: "Food"
-        capacity: 500
+        capacity: 1000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -557,7 +557,7 @@ mutation bootstrap {
         id: "Truck:4:Cotton"
         sim: "Default"
         type: "Cotton"
-        capacity: 3000
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -581,7 +581,7 @@ mutation bootstrap {
         id: "Truck:4:Trees"
         sim: "Default"
         type: "Trees"
-        capacity: 500
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -593,7 +593,7 @@ mutation bootstrap {
         id: "Truck:4:Lumber"
         sim: "Default"
         type: "Lumber"
-        capacity: 300
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -605,7 +605,7 @@ mutation bootstrap {
         id: "Truck:4:Food"
         sim: "Default"
         type: "Food"
-        capacity: 500
+        capacity: 1000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -678,7 +678,7 @@ mutation bootstrap {
         id: "Truck:5:Cotton"
         sim: "Default"
         type: "Cotton"
-        capacity: 3000
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -702,7 +702,7 @@ mutation bootstrap {
         id: "Truck:5:Trees"
         sim: "Default"
         type: "Trees"
-        capacity: 500
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -714,7 +714,7 @@ mutation bootstrap {
         id: "Truck:5:Lumber"
         sim: "Default"
         type: "Lumber"
-        capacity: 300
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -726,7 +726,7 @@ mutation bootstrap {
         id: "Truck:5:Food"
         sim: "Default"
         type: "Food"
-        capacity: 500
+        capacity: 1000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -763,7 +763,7 @@ mutation bootstrap {
         id: "Ship:0:Crude"
         sim: "Default"
         type: "Crude"
-        capacity: 20000
+        capacity: 5000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -775,7 +775,7 @@ mutation bootstrap {
         id: "Ship:0:Petrochemicals"
         sim: "Default"
         type: "Petrochemicals"
-        capacity: 20000
+        capacity: 5000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -787,7 +787,7 @@ mutation bootstrap {
         id: "Ship:0:Textiles"
         sim: "Default"
         type: "Textiles"
-        capacity: 8000
+        capacity: 20000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -799,7 +799,7 @@ mutation bootstrap {
         id: "Ship:0:Coal"
         sim: "Default"
         type: "Coal"
-        capacity: 25000
+        capacity: 10000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -811,7 +811,7 @@ mutation bootstrap {
         id: "Ship:0:Trees"
         sim: "Default"
         type: "Trees"
-        capacity: 9500
+        capacity: 20000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -823,7 +823,7 @@ mutation bootstrap {
         id: "Ship:0:Lumber"
         sim: "Default"
         type: "Lumber"
-        capacity: 9000
+        capacity: 20000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -835,7 +835,7 @@ mutation bootstrap {
         id: "Ship:0:Food"
         sim: "Default"
         type: "Food"
-        capacity: 12000
+        capacity: 10000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -847,7 +847,7 @@ mutation bootstrap {
         id: "Ship:0:Goods"
         sim: "Default"
         type: "Goods"
-        capacity: 11000
+        capacity: 10000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -885,7 +885,7 @@ mutation bootstrap {
         id: "Plane:0:Textiles"
         sim: "Default"
         type: "Textiles"
-        capacity: 6000
+        capacity: 10000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -897,7 +897,7 @@ mutation bootstrap {
         id: "Plane:0:Food"
         sim: "Default"
         type: "Food"
-        capacity: 6000
+        capacity: 5000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0
@@ -909,7 +909,7 @@ mutation bootstrap {
         id: "Plane:0:Goods"
         sim: "Default"
         type: "Goods"
-        capacity: 10000
+        capacity: 5000
         quantity: 0
         basePricePerUnit: 0
         adjustedPricePerUnit: 0

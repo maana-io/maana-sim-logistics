@@ -21,145 +21,145 @@ mutation bootstrap {
         id: "PowerPlant:0:Energy"
         sim: "Default"
         type: "Energy"
-        capacity: 1000
+        capacity: 5000
         quantity: 1000
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
         scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        replenishRate: 300 
+        consumptionRate: 30 
       }
       {
         id: "PowerPlant:1:Energy"
         sim: "Default"
         type: "Energy"
-        capacity: 1000
+        capacity: 5000
         quantity: 1000
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
         scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        replenishRate: 300 
+        consumptionRate: 30
       }
       {
         id: "OilWell:0:Product:Crude"
         sim: "Default"
         type: "Crude"
         capacity: 1000
-        quantity: 1000
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        quantity: 500
+        basePricePerUnit: 1.6
+        adjustedPricePerUnit: 1.6
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 25 
+        consumptionRate: 0
       }
       {
         id: "OilRefinery:0:Material:Crude"
         sim: "Default"
         type: "Crude"
         capacity: 1000
-        quantity: 1000
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
+        quantity: 500
+        basePricePerUnit: 2
+        adjustedPricePerUnit: 2
+        scarcitySurchargeFactor: 0.5
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 25
       }
       {
         id: "OilRefinery:0:Product:Petrochemicals"
         sim: "Default"
         type: "Petrochemicals"
         capacity: 1000
-        quantity: 0
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        quantity: 500
+        basePricePerUnit: 4
+        adjustedPricePerUnit: 4
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 25
+        consumptionRate: 0
       }
       {
         id: "CoalMine:0:Product:Coal"
         sim: "Default"
         type: "Coal"
         capacity: 1000
-        quantity: 1000
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        quantity: 500
+        basePricePerUnit: 0.5
+        adjustedPricePerUnit: 0.5
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 40
+        consumptionRate: 0
       }
       {
         id: "PowerPlant:0:Material:Coal"
         sim: "Default"
         type: "Coal"
         capacity: 1000
-        quantity: 100
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        quantity: 500
+        basePricePerUnit: 0.8
+        adjustedPricePerUnit: 0.8
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 30
+        consumptionRate: 0
       }
       {
         id: "PowerPlant:1:Material:Coal"
         sim: "Default"
         type: "Coal"
         capacity: 1000
-        quantity: 100
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        quantity: 500
+        basePricePerUnit: 0.8
+        adjustedPricePerUnit: 0.8
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 30
+        consumptionRate: 0
       }
       {
         id: "Farm:0:Product:Food"
         sim: "Default"
         type: "Food"
-        capacity: 100
-        quantity: 50
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        capacity: 1000
+        quantity: 500
+        basePricePerUnit: 0.5
+        adjustedPricePerUnit: 0.5
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 10
+        consumptionRate: 0
       }
       {
         id: "Farm:1:Product:Food"
         sim: "Default"
         type: "Food"
-        capacity: 100
-        quantity: 50
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        capacity: 1000
+        quantity: 500
+        basePricePerUnit: 0.5
+        adjustedPricePerUnit: 0.5
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 10
+        consumptionRate: 0
       }
       {
         id: "Forest:0:Product:Trees"
         sim: "Default"
         type: "Trees"
-        capacity: 1000
-        quantity: 1000
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        capacity: 2000
+        quantity: 500
+        basePricePerUnit: 0.5
+        adjustedPricePerUnit: 0.5
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 10
+        consumptionRate: 0
       }
       {
         id: "Forest:1:Product:Trees"
         sim: "Default"
         type: "Trees"
-        capacity: 1000
-        quantity: 1000
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        capacity: 2000
+        quantity: 500
+        basePricePerUnit: 0.5
+        adjustedPricePerUnit: 0.5
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 10
+        consumptionRate: 0
       }
       {
         id: "Warehouse:0:Product:Petrochemicals"
@@ -201,7 +201,7 @@ mutation bootstrap {
         id: "Warehouse:0:Product:Lumber"
         sim: "Default"
         type: "Lumber"
-        capacity: 1000
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
@@ -213,7 +213,7 @@ mutation bootstrap {
         id: "Warehouse:0:Product:Textiles"
         sim: "Default"
         type: "Textiles"
-        capacity: 1000
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
@@ -261,7 +261,7 @@ mutation bootstrap {
         id: "Warehouse:1:Product:Lumber"
         sim: "Default"
         type: "Lumber"
-        capacity: 1000
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
@@ -273,7 +273,7 @@ mutation bootstrap {
         id: "Warehouse:1:Product:Textiles"
         sim: "Default"
         type: "Textiles"
-        capacity: 1000
+        capacity: 2000
         quantity: 0
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
@@ -285,109 +285,109 @@ mutation bootstrap {
         id: "Textile:0:Material:Cotton"
         sim: "Default"
         type: "Cotton"
-        capacity: 1000
-        quantity: 0
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
+        capacity: 2000
+        quantity: 500
+        basePricePerUnit: 1.6
+        adjustedPricePerUnit: 1.6
+        scarcitySurchargeFactor: 0.5
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 40
       }
       {
         id: "Textile:0:Product:Textile"
         sim: "Default"
         type: "Textile"
         capacity: 1000
-        quantity: 0
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        quantity: 500
+        basePricePerUnit: 2
+        adjustedPricePerUnit: 2
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 40
+        consumptionRate: 0
       }
       {
         id: "Cotton:0:Product:Cotton"
         sim: "Default"
         type: "Cotton"
-        capacity: 10000
-        quantity: 100
+        capacity: 2000
+        quantity: 500
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 40
+        consumptionRate: 0
       }
       {
         id: "Factory:0:Material:Petrochemicals"
         sim: "Default"
         type: "Petrochemicals"
         capacity: 1000
-        quantity: 10
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
+        quantity: 500
+        basePricePerUnit: 4.5
+        adjustedPricePerUnit: 4.5
+        scarcitySurchargeFactor: 0.5
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 20
       }
       {
         id: "Factory:0:Material:Textiles"
         sim: "Default"
         type: "Textiles"
-        capacity: 1000
-        quantity: 10
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
+        capacity: 2000
+        quantity: 500
+        basePricePerUnit: 2.1
+        adjustedPricePerUnit: 2.1
+        scarcitySurchargeFactor: 0.5
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 20
       }
       {
         id: "Factory:0:Material:Lumber"
         sim: "Default"
         type: "Lumber"
-        capacity: 1000
-        quantity: 0
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
+        capacity: 2000
+        quantity: 500
+        basePricePerUnit: 1.1
+        adjustedPricePerUnit: 1.1
+        scarcitySurchargeFactor: 0.5
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 20
       }
       {
         id: "Factory:0:Product:Goods"
         sim: "Default"
         type: "Goods"
         capacity: 1000
-        quantity: 0
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        quantity: 500
+        basePricePerUnit: 10
+        adjustedPricePerUnit: 10
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 20
+        consumptionRate: 0
       }
       {
         id: "LumberMill:0:Material:Trees"
         sim: "Default"
         type: "Trees"
-        capacity: 1000
-        quantity: 0
-        basePricePerUnit: 1
-        adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
+        capacity: 2000
+        quantity: 500
+        basePricePerUnit: 0.8
+        adjustedPricePerUnit: 0.8
+        scarcitySurchargeFactor: 0.5
         replenishRate: 0
-        consumptionRate: 1
+        consumptionRate: 40
       }
       {
         id: "LumberMill:0:Product:Lumber"
         sim: "Default"
         type: "Lumber"
-        capacity: 1000
-        quantity: 0
+        capacity: 2000
+        quantity: 500
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
-        scarcitySurchargeFactor: 1
-        replenishRate: 0
-        consumptionRate: 1
+        scarcitySurchargeFactor: 0.5
+        replenishRate: 40
+        consumptionRate: 0
       }
     ]
   )
