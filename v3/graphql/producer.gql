@@ -26,8 +26,8 @@ mutation bootstrap {
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
         scarcitySurchargeFactor: 1
-        replenishRate: 300 
-        consumptionRate: 30 
+        replenishRate: 300
+        consumptionRate: 30
       }
       {
         id: "PowerPlant:1:Energy"
@@ -38,7 +38,7 @@ mutation bootstrap {
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
         scarcitySurchargeFactor: 1
-        replenishRate: 300 
+        replenishRate: 300
         consumptionRate: 30
       }
       {
@@ -50,7 +50,7 @@ mutation bootstrap {
         basePricePerUnit: 1.6
         adjustedPricePerUnit: 1.6
         scarcitySurchargeFactor: 0.5
-        replenishRate: 25 
+        replenishRate: 25
         consumptionRate: 0
       }
       {
@@ -296,7 +296,7 @@ mutation bootstrap {
       {
         id: "Textile:0:Product:Textile"
         sim: "Default"
-        type: "Textile"
+        type: "Textiles"
         capacity: 1000
         quantity: 500
         basePricePerUnit: 2

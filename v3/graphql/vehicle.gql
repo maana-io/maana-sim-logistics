@@ -1158,7 +1158,7 @@ mutation bootstrap {
         id: "Plane:0"
         sim: "Default"
         type: "Plane"
-        hub: "Airport:0"
+        hub: "Airport:1"
         steps: 0
         speed: 4.0
         maxDistance: 1.0

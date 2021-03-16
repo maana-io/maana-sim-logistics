@@ -114,8 +114,8 @@ mutation bootstrap {
         basePricePerUnit: 1
         adjustedPricePerUnit: 1
         scarcitySurchargeFactor: 1
-        replenishRate: 300 
-        consumptionRate: 30 
+        replenishRate: 300
+        consumptionRate: 30
       }
       {
         id: "PowerPlant:1:Energy"
@@ -159,7 +159,7 @@ mutation bootstrap {
         yRot: 0
       }
       {
-        id: "Port:0"
+        id: "Port:1"
         sim: "Default"
         type: "Port"
         vehicleType: "Ship"
@@ -171,7 +171,7 @@ mutation bootstrap {
         yRot: 0
       }
       {
-        id: "Port:1"
+        id: "Port:0"
         sim: "Default"
         type: "Port"
         vehicleType: "Ship"
