@@ -11,6 +11,7 @@ mutation bootstrap {
         vehicles: ["Truck:0", "Truck:1", "Truck:2", "Truck:3", "Truck:4", "Truck:5", "Ship:0", "Plane:0"]
         transfers: []
         transitOrders: []
+        mapAndTiles: "Default"
       }
     ]
   )
