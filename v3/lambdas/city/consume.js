@@ -12,4 +12,5 @@ const resourceUpdates = demand.map((x) => {
   }
   return res;
 });
+
 return resourceUpdates.some((x) => !x.ok) ? [] : resourceUpdates;

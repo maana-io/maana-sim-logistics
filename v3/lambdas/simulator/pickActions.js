@@ -1,0 +1,1 @@
+return input.actions ? input.actions : { id: "DefaultActions", transferActions: [], repairActions: [], transitActions: []}

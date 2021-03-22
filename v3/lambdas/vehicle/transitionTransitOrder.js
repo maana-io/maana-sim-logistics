@@ -36,7 +36,7 @@ const canTransit = (status) =>
   status === "Idle" ||
   status === "Pending" ||
   status === "InTransit" ||
-  status == "Arrived";
+  status === "Arrived";
 
 // --- state transitition logic
 

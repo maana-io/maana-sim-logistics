@@ -1,6 +1,8 @@
-const { sim, id } = input;
+const { sim, id, name, agentEndpoint } = input;
 
 return {
   ...sim,
   id,
+  name,
+  agentEndpoint
 };

@@ -1,8 +1,8 @@
-const { vehicle, sim, destX, destY } = input;
+const { vehicle, sim, destX, destY, status } = input;
 
 return {
   ...input,
   id: `${vehicle}/${destX}/${destY}#${new Date().valueOf()}`,
-  status: "Pending",
+  status: status || "Pending",
   steps: 0,
 };

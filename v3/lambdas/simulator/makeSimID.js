@@ -1,3 +1,3 @@
-const { name, scenario } = input;
+const { name, scenario, agentEndpoint } = input;
 
-return `${name}:${scenario}`;
+return `${name}:${scenario}:${agentEndpoint || "interactive"}`;

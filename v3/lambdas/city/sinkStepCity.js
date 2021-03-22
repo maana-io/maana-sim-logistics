@@ -1,1 +1,1 @@
-return input.city;
+return input.city

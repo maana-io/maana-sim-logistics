@@ -1,6 +1,1 @@
-const { simulation, state } = input;
-
-return {
-  ...state,
-  simulation,
-};
+return input.sim

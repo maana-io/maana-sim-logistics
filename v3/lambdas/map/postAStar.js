@@ -11,6 +11,4 @@ const waypoints = path.locations.map((oloc) => ({
   order: oloc.order,
 }));
 
-throw new Error(JSON.stringify(waypoints));
-
-// return waypoints;
+return waypoints;
